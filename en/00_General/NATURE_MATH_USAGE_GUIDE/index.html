@@ -1,0 +1,1359 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://borodind-maker.github.io/sbsQ-portal/en/00_General/NATURE_MATH_USAGE_GUIDE/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../../00_General/NATURE_MATH_USAGE_GUIDE/" hreflang="uk">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>🌿 Quantum Nature Protocol Implementation Guide - sbsQ Documentation Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quantum-nature-protocol-implementation-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="sbsQ Documentation Portal" class="md-header__button md-logo" aria-label="sbsQ Documentation Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            sbsQ Documentation Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🌿 Quantum Nature Protocol Implementation Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../00_General/NATURE_MATH_USAGE_GUIDE/" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/borodind-maker/sbsQ-portal" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sbsQ-portal
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Architecture_Overview/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01_Core_Intelligence/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Core
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../02_Body_Execution/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Body
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="sbsQ Documentation Portal" class="md-nav__button md-logo" aria-label="sbsQ Documentation Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    sbsQ Documentation Portal
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/borodind-maker/sbsQ-portal" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sbsQ-portal
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Architecture_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QUANTUM_NATURE_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantum Nature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Intelligence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Body_Execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Body
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Огляд
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Встановлення
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 Ключові Компоненти
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔑 Ключові Компоненти">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-earth-clock-783-hz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Earth Clock - Резонанс Шумана (7.83 Hz)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fibonacci-sphere-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fibonacci Sphere - Просторовий Розподіл Рою
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-fibonacci-backoff-retry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Fibonacci Backoff - Органічний Retry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-pi-projection-2d-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pi Projection - 2D → 3D Перетворення
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-moebius-topology-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Moebius Topology - Циклічне Логування
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Практичні Сценарії Використання
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Практичні Сценарії Використання">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарій 1: Автономна Місія Розвідки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mesh-network-resilient-retry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарій 2: Mesh Network з Resilient Retry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Тестування та Валідація
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Міграція Існуючого Коду
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Міграція Існуючого Коду">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        До → Після
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 API Референс
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 API Референс">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Константи
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Методи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Методи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Важливі Зауваження
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Додаткові Ресурси
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="quantum-nature-protocol-implementation-guide">🌿 Quantum Nature Protocol Implementation Guide</h1>
+<h2 id="_1">Огляд</h2>
+<p>Модуль <code>nature_math.py</code> реалізує математичне ядро системи sbsQ, яке базується на фундаментальних природних константах. Цей документ описує, як інтегрувати та використовувати ці алгоритми в різних компонентах системи.</p>
+<hr />
+<h2 id="_2">📦 Встановлення</h2>
+<p>Модуль вже інтегровано в систему:</p>
+<pre><code>smartbees/core/nature_math.py
+</code></pre>
+<p>Для використання:</p>
+<pre><code class="language-python">from smartbees.core.nature_math import QuantumNatureProtocol
+</code></pre>
+<hr />
+<h2 id="_3">🔑 Ключові Компоненти</h2>
+<h3 id="1-earth-clock-783-hz">1. Earth Clock - Резонанс Шумана (7.83 Hz)</h3>
+<p><strong>Використання для синхронізації циклів:</strong></p>
+<pre><code class="language-python">import time
+from smartbees.core.nature_math import QuantumNatureProtocol
+
+# Основний цикл системи
+while True:
+    start = time.time()
+
+    # Ваш код обробки
+    process_sensor_data()
+    update_brain_state()
+
+    # Синхронізація з планетарним ритмом
+    QuantumNatureProtocol.sync_sleep(start)
+</code></pre>
+<p><strong>Використання для семплінгу ентропії:</strong></p>
+<pre><code class="language-python">from smartbees.core.nature_math import QuantumNatureProtocol
+from smartbees.quantum.hybrid_entropy_pool import HybridEntropyPool
+
+pool = HybridEntropyPool()
+
+def harvest_entropy_on_schumann_tick():
+    current_tick = QuantumNatureProtocol.get_schumann_tick()
+
+    # Семплювання тільки на певних тактах
+    if current_tick % 10 == 0:  # Кожен 10-й такт
+        entropy_data = collect_from_sensors()
+        pool.add_event(&quot;multimodal&quot;, entropy_data)
+</code></pre>
+<p><strong>Отримання поточної фази:</strong></p>
+<pre><code class="language-python">phase = QuantumNatureProtocol.get_schumann_phase()
+
+if phase &lt; 0.5:
+    print(&quot;Rising edge - оптимальний час для передачі&quot;)
+else:
+    print(&quot;Falling edge - оптимальний час для прийому&quot;)
+</code></pre>
+<hr />
+<h3 id="2-fibonacci-sphere-">2. Fibonacci Sphere - Просторовий Розподіл Рою</h3>
+<p><strong>Формація дронів:</strong></p>
+<pre><code class="language-python">from smartbees.core.nature_math import QuantumNatureProtocol
+
+def calculate_swarm_formation(num_drones: int, mission_center: tuple, radius: float):
+    &quot;&quot;&quot;
+    Розраховує оптимальні позиції для всіх дронів у рої.
+
+    Args:
+        num_drones: Кількість дронів
+        mission_center: (lat, lon, alt) центр місії
+        radius: Радіус розгортання (метри)
+
+    Returns:
+        List[(x, y, z)]: Відносні координати для кожного дрона
+    &quot;&quot;&quot;
+    positions = []
+
+    for i in range(num_drones):
+        x, y, z = QuantumNatureProtocol.get_swarm_position(i, num_drones, radius)
+        positions.append((x, y, z))
+
+    return positions
+
+# Приклад використання
+drones = calculate_swarm_formation(
+    num_drones=10,
+    mission_center=(50.45, 30.52, 100.0),  # Київ, 100м висота
+    radius=50.0  # 50 метрів
+)
+
+for idx, (x, y, z) in enumerate(drones):
+    print(f&quot;Drone {idx}: offset ({x:.2f}, {y:.2f}, {z:.2f})m&quot;)
+</code></pre>
+<p><strong>Переваги:</strong>
+- ✅ Рівномірний розподіл (всі дрони на однаковій відстані від центру)
+- ✅ Відсутність сліпих зон
+- ✅ Мінімізація колізій
+- ✅ Масштабується для будь-якої кількості вузлів</p>
+<hr />
+<h3 id="3-fibonacci-backoff-retry">3. Fibonacci Backoff - Органічний Retry</h3>
+<p><strong>Мережеві з'єднання:</strong></p>
+<pre><code class="language-python">from smartbees.core.nature_math import QuantumNatureProtocol
+import time
+
+def connect_to_peer_with_retry(peer_address: str, max_attempts: int = 10):
+    &quot;&quot;&quot;
+    Підключення до peer з використанням Fibonacci backoff.
+    &quot;&quot;&quot;
+    for attempt in range(1, max_attempts + 1):
+        try:
+            connection = establish_connection(peer_address)
+            logger.info(f&quot;Connected to {peer_address} on attempt {attempt}&quot;)
+            return connection
+
+        except ConnectionError as e:
+            if attempt &lt; max_attempts:
+                delay = QuantumNatureProtocol.fibonacci_backoff(attempt)
+                logger.warning(f&quot;Connection failed. Retry in {delay:.2f}s&quot;)
+                time.sleep(delay)
+            else:
+                logger.error(f&quot;Max attempts reached for {peer_address}&quot;)
+                raise
+</code></pre>
+<p><strong>Послідовність затримок:</strong></p>
+<pre><code>Attempt 1: 0.1s
+Attempt 2: 0.1s
+Attempt 3: 0.2s
+Attempt 4: 0.3s
+Attempt 5: 0.5s
+Attempt 6: 0.8s
+Attempt 7: 1.3s
+Attempt 8: 2.1s
+...
+(обмежено max_delay=8.0s)
+</code></pre>
+<p><strong>Переваги:</strong>
+- ✅ Менше агресивний, ніж exponential backoff
+- ✅ Природна прогресія затримок
+- ✅ Зменшення навантаження на мережу</p>
+<hr />
+<h3 id="4-pi-projection-2d-3d">4. Pi Projection - 2D → 3D Перетворення</h3>
+<p><strong>Vision pipeline інтеграція:</strong></p>
+<pre><code class="language-python">from smartbees.core.nature_math import (
+    QuantumNatureProtocol, 
+    Vector2D, 
+    DroneTelemetry
+)
+import math
+
+def process_detected_objects(yolo_results, drone_gps, drone_imu):
+    &quot;&quot;&quot;
+    Перетворює 2D детекції з камери в 3D світові координати.
+
+    Args:
+        yolo_results: Результати YOLOv8 [(x, y, confidence, depth), ...]
+        drone_gps: (lat, lon, alt)
+        drone_imu: (yaw, pitch, roll) в радіанах
+
+    Returns:
+        List[dict]: Об'єкти з GPS координатами
+    &quot;&quot;&quot;
+    objects_3d = []
+
+    # Створення телеметрії дрона
+    telem = DroneTelemetry(
+        lat=drone_gps[0],
+        lon=drone_gps[1],
+        alt=drone_gps[2],
+        yaw=drone_imu[0],
+        pitch=drone_imu[1],
+        roll=drone_imu[2]
+    )
+
+    for obj in yolo_results:
+        # Нормалізовані координати (-1..1)
+        screen_x = (obj['x'] - 0.5) * 2  # Конвертувати з 0..1 в -1..1
+        screen_y = (obj['y'] - 0.5) * 2
+
+        vec = Vector2D(
+            x=screen_x,
+            y=screen_y,
+            depth_estimation=obj['depth']  # З монокулярної оцінки або стерео
+        )
+
+        # Проекція в 3D
+        dx, dy, dz = QuantumNatureProtocol.project_vector_to_3d(vec, telem)
+
+        objects_3d.append({
+            'class': obj['class'],
+            'confidence': obj['confidence'],
+            'offset_meters': (dx, dy, dz),
+            # Для повного GPS: потрібна функція meter_offset_to_gps()
+        })
+
+    return objects_3d
+</code></pre>
+<p><strong>Depth estimation:</strong></p>
+<p>Модуль потребує оцінку глибини. Опції:
+1. <strong>Стерео-камера:</strong> Пряме обчислення з диспаритету
+2. <strong>Монокулярна камера:</strong> Використати Depth-Anything, MiDaS
+3. <strong>LIDAR:</strong> Безпосереднє зчитування
+4. <strong>Емпірична оцінка:</strong> Розмір об'єкта → відстань</p>
+<hr />
+<h3 id="5-moebius-topology-">5. Moebius Topology - Циклічне Логування</h3>
+<p><strong>Безпечна "Чорна Скринька":</strong></p>
+<pre><code class="language-python">from smartbees.core.nature_math import QuantumNatureProtocol
+import json
+import hashlib
+
+class MoebiusLogger:
+    &quot;&quot;&quot;
+    Циклічний логер з топологією Мебіуса для неможливості підробки.
+    &quot;&quot;&quot;
+    def __init__(self, buffer_size: int = 10000):
+        self.buffer_size = buffer_size
+        self.buffer = [None] * buffer_size
+        self.log_counter = 0
+        self.previous_hash = &quot;0&quot; * 64  # Genesis hash
+
+    def write_log(self, event_data: dict):
+        &quot;&quot;&quot;Записує лог-подію з криптографічною прив'язкою.&quot;&quot;&quot;
+        physical_idx, is_inverted = QuantumNatureProtocol.get_moebius_index(
+            self.log_counter, 
+            self.buffer_size
+        )
+
+        # Додаємо попередній хеш для blockchain-like integrity
+        event_data['prev_hash'] = self.previous_hash
+        event_data['logical_idx'] = self.log_counter
+        event_data['inverted'] = is_inverted
+
+        # Серіалізація
+        log_entry = json.dumps(event_data, sort_keys=True)
+
+        # Якщо інвертована фаза - застосувати XOR шифрування
+        if is_inverted:
+            log_entry = self._xor_encrypt(log_entry)
+
+        # Запис у буфер
+        self.buffer[physical_idx] = log_entry
+
+        # Оновлення хешу
+        self.previous_hash = hashlib.sha256(log_entry.encode()).hexdigest()
+        self.log_counter += 1
+
+    def _xor_encrypt(self, data: str, key: str = &quot;sbsQ_Moebius_Key&quot;) -&gt; str:
+        &quot;&quot;&quot;Проста XOR симетрична криптографія.&quot;&quot;&quot;
+        key_bytes = key.encode()
+        data_bytes = data.encode()
+
+        encrypted = bytearray()
+        for i, byte in enumerate(data_bytes):
+            encrypted.append(byte ^ key_bytes[i % len(key_bytes)])
+
+        return encrypted.hex()
+
+    def verify_integrity(self) -&gt; bool:
+        &quot;&quot;&quot;Перевіряє цілісність всього лог-ланцюга.&quot;&quot;&quot;
+        # Implementation: ітерація по логах і перевірка хешів
+        pass
+
+# Використання
+logger = MoebiusLogger(buffer_size=1000)
+
+logger.write_log({'event': 'drone_takeoff', 'timestamp': time.time()})
+logger.write_log({'event': 'target_detected', 'class': 'person', 'confidence': 0.95})
+</code></pre>
+<p><strong>Переваги:</strong>
+- ✅ Неможливо "відрізати кінець" логу без порушення хешів
+- ✅ Автоматичне циклічне перезаписування при нестачі пам'яті
+- ✅ Інвертована фаза додає додатковий рівень безпеки</p>
+<hr />
+<h2 id="_4">🎯 Практичні Сценарії Використання</h2>
+<h3 id="1">Сценарій 1: Автономна Місія Розвідки</h3>
+<pre><code class="language-python"># 1. Розрахунок формації рою
+swarm_positions = [
+    QuantumNatureProtocol.get_swarm_position(i, 5, radius=30.0)
+    for i in range(5)
+]
+
+# 2. Синхронізація тактової генерації
+while mission_active:
+    start = time.time()
+
+    # 3. Збір даних з камер
+    detected_objects = process_vision_pipeline()
+
+    # 4. Проекція об'єктів у 3D
+    for obj in detected_objects:
+        dx, dy, dz = QuantumNatureProtocol.project_vector_to_3d(
+            obj.vector, 
+            current_telemetry
+        )
+        share_with_swarm(obj, (dx, dy, dz))
+
+    # 5. Логування подій
+    moebius_logger.write_log({
+        'event': 'scan_complete',
+        'objects_found': len(detected_objects)
+    })
+
+    # 6. Синхронізація з Шуманом
+    QuantumNatureProtocol.sync_sleep(start)
+</code></pre>
+<h3 id="2-mesh-network-resilient-retry">Сценарій 2: Mesh Network з Resilient Retry</h3>
+<pre><code class="language-python">class MeshNode:
+    def __init__(self, node_id: int):
+        self.node_id = node_id
+        self.peers = []
+
+    def connect_to_network(self, peer_list: list):
+        for peer in peer_list:
+            attempt = 1
+            while attempt &lt;= 10:
+                try:
+                    connection = self.establish_connection(peer)
+                    self.peers.append(connection)
+                    break
+                except ConnectionError:
+                    delay = QuantumNatureProtocol.fibonacci_backoff(attempt)
+                    time.sleep(delay)
+                    attempt += 1
+</code></pre>
+<hr />
+<h2 id="_5">📊 Тестування та Валідація</h2>
+<p>Запустіть демонстраційні приклади:</p>
+<pre><code class="language-bash"># Тестування самого модуля
+python smartbees/core/nature_math.py
+
+# Приклади інтеграції
+python examples/nature_math_integration.py
+</code></pre>
+<p><strong>Очікуваний вивід:</strong>
+- ✅ Генерація тактів Шумана
+- ✅ Розрахунок позицій Fibonacci Sphere
+- ✅ Fibonacci backoff послідовність
+- ✅ Golden Ratio розділення
+- ✅ Moebius індексація</p>
+<hr />
+<h2 id="_6">🔄 Міграція Існуючого Коду</h2>
+<h3 id="_7">До → Після</h3>
+<p><strong>Старий код (стандартний sleep):</strong></p>
+<pre><code class="language-python">while True:
+    process_data()
+    time.sleep(0.1)  # ~10 Hz (не синхронізовано)
+</code></pre>
+<p><strong>Новий код (Schumann sync):</strong></p>
+<pre><code class="language-python">while True:
+    start = time.time()
+    process_data()
+    QuantumNatureProtocol.sync_sleep(start)  # 7.83 Hz (планетарно синхронізовано)
+</code></pre>
+<hr />
+<p><strong>Старий код (exponential backoff):</strong></p>
+<pre><code class="language-python">delay = 2 ** attempt  # 1, 2, 4, 8, 16... (дуже агресивне)
+</code></pre>
+<p><strong>Новий код (Fibonacci backoff):</strong></p>
+<pre><code class="language-python">delay = QuantumNatureProtocol.fibonacci_backoff(attempt)  # 0.1, 0.1, 0.2, 0.3, 0.5, 0.8... (органічне)
+</code></pre>
+<hr />
+<h2 id="api">📚 API Референс</h2>
+<h3 id="_8">Константи</h3>
+<pre><code class="language-python">SCHUMANN_HZ = 7.83                  # Гц
+EARTH_HEARTBEAT_MS = 127.71         # мілісекунди
+PHI = 1.618033988749895             # Золотий перетин
+GOLDEN_ANGLE_RAD = 2.399963229...   # радіани (~137.5°)
+GOLDEN_ANGLE_DEG = 137.507764...    # градуси
+</code></pre>
+<h3 id="_9">Методи</h3>
+<h4 id="time-sync">Time Sync</h4>
+<ul>
+<li><code>get_schumann_tick() -&gt; int</code></li>
+<li><code>get_schumann_phase() -&gt; float</code></li>
+<li><code>sync_sleep(start_time: float, multiplier: int = 1) -&gt; float</code></li>
+<li><code>get_next_schumann_timestamp() -&gt; float</code></li>
+</ul>
+<h4 id="spatial">Spatial</h4>
+<ul>
+<li><code>get_swarm_position(node_index, total_nodes, radius) -&gt; (float, float, float)</code></li>
+<li><code>fibonacci_backoff(retry_attempt, base_delay=0.1, max_delay=8.0) -&gt; float</code></li>
+<li><code>golden_ratio_split(value) -&gt; (float, float)</code></li>
+</ul>
+<h4 id="projection">Projection</h4>
+<ul>
+<li><code>project_vector_to_3d(vec, telem, fov_h=π/2, fov_v=π/4) -&gt; (float, float, float)</code></li>
+<li><code>spherical_distance(lat1, lon1, lat2, lon2) -&gt; float</code></li>
+</ul>
+<h4 id="topology">Topology</h4>
+<ul>
+<li><code>get_moebius_index(logical_idx, buffer_size) -&gt; (int, bool)</code></li>
+</ul>
+<h4 id="utility">Utility</h4>
+<ul>
+<li><code>get_protocol_info() -&gt; dict</code></li>
+</ul>
+<hr />
+<h2 id="_10">🚨 Важливі Зауваження</h2>
+<ol>
+<li>
+<p><strong>Depth Estimation:</strong> Функція <code>project_vector_to_3d()</code> потребує реальні дані глибини. Використовуйте відповідні моделі (Depth-Anything, MiDaS) або стерео-камери.</p>
+</li>
+<li>
+<p><strong>GPS Conversion:</strong> Функція повертає метричні зміщення (dx, dy, dz). Для перетворення в GPS потрібна додаткова функція <code>meter_offset_to_gps()</code>.</p>
+</li>
+<li>
+<p><strong>Performance:</strong> Всі функції оптимізовані для роботи в реальному часі. Пр складних обчисленнях використовуйте мультиплікатор у <code>sync_sleep()</code> для зниження частоти.</p>
+</li>
+<li>
+<p><strong>Thread Safety:</strong> Модуль є stateless (без внутрішнього стану), тому thread-safe для паралельних викликів.</p>
+</li>
+</ol>
+<hr />
+<h2 id="_11">📖 Додаткові Ресурси</h2>
+<ul>
+<li><a href="../QUANTUM_NATURE_PROTOCOL/">QUANTUM_NATURE_PROTOCOL.md</a> - Філософія та концепція</li>
+<li><a href="../HARMONIC_DECISION_MATRIX/">HARMONIC_DECISION_MATRIX.md</a> - Гармонійна логіка прийняття рішень</li>
+<li><a href="../NATURE_MATH_ANALYSIS/">NATURE_MATH_ANALYSIS.md</a> - Детальний аналіз корисності</li>
+</ul>
+<hr />
+<p><strong>Створено:</strong> 2026-01-11<br />
+<strong>Версія:</strong> 1.0.0<br />
+<strong>Підтримка:</strong> sbsQ Development Team</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
