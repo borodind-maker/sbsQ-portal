@@ -155,6 +155,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/en/01_Core_Intelligence/PHYSICS_GATED_GROUNDING/"/>
     </url>
     <url>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/04_Infrastructure/ROBLOX_DIGITAL_TWIN/</loc>
+        <lastmod>2026-01-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/04_Infrastructure/ROBLOX_DIGITAL_TWIN/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/en/04_Infrastructure/ROBLOX_DIGITAL_TWIN/"/>
+    </url>
+    <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/05_User_Interfaces/ADMIN_PANEL/</loc>
         <lastmod>2026-01-23</lastmod>
         <changefreq>daily</changefreq>
@@ -807,6 +814,13 @@
         <lastmod>2026-01-23</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/en/04_Infrastructure/"/>
+    </url>
+    <url>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/en/04_Infrastructure/ROBLOX_DIGITAL_TWIN/</loc>
+        <lastmod>2026-01-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/en/04_Infrastructure/ROBLOX_DIGITAL_TWIN/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/04_Infrastructure/ROBLOX_DIGITAL_TWIN/"/>
     </url>
     <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/en/05_User_Interfaces/ADMIN_PANEL/</loc>

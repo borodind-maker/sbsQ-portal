@@ -1,43 +1,81 @@
+/* 
+   sbsQ TACTICAL THEME
+   Military Green Primary + High Contrast Modes
+*/
+
 :root {
-  --md-primary-fg-color:        #8fde6d;
-  --md-primary-fg-color--light: #b2e89a;
-  --md-primary-fg-color--dark:  #6db64d;
+  /* Military Green Base - Used for primary UI elements */
+  --md-primary-fg-color: #4B5320;
+  --md-primary-fg-color--light: #6B7340;
+  --md-primary-fg-color--dark: #2B3300;
+  --md-accent-fg-color: #FFD700; /* Gold accent for tactical feel */
   
-  /* Accent color */
-  --md-accent-fg-color:         #8fde6d;
+  /* Standard Font Override just in case */
+  --md-text-font: "Times New Roman", Times, serif;
+  --md-code-font: "Roboto Mono", monospace;
 }
 
+/* --- LIGHT MODE (Pastel Yellow / Private Archive Style) --- */
+[data-md-color-scheme="default"] {
+  /* Background: Pastel Yellow */
+  --md-default-bg-color: #FFFDF5;
+  /* Text: Black */
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: #333333;
+  --md-default-fg-color--lighter: #555555;
+  
+  /* Tables and surface elements */
+  --md-code-bg-color: #F0EEE0;
+}
+
+/* --- DARK MODE (Tactical Radar Style) --- */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #8fde6d;
-  --md-primary-fg-color--light: #b2e89a;
-  --md-primary-fg-color--dark:  #6db64d;
+  /* Background: Deep Black */
+  --md-default-bg-color: #000000;
+  /* Text: Tactical Yellow/Amber */
+  --md-default-fg-color: #FFD700; 
+  --md-default-fg-color--light: #E6C200;
+  --md-default-fg-color--lighter: #CCAD00;
   
-  --md-accent-fg-color:         #8fde6d;
+  /* Muted elements and borders */
+  --md-code-bg-color: #111111;
+  --md-typeset-color: #FFD700;
+  
+  /* Specific Overrides for readability */
+  h1, h2, h3, h4, h5, h6 {
+    color: #4B5320; /* Keep headers military green or gold? Let's use Gold for contrast */
+    color: #FFD700;
+    text-shadow: 0 0 2px rgba(255, 215, 0, 0.3); /* Glow effect */
+  }
+  
+  /* Links */
+  a {
+    color: #50fa7b; /* Matrix Green for links */
+  }
 }
 
-/* Force palette toggle visibility if JS fails to unhide it */
-.md-header__option[data-md-component="palette"] label[hidden] {
-  display: block !important;
+/* Font Size Controls Container */
+.font-controls {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 5px;
 }
 
-/* Base style for toggle labels */
-.md-header__option[data-md-component="palette"] label {
+.font-btn {
+  background: var(--md-primary-fg-color);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  padding: 2px 8px;
   cursor: pointer;
-  color: inherit;
-  display: block !important;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: all 0.2s;
 }
 
-/* Search bar styling */
-.md-search {
-  border-radius: 8px;
-  background-color: var(--md-default-bg-color--lightest);
-}
-
-.md-search__input {
-  background-color: transparent !important;
-}
-
-/* Language and palette toggle alignment adjustment */
-.md-header__option {
-  margin-left: 0.75rem;
+.font-btn:hover {
+  background: var(--md-accent-fg-color);
+  color: black;
 }
