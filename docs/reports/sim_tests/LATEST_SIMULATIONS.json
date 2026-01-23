@@ -1,0 +1,38 @@
+[
+    {
+        "id": "BLOCKCHAIN_STEGO_1M",
+        "title": "1,000,000 Cycles Blockchain  Steganography Stress Test",
+        "description": "Simulated the full lifecycle of decentralized weight updates via steganographic channels.",
+        "date": "2026-01-14",
+        "status": "PASS",
+        "link": "../reports/sim_tests/SIM_BLOCKCHAIN_STEGO_1M_REPORT.md",
+        "cycles": 1000000
+    },
+    {
+        "id": "CORONA_RISK",
+        "title": "Simulation Report High Voltage Corona Risk Analysis",
+        "description": "We simulated the Electric Field Gradient ($E$) surrounding a standard 110kV phase conductor and analyzed the impact on various drone components, ap...",
+        "date": "2026-01-14",
+        "status": "PASS",
+        "link": "../reports/sim_tests/SIM_CORONA_RISK_REPORT.md",
+        "cycles": 0
+    },
+    {
+        "id": "MASS_STRESS_1M",
+        "title": "Simulation Report Mass Stress Test (1M Cycles) - Monte Carlo Enhanced",
+        "description": "- ACCEPTED Zones (Health): 99.9% (Primary sensor trust).",
+        "date": "2026-01-14",
+        "status": "PASS",
+        "link": "../reports/sim_tests/SIM_MASS_STRESS_1M_REPORT.md",
+        "cycles": 1000000
+    },
+    {
+        "id": "WIRE_LANDING_PHYSICS",
+        "title": "Simulation Report 110kV Wire Landing  Physics",
+        "description": "Unlike previous voltage-based approximations, this simulation uses **Amperage (I_rms)** to drive magnetic flux, which...",
+        "date": "2026-01-14",
+        "status": "PASS",
+        "link": "../reports/sim_tests/SIM_WIRE_LANDING_PHYSICS.md",
+        "cycles": 0
+    }
+]

@@ -1,0 +1,105 @@
+﻿Folder PATH listing
+Volume serial number is 000000D3 E479:94FA
+C:\USERS\BDVCA\DESKTOP\SBSQ_V1.6\DOCS\REPORTS\SIM_TESTS
+|   MANIFEST.json
+|   README.md
+|   SHA256SUMS.txt
+|   STRUCTURE.txt
+|   
++---en
+|       INDEX.md
+|       OFFENSIVE_EW_RESILIENCE.md
+|       STRESS_MATRIX.md
+|       VOL_01_PHYSICS.md
+|       VOL_02_SWARM.md
+|       VOL_03_SECURITY.md
+|       VOL_04_AI_REASONING.md
+|       VOL_05_LOGISTICS.md
+|       
++---evidence
+|   +---en
+|   \---ua
++---logs
+|   |   chi2_stress_100k_2026-01-13.md
+|   |   
+|   +---en
+|   |       agent_council_5000.log
+|   |       consensus_1000.log
+|   |       crypto_tunnel_1000.log
+|   |       electronic_storm_1000.log
+|   |       forest_nav_1000.log
+|   |       ghs_precision_1400k.log
+|   |       ghs_sync_24h.log
+|   |       hardware_survival_1000.log
+|   |       kinematic_wind_1000.log
+|   |       lep_charging_1000.log
+|   |       magnetic_docking_1000.log
+|   |       mesh_recon_1000.log
+|   |       quantum_resilience_1000.log
+|   |       stealth_ghost_1000.log
+|   |       swarm_avoidance_1000.log
+|   |       
+|   \---ua
+|           agent_council_5000.log
+|           consensus_1000.log
+|           crypto_tunnel_1000.log
+|           electronic_storm_1000.log
+|           forest_nav_1000.log
+|           ghs_precision_1400k.log
+|           ghs_sync_24h.log
+|           hardware_survival_1000.log
+|           kinematic_wind_1000.log
+|           lep_charging_1000.log
+|           magnetic_docking_1000.log
+|           mesh_recon_1000.log
+|           quantum_resilience_1000.log
+|           solar_flare_1000.log
+|           stealth_ghost_1000.log
+|           stress_st-01.log
+|           stress_st-02.log
+|           stress_st-03.log
+|           stress_st-04.log
+|           stress_st-05.log
+|           stress_st-06.log
+|           stress_st-07.log
+|           stress_st-08.log
+|           stress_st-09.log
+|           stress_st-10.log
+|           stress_st-11.log
+|           stress_st-12.log
+|           stress_st-13.log
+|           stress_st-14.log
+|           swarm_avoidance_1000.log
+|           
++---src
+|       crash_test_solar_flare_paradox.py
+|       mass_stress_test_10k.py
+|       mass_stress_test_chi2.py
+|       simulate_bicameral_dream.py
+|       simulate_distributed_consensus.py
+|       simulate_electronic_storm_siege.py
+|       simulate_forest_swarm_navigation.py
+|       simulate_ghs_timing_sync.py
+|       simulate_hardware_survival.py
+|       simulate_kinematic_wind_stress.py
+|       simulate_lep_charging_induction.py
+|       simulate_magnetic_field_docking.py
+|       simulate_mesh_reconstitution.py
+|       simulate_quantum_resilience.py
+|       simulate_secure_tunnel_integrity.py
+|       simulate_stealth_emission_control.py
+|       simulate_swarm_formation_avoidance.py
+|       simulate_z_gate.py
+|       stress_matrix_orchestrator.py
+|       
+\---ua
+        INDEX.md
+        OFFENSIVE_EW_RESILIENCE.md
+        STRESS_MATRIX.md
+        VOL_01_PHYSICS.md
+        VOL_02_SWARM.md
+        VOL_03_SECURITY.md
+        VOL_04_AI_REASONING.md
+        VOL_05_LOGISTICS.md
+        VOL_06_STRESS_TESTS.md
+        

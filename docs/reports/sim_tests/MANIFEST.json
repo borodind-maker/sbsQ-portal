@@ -1,0 +1,98 @@
+﻿{
+    "artifacts":  [
+                      {
+                          "path":  "logs/ua/agent_council_5000.log",
+                          "sha256":  "ba71199a55ea7b7fcfeedaae1413aef2cac459418b7b47badab0dddbbc669d8e",
+                          "name":  "agent_council_5000.log"
+                      },
+                      {
+                          "path":  "logs/ua/ghs_precision_1400k.log",
+                          "sha256":  "5b49799e7204eb0fc0c9849b9f42f591f1fe16b2377f9f40ad5df5cea76482fd",
+                          "name":  "ghs_precision_1400k.log"
+                      },
+                      {
+                          "path":  "logs/ua/electronic_storm_1000.log",
+                          "sha256":  "041cfe7f6da6544a9daa26ecbf6cc01e99590cbce39c4a86c705779f8aac9ec2",
+                          "name":  "electronic_storm_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/lep_charging_1000.log",
+                          "sha256":  "80afbf0d32ffda33fd0e65d04056eaee87feb7aa75f957b6b303d21252845be2",
+                          "name":  "lep_charging_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/solar_flare_1000.log",
+                          "sha256":  "13733bae2c7c62c8500811197cb2097210c5ce75485698e8d522b7048ef855ab",
+                          "name":  "solar_flare_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/forest_nav_1000.log",
+                          "sha256":  "b4174ae5101b167c8ac1499afabcd165cf00da74995c843d4994048f00a19a53",
+                          "name":  "forest_nav_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/consensus_1000.log",
+                          "sha256":  "741c839c0520cfe5b250d88262950a4bbb9e41cf75bfd2cc405ed18f00f6e2d6",
+                          "name":  "consensus_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/ghs_sync_24h.log",
+                          "sha256":  "c99af55a5a86fa0d97439d9d9ad16c16ca064d920bed8fea7071f277fce4d384",
+                          "name":  "ghs_sync_24h.log"
+                      },
+                      {
+                          "path":  "logs/ua/mesh_recon_1000.log",
+                          "sha256":  "3fc9186c40468afdb8fe9c3e1134b8fa43a965338be485e95b2f52b8e9d3b277",
+                          "name":  "mesh_recon_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/stealth_ghost_1000.log",
+                          "sha256":  "4c8d2e7d5b2aeca8805178ed0ee4eb7b7d51b128aa9880dd1b38f518e36062ac",
+                          "name":  "stealth_ghost_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/kinematic_wind_1000.log",
+                          "sha256":  "12e5aea76b3f9f850eb3afdd8a67f79d32719d0747bdc9da500e6aa1d09831fa",
+                          "name":  "kinematic_wind_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/hardware_survival_1000.log",
+                          "sha256":  "2d3e7171fdcdbb8bc42a37ed4fa62401637640273430aa7e56d8d23ee034df24",
+                          "name":  "hardware_survival_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/crypto_tunnel_1000.log",
+                          "sha256":  "53f3e206b920725dc99c30ee818af52c51601e6b9c96f034a80276a1ef74d768",
+                          "name":  "crypto_tunnel_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/swarm_avoidance_1000.log",
+                          "sha256":  "55873f9a3b7551ea9788c2d5c97b21126f236913add9e6633efc1fe259d0b544",
+                          "name":  "swarm_avoidance_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/quantum_resilience_1000.log",
+                          "sha256":  "87c6a8c1cd2f0c67b920cea7caf8c2472434eefbeea95aec0b33b0e38ded65a3",
+                          "name":  "quantum_resilience_1000.log"
+                      },
+                      {
+                          "path":  "logs/ua/magnetic_docking_1000.log",
+                          "sha256":  "61d166f943d6b8dd0a82cf93183b8cd6c28d2048c7581b38b7702b732a3e30a4",
+                          "name":  "magnetic_docking_1000.log"
+                      }
+                  ],
+    "ci_run_id":  "SBSQ-AUTO-20260113-1730",
+    "project":  "sbsQ",
+    "audit_version":  "1.4",
+    "build":  {
+                  "environment":  {
+                                      "os":  "Windows 11 (Audit Verified)",
+                                      "seed_policy":  "Deterministic (Fixed Entropy Seed 0x7B34)",
+                                      "python":  "3.11.0"
+                                  },
+                  "timestamp":  "2026-01-13T17:30:00+02:00",
+                  "config_id":  "CONF-GHS-2026-X1",
+                  "commit":  "14ca2aa",
+                  "timezone":  "Europe/Kiev"
+              }
+}

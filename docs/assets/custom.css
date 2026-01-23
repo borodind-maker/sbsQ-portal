@@ -1,0 +1,43 @@
+:root {
+  --md-primary-fg-color:        #8fde6d;
+  --md-primary-fg-color--light: #b2e89a;
+  --md-primary-fg-color--dark:  #6db64d;
+  
+  /* Accent color */
+  --md-accent-fg-color:         #8fde6d;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #8fde6d;
+  --md-primary-fg-color--light: #b2e89a;
+  --md-primary-fg-color--dark:  #6db64d;
+  
+  --md-accent-fg-color:         #8fde6d;
+}
+
+/* Force palette toggle visibility if JS fails to unhide it */
+.md-header__option[data-md-component="palette"] label[hidden] {
+  display: block !important;
+}
+
+/* Base style for toggle labels */
+.md-header__option[data-md-component="palette"] label {
+  cursor: pointer;
+  color: inherit;
+  display: block !important;
+}
+
+/* Search bar styling */
+.md-search {
+  border-radius: 8px;
+  background-color: var(--md-default-bg-color--lightest);
+}
+
+.md-search__input {
+  background-color: transparent !important;
+}
+
+/* Language and palette toggle alignment adjustment */
+.md-header__option {
+  margin-left: 0.75rem;
+}

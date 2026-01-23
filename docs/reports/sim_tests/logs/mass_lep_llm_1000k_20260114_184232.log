@@ -1,0 +1,37 @@
+================================================================================
+ SUMMARY
+================================================================================
+ Runtime: 39.33s | Speed: 25426 steps/s
+ Steps: 1,000,000/1,000,000
+ Charge cycles completed: 0
+--------------------------------------------------------------------------------
+ Zone distribution (decision space):
+  ACCEPTED: 999,993 (100.00%)
+  UNKNOWN : 7 (  0.00%)
+  REJECTED: 0 (  0.00%)
+  HEALTH  : 100.00% (ACCEPT share)
+--------------------------------------------------------------------------------
+ Sensor stress counters:
+  MAG jam events : 945,603
+  MAG spoof hits : 50,246
+  CAM degraded   : 20,123
+--------------------------------------------------------------------------------
+ Phase counters:
+  PHASE_PERCH     : 1
+--------------------------------------------------------------------------------
+ LLM thought distribution (top 25):
+  FINAL_ALIGN                     200,366 ( 20.04%)
+  MICRO_ADJUST_Y                  200,142 ( 20.01%)
+  CONTACT_GEOMETRY_FINE           199,741 ( 19.97%)
+  MICRO_ADJUST_Z                  199,664 ( 19.97%)
+  HOVER_STABILIZE                 199,583 ( 19.96%)
+  VISUAL_SERVO_TRACKING               104 (  0.01%)
+  FUNNEL_ALIGNMENT_OK                 103 (  0.01%)
+  EDGE_FEATURE_LOCK                    99 (  0.01%)
+  ALTITUDE_PROFILE_OK                  98 (  0.01%)
+  WIND_GUST_COMPENSATION               93 (  0.01%)
+  HOLD_FOR_CONFIRM                      3 (  0.00%)
+  RETRY_APPROACH                        2 (  0.00%)
+  VISUAL_ONLY_MODE                      1 (  0.00%)
+  CONTACT_UNCERTAIN                     1 (  0.00%)
+================================================================================
