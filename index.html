@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartBees Quantum | The Future of Autonomous Swarms</title>
+    <meta name="description" content="SmartBees Quantum - перша у світі операційна система для автономних роїв, що базується на природних константах та трійковій логіці.">
+    <meta name="keywords" content="SmartBees, Quantum, Swarm, Autonomous, Drones, AI, Ukraine">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #8fde6d;
+            --primary: #0e9226;
             --primary-glow: rgba(143, 222, 109, 0.4);
             --secondary: #00f2ff;
             --secondary-glow: rgba(0, 242, 255, 0.4);
@@ -17,8 +19,8 @@
             --card-bg: rgba(255, 255, 255, 0.02);
             --glass: rgba(255, 255, 255, 0.05);
             --border: rgba(255, 255, 255, 0.08);
-            --text: #ffffff;
-            --text-dim: #94a3b8;
+            --text: #ef1e1e;
+            --text-dim: #f8f84f;
             --font-main: 'Plus Jakarta Sans', sans-serif;
             --font-title: 'Syncopate', sans-serif;
         }
@@ -171,7 +173,7 @@
             filter: brightness(0.8) contrast(1.2);
         }
 
-        /* Dynamic Stats */
+        /* Dynamic Stats - SANITIZED: No secret constants exposed */
         .stats-banner {
             background: var(--glass);
             display: flex; justify-content: space-around;
@@ -285,10 +287,10 @@
         <div class="nav-links">
             <a href="#sectors" class="ua">Рішення</a>
             <a href="#sectors" class="en">Solutions</a>
-            <a href="00_General/00_QUICK_START/" class="ua">Технології</a>
-            <a href="00_General/00_QUICK_START/" class="en">Tech</a>
-            <a href="./" class="ua">Портал</a>
-            <a href="./" class="en">Portal</a>
+            <a href="docs/00_General/00_QUICK_START/" class="ua">Технології</a>
+            <a href="docs/00_General/00_QUICK_START/" class="en">Tech</a>
+            <a href="docs/" class="ua">Документація</a>
+            <a href="docs/" class="en">Documentation</a>
             <div class="lang-toggle">
                 <button onclick="setLang('ua')" class="active">UA</button>
                 <button onclick="setLang('en')">EN</button>
@@ -308,12 +310,12 @@
             <p class="en">Control the future with mathematical precision. SmartBees is the world's first swarm OS based on natural constants and ternary logic.</p>
             
             <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <a href="04_Infrastructure/ROBLOX_DIGITAL_TWIN/" class="btn btn-fill">
+                <a href="docs/04_Infrastructure/ROBLOX_DIGITAL_TWIN/" class="btn btn-fill">
                     <span class="ua">Отримати Демо</span>
                     <span class="en">Request Demo</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="architecture/MODULES_CATALOGUE/" class="btn" style="border: 1px solid var(--border); color: #fff;">
+                <a href="docs/reports/MODULES_CATALOGUE/" class="btn" style="border: 1px solid var(--border); color: #fff;">
                     <span class="ua">Специфікації</span>
                     <span class="en">Technical Specs</span>
                 </a>
@@ -327,6 +329,7 @@
         </div>
     </section>
 
+    <!-- SANITIZED: Statistics use BRANDED terminology per OBFUSCATION_DICTIONARY -->
     <div class="stats-banner">
         <div class="stat-item">
             <h2>60<span>Hz</span></h2>
@@ -339,14 +342,14 @@
             <p class="en">C++ Optimization</p>
         </div>
         <div class="stat-item">
-            <h2>7.83</h2>
-            <p class="ua">Sync Schumann</p>
-            <p class="en">Sync Schumann</p>
+            <h2>GHS</h2>
+            <p class="ua">Планетарний Резонанс</p>
+            <p class="en">Planetary Resonance</p>
         </div>
         <div class="stat-item">
-            <h2>Φ</h2>
-            <p class="ua">Golden Ratio</p>
-            <p class="en">Golden Ratio</p>
+            <h2>TCI</h2>
+            <p class="ua">Гармонічний Поріг</p>
+            <p class="en">Harmonic Threshold</p>
         </div>
     </div>
 
@@ -367,9 +370,40 @@
             </div>
             <div class="card">
                 <h3>DEFENSE</h3>
-                <p class="ua">Стійкі до РЕБ мережі зв'язку та автономне патрулювання за протоколами Moebius.</p>
-                <p class="en">EW-resilient communication meshes and autonomous patrolling using Moebius protocols.</p>
+                <p class="ua">Стійкі до завад мережі зв'язку та автономне патрулювання за протоколами Adaptive Pathing.</p>
+                <p class="en">Interference-resilient communication meshes and autonomous patrolling using Adaptive Pathing protocols.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Validation Evidence Section -->
+    <section class="sectors" id="validation">
+        <span class="hero-label ua" style="text-align: center;">Підтвердження та Валідація</span>
+        <span class="hero-label en" style="text-align: center;">Validation & Evidence</span>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>260,000+ LOC</h3>
+                <p class="ua">Повний об'єм коду системи, задокументований та верифікований.</p>
+                <p class="en">Full system codebase, documented and verified.</p>
+            </div>
+            <div class="card">
+                <h3>910+ TESTS</h3>
+                <p class="ua">Комплексний набір тестів для всіх модулів системи.</p>
+                <p class="en">Comprehensive test suite covering all system modules.</p>
+            </div>
+            <div class="card">
+                <h3>1M+ SIMULATIONS</h3>
+                <p class="ua">Результати стрес-тестування та симуляцій доступні в репортах.</p>
+                <p class="en">Stress test and simulation results available in reports.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="docs/reports/sim_tests/" class="btn btn-fill">
+                <span class="ua">Переглянути Звіти Симуляцій</span>
+                <span class="en">View Simulation Reports</span>
+            </a>
         </div>
     </section>
 
@@ -381,20 +415,20 @@
             </div>
             <div style="display: flex; gap: 80px;">
                 <div class="nav-links" style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
-                    <a href="#">X (Twitter)</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
+                    <a href="docs/">Documentation</a>
+                    <a href="docs/reports/">Reports</a>
+                    <a href="docs/architecture/TESTS_CATALOGUE/">Test Suite</a>
                 </div>
                 <div class="nav-links" style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
-                    <a href="#">Whitepaper</a>
-                    <a href="#">Evidence Pack</a>
-                    <a href="#">Legal</a>
+                    <a href="docs/00_General/Architecture_Overview/">Architecture</a>
+                    <a href="docs/reports/sim_tests/">Simulations</a>
+                    <a href="docs/00_General/SYSTEM_STATISTICS/">Statistics</a>
                 </div>
             </div>
         </div>
         <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem; display: flex; justify-content: space-between;">
             <p>&copy; 2026 SmartBees Quantum Intelligence. All rights reserved.</p>
-            <p>Made in Ukraine with 💚 and Ternary Logic.</p>
+            <p>Made in Ukraine with 💚 and TCI-Quantum-Inspired Architecture.</p>
         </div>
     </footer>
 
