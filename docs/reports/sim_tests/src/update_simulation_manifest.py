@@ -27,7 +27,7 @@ def parse_cycles(text):
 
 def extract_description(content):
     # Try to find the first paragraph after Executive Summary
-    match = re.search(r"## 📊 Executive Summary\s*\n\s*([^#\n]+)", content, re.MULTILINE)
+    match = re.search(r"## \[STATS\] Executive Summary\s*\n\s*([^#\n]+)", content, re.MULTILINE)
     if not match:
         # Fallback 1: Try finding "## 1." (e.g. Physics Model)
         match = re.search(r"## 1\..+\n\s*([^#\n]+)", content, re.MULTILINE)
@@ -122,7 +122,7 @@ def update_manifest():
     with open(MANIFEST_PATH, 'w', encoding='utf-8') as f:
         json.dump(reports, f, indent=4, ensure_ascii=False)
     
-    print(f"✅ Manifest updated at {MANIFEST_PATH}")
+    print(f"[OK] Manifest updated at {MANIFEST_PATH}")
     print(f"Total reports: {len(reports)}")
 
 if __name__ == "__main__":

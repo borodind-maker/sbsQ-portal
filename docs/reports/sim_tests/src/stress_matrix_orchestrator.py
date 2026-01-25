@@ -49,13 +49,13 @@ def run_stress_round():
                 )
             
             elapsed = time.time() - start_t
-            status = "✅ PASS" if process.returncode == 0 else "❌ FAIL"
+            status = "[PASS] PASS" if process.returncode == 0 else "[FAIL] FAIL"
             results.append((sid, cfg['desc'], status, f"{elapsed:.2f}s"))
             print(f"   Done in {elapsed:.2f}s -> {status}")
             
         except Exception as e:
             print(f"   [!] Error: {str(e)}")
-            results.append((sid, cfg['desc'], "❗ ERROR", "0.00s"))
+            results.append((sid, cfg['desc'], "[ERROR]", "0.00s"))
 
     print("\n" + "=" * 80)
     print(" STRESS TEST SUMMARY REPORT")

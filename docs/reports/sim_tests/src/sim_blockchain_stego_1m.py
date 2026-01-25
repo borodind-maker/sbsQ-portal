@@ -228,16 +228,16 @@ def run_simulation(episodes: int, output_file: Path):
     avg_latency = stats["total_latency"] / episodes
     throughput_mb_s = (stats["total_data_kb"] / 1024) / duration
     
-    report_content = f"""# 🛡️ 1,000,000 Cycles: Blockchain & Steganography Stress Test
+    report_content = f"""# [TEST] 1,000,000 Cycles: Blockchain & Steganography Stress Test
 
 **Date:** {time.strftime("%Y-%m-%d %H:%M:%S")}
 **Simulator:** `sim_blockchain_stego_1m.py`
 **Cycles:** {episodes:,}
-**Status:** ✅ COMPLETED
+**Status:** [OK] COMPLETED
 
 ---
 
-## 📊 Executive Summary
+## [STATS] Executive Summary
 
 Simulated the full lifecycle of decentralized weight updates via steganographic channels.
 
@@ -251,14 +251,14 @@ Simulated the full lifecycle of decentralized weight updates via steganographic 
 | **Throughput** | {throughput_mb_s:.2f} MB/s |
 | **Total Data Processed** | {stats['total_data_kb']/1024/1024:.2f} GB |
 
-## 🛠️ Simulation Parameters
+## [CONFIG] Simulation Parameters
 
 - **Blockchain Block Time:** {BLOCK_TIME_AVG_S}s
 - **Blockchain Fork Prob:** {FORK_PROBABILITY*100}%
 - **Stego Image Capacity:** {IMAGE_CAPACITY_RATIO*100}% (LSB)
 - **Weight Package Avg:** {WEIGHT_PACKAGE_SIZE_KB_AVG} KB
 
-## 🔍 Detailed Analysis
+## [ANALYSIS] Detailed Analysis
 
 ### 1. Blockchain Layer
 - **Reliability:** {(1 - stats['chain_fail']/episodes)*100:.4f}%
@@ -270,7 +270,7 @@ Simulated the full lifecycle of decentralized weight updates via steganographic 
 - **Failures:** Primarily due to noise exceeding Reed-Solomon margins.
 - **Text carrier:** Metadata embedded via homoglyphs; rare normalization attacks.
 
-## 🎯 Conclusion
+## [RESULT] Conclusion
 
 The system demonstrates **high resilience** (>{int(success_rate)}%) in forming and propagating update packages. The primary failure mode is **image channel noise** under aggressive compression simulation, suggesting that the `robust_mode` parameter should be strictly enforced in production.
 
