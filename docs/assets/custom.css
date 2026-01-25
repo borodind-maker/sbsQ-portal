@@ -1,137 +1,136 @@
-/* 🛡️ sbsQ Custom Documentation Styles - Tactical UI v2.0 */
+/* 🛡️ sbsQ Custom Documentation Styles - Tactical UI v3.0 (ULTIMATE GAME HUD) */
 
 :root {
     --md-primary-fg-color: #8fde6d;
     --md-accent-fg-color: #00f2ff;
-    --inventory-bg: rgba(20, 20, 20, 0.95);
-    --inventory-border: #444;
-    --rarity-common: #888;
-    --rarity-rare: #00f2ff;
-    --rarity-epic: #a335ee;
-    --rarity-legendary: #ff8000;
+    --inventory-bg: rgba(10, 12, 10, 0.98);
+    --panel-border: 1px solid #3a3a3a;
+    --tactical-red: #ef1e1e;
 }
 
-/* Base Readability */
-body {
-    background-color: #050505 !important;
-}
-
-.md-content {
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-/* Font Controls - Tactical Floating Bar */
-.font-controls {
-    display: flex;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--inventory-bg);
-    border: 2px solid var(--md-primary-fg-color);
-    border-radius: 8px;
-    padding: 5px;
-    gap: 10px;
-    z-index: 1000;
-    box-shadow: 0 0 15px rgba(143, 222, 109, 0.3);
-}
-
-.font-btn {
-    background: transparent;
-    border: none;
-    color: var(--md-primary-fg-color);
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    padding: 8px 12px;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-.font-btn:hover {
-    background: var(--md-primary-fg-color);
-    color: #000;
-}
-
-/* Marketplace - Game Style Inventory */
-.inventory-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.item-card {
-    background: var(--inventory-bg);
-    border: 1px solid var(--inventory-border);
-    border-radius: 4px;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    transition: 0.2s;
-    display: flex;
-    flex-direction: column;
-}
-
-.item-card:hover {
-    border-color: var(--md-primary-fg-color);
-    box-shadow: 0 0 10px rgba(143, 222, 109, 0.2);
-}
-
-.item-header {
-    height: 120px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    border-bottom: 1px solid var(--inventory-border);
-}
-
-.item-body {
-    padding: 15px;
-    flex-grow: 1;
-}
-
-.item-name {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 12px;
-    color: #fff;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
-
-.item-desc {
-    font-size: 0.8rem;
-    color: #aaa;
-    min-height: 60px;
-}
-
-.item-footer {
-    padding: 10px 15px;
-    background: rgba(0,0,0,0.3);
-    border-top: 1px solid var(--inventory-border);
+/* Base HUD Elements */
+.hud-container {
+    width: 100%;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    background: rgba(143, 222, 109, 0.05);
+    border: var(--panel-border);
+    padding: 10px 20px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--md-primary-fg-color);
 }
 
-.item-price {
-    font-family: 'Roboto Mono', monospace;
-    color: var(--md-accent-fg-color);
+.hud-item {
+    font-size: 12px;
+}
+
+.hud-value {
+    color: #fff;
     font-weight: bold;
 }
 
-.item-type {
-    font-size: 10px;
-    padding: 2px 6px;
-    background: var(--inventory-border);
-    color: #fff;
-    border-radius: 2px;
-    text-transform: uppercase;
+/* Chat Box */
+.tactical-chat {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    width: 300px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #333;
+    border-top: 2px solid var(--md-accent-fg-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 900;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
 }
 
-/* Rarity Accents */
-.rare .item-header { border-bottom: 2px solid var(--rarity-rare); }
-.epic .item-header { border-bottom: 2px solid var(--rarity-epic); }
-.legendary .item-header { border-bottom: 2px solid var(--rarity-legendary); }
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.msg { color: #888; }
+.msg-pilot { color: var(--md-primary-fg-color); font-weight: bold; }
+.msg-text { color: #eee; }
+
+.chat-input {
+    background: #111;
+    border: none;
+    border-top: 1px solid #333;
+    padding: 8px;
+    color: #fff;
+    font-size: 10px;
+}
+
+/* Payment Modal Overlay */
+.payment-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-modal {
+    width: 450px;
+    background: #0f120f;
+    border: 2px solid var(--md-primary-fg-color);
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(143, 222, 109, 0.2);
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pay-btn {
+    border: 1px solid #333;
+    background: #1a1a1a;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.pay-btn:hover {
+    border-color: var(--md-accent-fg-color);
+    background: rgba(0, 242, 255, 0.05);
+}
+
+.pay-btn i { font-size: 24px; display: block; margin-bottom: 10px; }
+
+/* Marketplace Tweaks */
+.buy-btn {
+    background: var(--md-primary-fg-color);
+    color: #000;
+    border: none;
+    padding: 4px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.buy-btn:hover {
+    filter: brightness(1.2);
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .tactical-chat { display: none; }
+}

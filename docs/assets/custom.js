@@ -1,19 +1,13 @@
-// Custom JS for sbsQ Portal - Tactical Version
+// Custom JS for sbsQ Portal - Tactical Version 3.0 (ULTIMATE GAME HUD)
 
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("sbsQ Tactical Interface Loaded");
+    console.log("sbsQ Tactical Interface v3.0 Loaded");
 
     // 1. Create Floating Tactical Font Controls
     function setupTacticalControls() {
         if (!document.querySelector(".font-controls")) {
             const controls = document.createElement("div");
             controls.className = "font-controls";
-            
-            const label = document.createElement("span");
-            label.innerText = "ZOOM:";
-            label.style.fontSize = "10px";
-            label.style.color = "#8fde6d";
-            label.style.marginRight = "5px";
             
             const btnDecrease = document.createElement("button");
             btnDecrease.innerText = "[-] ASC";
@@ -25,48 +19,90 @@ document.addEventListener("DOMContentLoaded", function() {
             btnIncrease.className = "font-btn";
             btnIncrease.onclick = () => resizeFont(1);
             
-            controls.appendChild(label);
             controls.appendChild(btnDecrease);
             controls.appendChild(btnIncrease);
             document.body.appendChild(controls);
-            console.log("Tactical font controls deployed");
         }
     }
 
-    // 2. Fix Header Logo and Link
-    function setupHeader() {
-        const logo = document.querySelector(".md-logo");
-        if (logo) {
-            logo.href = "https://borodind-maker.github.io/sbsQ-portal/";
-            const logoImg = logo.querySelector("img");
-            if (logoImg) {
-                logoImg.src = "https://borodind-maker.github.io/sbsQ-portal/docs/assets/images/logo.png";
-            }
+    // 2. Tactical Clock
+    function updateClock() {
+        const clockEl = document.getElementById('tactical-clock');
+        if (clockEl) {
+            const now = new Date();
+            clockEl.innerText = now.toTimeString().split(' ')[0];
         }
     }
+    setInterval(updateClock, 1000);
 
+    // 3. Simulated Chat
+    const chatStream = document.getElementById('chat-stream');
+    const pilotNames = ['STALKER_ONE', 'BEE_MASTER', 'RESCUE_PILOT', 'GHOST_SWARM', 'ECHO_42'];
+    const messages = [
+        'Swarm 12 reporting for extraction.',
+        'New artifacts detected in Sector-7.',
+        'Does anyone have a spare Medkit?',
+        'Testing Fibonacci pathing... feels smooth.',
+        'Watch out for jamming in the north zone!',
+        'License verified. Approaching terminal.'
+    ];
+
+    function addSimulatedMessage() {
+        if (chatStream && Math.random() > 0.7) {
+            const pilot = pilotNames[Math.floor(Math.random() * pilotNames.length)];
+            const text = messages[Math.floor(Math.random() * messages.length)];
+            
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'msg';
+            msgDiv.innerHTML = `<span class="msg-pilot">${pilot}:</span> <span class="msg-text">${text}</span>`;
+            chatStream.appendChild(msgDiv);
+            chatStream.scrollTop = chatStream.scrollHeight;
+            
+            // Keep only last 15 messages
+            if (chatStream.children.length > 15) chatStream.removeChild(chatStream.children[0]);
+        }
+    }
+    setInterval(addSimulatedMessage, 3000);
+
+    // Initial setups
     setupTacticalControls();
-    setupHeader();
+    updateClock();
 
     // Re-check after dynamic navigation
     const observer = new MutationObserver(() => {
         setupTacticalControls();
-        setupHeader();
     });
     observer.observe(document.body, { childList: true, subtree: true });
 });
 
+// Font Resizing Logic
 function resizeFont(delta) {
     let size = parseInt(localStorage.getItem("sbs_font_scale") || "100");
     size += delta * 15;
-    if (size < 80) size = 80;
-    if (size > 200) size = 200;
-    
+    if (size < 70) size = 70;
+    if (size > 220) size = 220;
     document.documentElement.style.fontSize = `${size}%`;
     localStorage.setItem("sbs_font_scale", size);
 }
 
-// Global apply
+// Payment Interface Logic (Global for buttons)
+window.openPayment = function(name, cost) {
+    const modal = document.getElementById('payment-modal');
+    document.getElementById('pay-item-name').innerText = name;
+    document.getElementById('pay-item-cost').innerText = cost;
+    modal.style.display = 'flex';
+};
+
+window.closePayment = function() {
+    document.getElementById('payment-modal').style.display = 'none';
+};
+
+window.confirmPayment = function(method) {
+    alert(`TRANSACTION AUTHORIZED [${method}]\nProcessing secure payment gateway...`);
+    closePayment();
+};
+
+// Global font apply
 (function() {
     const size = localStorage.getItem("sbs_font_scale") || "100";
     document.documentElement.style.fontSize = `${size}%`;
