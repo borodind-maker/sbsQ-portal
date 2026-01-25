@@ -24,6 +24,19 @@ document.addEventListener("DOMContentLoaded", function() {
         
         header.appendChild(controls);
     }
+
+    // 2. Fix Logo Link and Image
+    const logoLink = document.querySelector(".md-header__button.md-logo");
+    if (logoLink) {
+        logoLink.href = "https://borodind-maker.github.io/sbsQ-portal/";
+        logoLink.title = "Return to Main Portal";
+        
+        // Ensure image is correct if it exists
+        const img = logoLink.querySelector("img");
+        if (img) {
+            img.src = "https://borodind-maker.github.io/sbsQ-portal/docs/assets/images/logo.png";
+        }
+    }
 });
 
 let currentFontSize = 100; // Percentage
