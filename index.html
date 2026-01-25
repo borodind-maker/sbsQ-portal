@@ -358,23 +358,36 @@
         <span class="hero-label en" style="text-align: center;">Industries</span>
         
         <div class="grid">
-            <div class="card">
+            <a href="docs/reference/sensors/" class="card" style="text-decoration: none; display: block; height: 100%;">
                 <h3>AGRICULTURE 4.0</h3>
                 <p class="ua">Автономний моніторинг посівів та точкове внесення з використанням ройової координації.</p>
                 <p class="en">Autonomous crop monitoring and precision application using swarm coordination.</p>
-            </div>
-            <div class="card">
+            </a>
+            <a href="docs/00_General/00_QUICK_START/" class="card" style="text-decoration: none; display: block; height: 100%;">
                 <h3>LOGISTICS</h3>
                 <p class="ua">Динамічна доставка та складське пакування за алгоритмами «Бджолиних сот».</p>
                 <p class="en">Dynamic delivery and warehouse packing via "Honey-Comb" algorithms.</p>
-            </div>
-            <div class="card">
+            </a>
+            <a href="docs/01_Core_Intelligence/HARMONY_GUARDRAILS/" class="card" style="text-decoration: none; display: block; height: 100%;">
                 <h3>DEFENSE</h3>
                 <p class="ua">Стійкі до завад мережі зв'язку та автономне патрулювання за протоколами Adaptive Pathing.</p>
                 <p class="en">Interference-resilient communication meshes and autonomous patrolling using Adaptive Pathing protocols.</p>
-            </div>
+            </a>
         </div>
     </section>
+
+    <style>
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(143, 222, 109, 0.2);
+            background: rgba(143, 222, 109, 0.05);
+        }
+    </style>
 
     <!-- Validation Evidence Section -->
     <section class="sectors" id="validation">
