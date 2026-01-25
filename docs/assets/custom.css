@@ -1,81 +1,78 @@
-/* 
-   sbsQ TACTICAL THEME
-   Military Green Primary + High Contrast Modes
-*/
+/* 🛡️ sbsQ Custom Documentation Styles */
 
 :root {
-  /* Military Green Base - Used for primary UI elements */
-  --md-primary-fg-color: #4B5320;
-  --md-primary-fg-color--light: #6B7340;
-  --md-primary-fg-color--dark: #2B3300;
-  --md-accent-fg-color: #FFD700; /* Gold accent for tactical feel */
-  
-  /* Standard Font Override just in case */
-  --md-text-font: "Times New Roman", Times, serif;
-  --md-code-font: "Roboto Mono", monospace;
+    --md-primary-fg-color: #8fde6d;
+    --md-accent-fg-color: #00f2ff;
 }
 
-/* --- LIGHT MODE (Pastel Yellow / Private Archive Style) --- */
-[data-md-color-scheme="default"] {
-  /* Background: Pastel Yellow */
-  --md-default-bg-color: #FFFDF5;
-  /* Text: Black */
-  --md-default-fg-color: #000000;
-  --md-default-fg-color--light: #333333;
-  --md-default-fg-color--lighter: #555555;
-  
-  /* Tables and surface elements */
-  --md-code-bg-color: #F0EEE0;
+/* Make body text more readable and bold */
+body, .md-content {
+    font-family: 'Roboto', 'Courier New', Courier, monospace !important;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
 }
 
-/* --- DARK MODE (Tactical Radar Style) --- */
-[data-md-color-scheme="slate"] {
-  /* Background: Deep Black */
-  --md-default-bg-color: #000000;
-  /* Text: Tactical Yellow/Amber */
-  --md-default-fg-color: #FFD700; 
-  --md-default-fg-color--light: #E6C200;
-  --md-default-fg-color--lighter: #CCAD00;
-  
-  /* Muted elements and borders */
-  --md-code-bg-color: #111111;
-  --md-typeset-color: #FFD700;
-  
-  /* Specific Overrides for readability */
-  h1, h2, h3, h4, h5, h6 {
-    color: #4B5320; /* Keep headers military green or gold? Let's use Gold for contrast */
-    color: #FFD700;
-    text-shadow: 0 0 2px rgba(255, 215, 0, 0.3); /* Glow effect */
-  }
-  
-  /* Links */
-  a {
-    color: #50fa7b; /* Matrix Green for links */
-  }
+/* Headlines */
+h1, h2, h3 {
+    color: var(--md-primary-fg-color) !important;
+    font-weight: 700 !important;
 }
 
-/* Font Size Controls Container */
+/* Font Size Controls Styling */
 .font-controls {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-  gap: 5px;
+    display: flex;
+    gap: 8px;
+    margin-left: 20px;
+    align-items: center;
 }
 
 .font-btn {
-  background: var(--md-primary-fg-color);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px;
-  padding: 2px 8px;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 0.8rem;
-  transition: all 0.2s;
+    background: rgba(143, 222, 109, 0.1);
+    border: 1px solid #8fde6d;
+    color: #8fde6d;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+    transition: 0.2s;
+    font-weight: bold;
 }
 
 .font-btn:hover {
-  background: var(--md-accent-fg-color);
-  color: black;
+    background: #8fde6d;
+    color: #000;
+}
+
+/* Header Adjustments */
+.md-header__topic {
+    display: flex !important;
+    align-items: center;
+}
+
+/* Logo Fixes */
+.md-logo img {
+    height: 48px !important;
+    width: auto !important;
+}
+
+/* Navigation Links */
+.md-nav__link--active {
+    color: #8fde6d !important;
+    font-weight: bold;
+}
+
+/* Tables (Reports) */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+th {
+    background: rgba(143, 222, 109, 0.1) !important;
+    color: #8fde6d !important;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
