@@ -1,78 +1,73 @@
-// Custom JS for sbsQ Portal
+// Custom JS for sbsQ Portal - Tactical Version
 
 document.addEventListener("DOMContentLoaded", function() {
     console.log("sbsQ Tactical Interface Loaded");
 
-    // 1. Create Font Size Controls in Header
-    function setupFontControls() {
-        const headerTitle = document.querySelector(".md-header__topic");
-        if (headerTitle && !document.querySelector(".font-controls")) {
+    // 1. Create Floating Tactical Font Controls
+    function setupTacticalControls() {
+        if (!document.querySelector(".font-controls")) {
             const controls = document.createElement("div");
             controls.className = "font-controls";
             
+            const label = document.createElement("span");
+            label.innerText = "ZOOM:";
+            label.style.fontSize = "10px";
+            label.style.color = "#8fde6d";
+            label.style.marginRight = "5px";
+            
             const btnDecrease = document.createElement("button");
-            btnDecrease.innerText = "A-";
+            btnDecrease.innerText = "[-] ASC";
             btnDecrease.className = "font-btn";
-            btnDecrease.onclick = (e) => { e.preventDefault(); resizeFont(-1); };
+            btnDecrease.onclick = () => resizeFont(-1);
             
             const btnIncrease = document.createElement("button");
-            btnIncrease.innerText = "A+";
+            btnIncrease.innerText = "[+] DSC";
             btnIncrease.className = "font-btn";
-            btnIncrease.onclick = (e) => { e.preventDefault(); resizeFont(1); };
+            btnIncrease.onclick = () => resizeFont(1);
             
+            controls.appendChild(label);
             controls.appendChild(btnDecrease);
             controls.appendChild(btnIncrease);
-            headerTitle.appendChild(controls);
-            console.log("Font controls added to header");
+            document.body.appendChild(controls);
+            console.log("Tactical font controls deployed");
         }
     }
 
-    // 2. Fix Logo Link and Image
-    function setupLogo() {
-        const logoLink = document.querySelector(".md-header__button.md-logo");
-        if (logoLink) {
-            logoLink.href = "https://borodind-maker.github.io/sbsQ-portal/";
-            logoLink.title = "Return to Main Portal";
-            
-            const img = logoLink.querySelector("img");
-            if (img) {
-                // Point to absolute path of logo
-                img.src = "https://borodind-maker.github.io/sbsQ-portal/docs/assets/images/logo.png";
+    // 2. Fix Header Logo and Link
+    function setupHeader() {
+        const logo = document.querySelector(".md-logo");
+        if (logo) {
+            logo.href = "https://borodind-maker.github.io/sbsQ-portal/";
+            const logoImg = logo.querySelector("img");
+            if (logoImg) {
+                logoImg.src = "https://borodind-maker.github.io/sbsQ-portal/docs/assets/images/logo.png";
             }
         }
     }
 
-    // Run initial setup
-    setupFontControls();
-    setupLogo();
+    setupTacticalControls();
+    setupHeader();
 
-    // Re-run setup if MkDocs dynamic navigation changes (sometimes needed for Single Page features)
-    if (typeof MutationObserver !== 'undefined') {
-        const observer = new MutationObserver(() => {
-            setupFontControls();
-            setupLogo();
-        });
-        const header = document.querySelector('.md-header');
-        if (header) observer.observe(header, { childList: true, subtree: true });
-    }
+    // Re-check after dynamic navigation
+    const observer = new MutationObserver(() => {
+        setupTacticalControls();
+        setupHeader();
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
 });
 
-let currentFontSize = 100; // Percentage
-
 function resizeFont(delta) {
-    currentFontSize += delta * 10;
-    if (currentFontSize < 80) currentFontSize = 80;
-    if (currentFontSize > 180) currentFontSize = 180;
+    let size = parseInt(localStorage.getItem("sbs_font_scale") || "100");
+    size += delta * 15;
+    if (size < 80) size = 80;
+    if (size > 200) size = 200;
     
-    document.documentElement.style.fontSize = `${currentFontSize}%`;
-    localStorage.setItem("sbs_font_scale", currentFontSize);
-    console.log("Font resized to:", currentFontSize);
+    document.documentElement.style.fontSize = `${size}%`;
+    localStorage.setItem("sbs_font_scale", size);
 }
 
-// Restore saved font size on load
+// Global apply
 (function() {
-    const savedSize = localStorage.getItem("sbs_font_scale");
-    if (savedSize) {
-        document.documentElement.style.fontSize = `${savedSize}%`;
-    }
+    const size = localStorage.getItem("sbs_font_scale") || "100";
+    document.documentElement.style.fontSize = `${size}%`;
 })();
