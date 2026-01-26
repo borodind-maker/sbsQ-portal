@@ -1782,13 +1782,236 @@
 </div>
 
 <!-- 💬 CHAT SYSTEM DEMO -->
-<div class="tactical-chat">
-    <div style="background: #222; padding: 5px 10px; font-weight: bold; color: var(--md-accent-fg-color);">PILOT_REACH (Global)</div>
-    <div class="chat-messages" id="chat-stream">
-        <div class="msg"><span class="msg-pilot">SYSTEM:</span> Welcome, Pilot. Training ground is hot.</div>
+<!-- 💬 DRAGGABLE TACTICAL CHAT v2.0 -->
+<style>
+    /* Chat Styling */
+    .tactical-chat {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 320px;
+        background: rgba(10, 10, 10, 0.95);
+        border: 1px solid var(--md-accent-fg-color);
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        z-index: 9999;
+        font-family: 'Roboto Mono', monospace;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    .chat-header {
+        background: #1a1a1a;
+        padding: 10px;
+        cursor: move;
+        border-bottom: 1px solid #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+    }
+
+    .chat-title {
+        font-weight: bold;
+        color: var(--md-accent-fg-color);
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .chat-controls button {
+        background: none;
+        border: none;
+        color: #888;
+        cursor: pointer;
+        font-size: 1.2rem;
+        line-height: 1;
+        padding: 0 5px;
+    }
+
+    .chat-controls button:hover { color: #fff; }
+
+    .chat-body {
+        display: flex;
+        flex-direction: column;
+        height: 300px; /* Default height */
+    }
+
+    /* Minimized State */
+    .tactical-chat.minimized .chat-body {
+        display: none;
+    }
+
+    .tactical-chat.minimized {
+        height: auto; /* Shrink to header */
+        width: 250px;
+    }
+
+    .chat-messages {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        font-size: 0.8rem;
+        color: #ccc;
+    }
+
+    .msg { margin-bottom: 8px; }
+    .msg-pilot { color: var(--md-accent-fg-color); font-weight: bold; }
+
+    .chat-input-area {
+        padding: 10px;
+        border-top: 1px solid #333;
+        background: #111;
+    }
+
+    .chat-input {
+        width: 100%;
+        background: #000;
+        border: 1px solid #444;
+        color: #fff;
+        padding: 8px;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 0.8rem;
+    }
+</style>
+
+<div class="tactical-chat" id="tacticalChat">
+    <div class="chat-header" id="chatHeader">
+        <div class="chat-title"><span>📡 PILOT_REACH (DIRECT)</span></div>
+        <div class="chat-controls">
+            <button onclick="toggleChat()">_</button>
+        </div>
     </div>
-    <input type="text" class="chat-input" placeholder="Enter message..." readonly>
+    <div class="chat-body">
+        <div class="chat-messages" id="chat-stream">
+            <div class="msg"><span class="msg-pilot">SYSTEM:</span> Uplink established.</div>
+            <div class="msg"><span class="msg-pilot">SYSTEM:</span> Welcome to Kyiv_Sim Sector 7.</div>
+            <div class="msg"><span style="color:#d71414">ALERT:</span> Interference detected.</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="cmdInput" class="chat-input" placeholder="Type command... (e.g. /scan, /status)" autocomplete="off">
+        </div>
+    </div>
 </div>
+
+<script>
+    // --- CHAT LOGIC ---
+    const chat = document.getElementById("tacticalChat");
+    const header = document.getElementById("chatHeader");
+    const input = document.getElementById("cmdInput");
+    const stream = document.getElementById("chat-stream");
+    let isMinimized = false;
+
+    // Toggle Minimize
+    function toggleChat() {
+        isMinimized = !isMinimized;
+        if (isMinimized) {
+            chat.classList.add("minimized");
+        } else {
+            chat.classList.remove("minimized");
+            scrollToBottom();
+        }
+    }
+
+    // Message Handling
+    input.addEventListener("keypress", function(e) {
+        if (e.key === "Enter" && input.value.trim() !== "") {
+            sendMessage(input.value.trim());
+            input.value = "";
+        }
+    });
+
+    function sendMessage(text) {
+        addMessage("PILOT", text, "#fff");
+
+        // Simulating Latency & Processing
+        setTimeout(() => {
+            processCommand(text);
+        }, 600 + Math.random() * 500);
+    }
+
+    function addMessage(sender, text, color) {
+        const div = document.createElement("div");
+        div.className = "msg";
+        div.innerHTML = `<span style="color:${color || '#ccc'}; font-weight:bold;">${sender}:</span> ${text}`;
+        stream.appendChild(div);
+        scrollToBottom();
+    }
+
+    function scrollToBottom() {
+        stream.scrollTop = stream.scrollHeight;
+    }
+
+    // AI Logic (Simulated)
+    function processCommand(cmd) {
+        const lowerCmd = cmd.toLowerCase();
+        let response = "Command not recognized. Try /help.";
+        let color = "var(--md-accent-fg-color)";
+
+        if (lowerCmd.includes("/scan")) {
+            response = "Scanning sector... [3 targets found]";
+        } else if (lowerCmd.includes("/status")) {
+            response = "Sys: NOMINAL | Battery: 89% | Signal: -42dBm";
+        } else if (lowerCmd.includes("/deploy")) {
+            response = "Deploying asset... Authorization REQUIRED.";
+            color = "#f8f84f"; // Warning Yellow
+        } else if (lowerCmd.includes("/help")) {
+            response = "Avail: /scan, /status, /deploy, /return, /ping";
+        } else if (lowerCmd.includes("hello") || lowerCmd.includes("hi")) {
+            response = "Handshake acknowledged. Awaiting orders.";
+        } else if (lowerCmd.includes("roblox")) {
+            response = "Bridging to Roblox Engine... [Simulated]";
+        }
+
+        addMessage("SYSTEM", response, color);
+    }
+
+    // --- DRAG LOGIC ---
+    let isDragging = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    header.addEventListener("mousedown", dragStart);
+    document.addEventListener("mouseup", dragEnd);
+    document.addEventListener("mousemove", drag);
+
+    function dragStart(e) {
+        if (e.target === header || e.target.parentNode === header) {
+            initialX = e.clientX - xOffset;
+            initialY = e.clientY - yOffset;
+            isDragging = true;
+        }
+    }
+
+    function dragEnd(e) {
+        initialX = currentX;
+        initialY = currentY;
+        isDragging = false;
+    }
+
+    function drag(e) {
+        if (isDragging) {
+            e.preventDefault();
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+
+            xOffset = currentX;
+            yOffset = currentY;
+
+            setTranslate(currentX, currentY, chat);
+        }
+    }
+
+    function setTranslate(xPos, yPos, el) {
+        el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+</script>
 
 <hr />
 <h2 id="interface-architecture">🎮 Interface Architecture</h2>
