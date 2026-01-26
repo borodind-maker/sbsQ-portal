@@ -1,1554 +1,504 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBSQ SECURITY GATE | RESTRICTED AREA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto+Mono:wght@400;700&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <style>
+        :root {
+            --primary: #246c05;
+            --primary-glow: rgba(143, 222, 109, 0.4);
+            --secondary: #00f2ff;
+            --secondary-glow: rgba(13, 124, 214, 0.4);
+            --bg: #020202;
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #ffffff;
+            --text-dim: #94a3b8;
+            --danger: #d71414; /* Kept for Security Warning context */
+            --alert-bg: rgba(215, 20, 20, 0.05);
+            --font-main: 'Courier New', Courier, monospace;
+            --font-title: 'Syncopate', sans-serif;
+            --text-highlight: var(--secondary);
+        }
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-      
-      
+        * { box-sizing: border-box; }
         
-          <link rel="alternate" href="/sbsQ-portal/docs/tests/reports/nature_math_100_coverage_report/" hreflang="uk">
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-main);
+            margin: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+            /* Fit content in viewport height if possible */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh; 
+        }
+
+        /* HEADER SECTION */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .system-badge {
+            font-family: var(--font-main);
+            background: var(--glass);
+            color: var(--secondary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+            display: inline-block;
+            border: 1px solid var(--secondary);
+            box-shadow: 0 0 10px var(--secondary-glow);
+        }
+
+        h1 {
+            font-family: var(--font-title);
+            color: var(--danger);
+            font-size: 1.8rem;
+            margin: 5px 0 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* CONTENT GRID (Side-by-side on desktop) */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1.2fr 0.8fr; /* Warning takes more space, Action takes less */
+                align-items: stretch;
+            }
+        }
+
+        /* WARNING CARDS (Security Alert) */
+        .alert-box {
+            background: var(--alert-bg);
+            border-left: 4px solid var(--danger);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .alert-title {
+            color: var(--danger);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-family: var(--font-main);
+            font-size: 0.9rem;
+        }
+
+        .alert-content p {
+            margin: 0 0 10px;
+            font-size: 0.85rem;
+        }
+
+        .lang-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
         
-          <link rel="alternate" href="/sbsQ-portal/docs/en/tests/reports/nature_math_100_coverage_report/" hreflang="en">
-        
-      
-      
-      <link rel="icon" href="/sbsQ-portal/docs/assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
-    
-    
-      
-        <title>sbsQ SmartBeesSwarm Portal</title>
-      
-    
-    
-      <link rel="stylesheet" href="/sbsQ-portal/docs/assets/stylesheets/main.484c7ddc.min.css">
-      
-        
-        <link rel="stylesheet" href="/sbsQ-portal/docs/assets/stylesheets/palette.ab4e12ef.min.css">
-      
-      
+        @media (min-width: 900px) {
+            .lang-grid { grid-template-columns: 1fr 1fr; }
+        }
 
+        .lang-item {
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
 
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="/sbsQ-portal/docs/assets/_mkdocstrings.css">
-    
-      <link rel="stylesheet" href="/sbsQ-portal/docs/assets/_mkdocstrings.css">
-    
-      <link rel="stylesheet" href="/sbsQ-portal/docs/assets/custom.css">
-    
-    <script>__md_scope=new URL("/sbsQ-portal/docs/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
+        .lang-label {
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 3px;
+            display: block;
+            font-size: 0.7rem;
+            opacity: 0.7;
+        }
 
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
+        /* ACTION AREA */
+        .action-area {
+            text-align: center;
+            padding: 25px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-  
+        .btn-primary {
+            background-color: var(--secondary);
+            color: #000;
+            font-family: var(--font-title);
+            font-weight: 700;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px var(--secondary-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+        }
 
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/sbsQ-portal/docs/en/" title="sbsQ SmartBeesSwarm Portal" class="md-header__button md-logo" aria-label="sbsQ SmartBeesSwarm Portal" data-md-component="logo">
-      
-  <img src="/sbsQ-portal/docs/assets/images/logo.png" alt="logo">
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 40px var(--secondary-glow);
+            background-color: #fff;
+        }
 
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            sbsQ SmartBeesSwarm Portal
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+        /* MODAL (Google/Microsoft Style) */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: none; /* Hidden by default */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-card {
+            background: #050505;
+            width: 100%;
+            max-width: 800px;
+            height: 90vh; /* Takes up most of screen */
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--danger);
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(215, 20, 20, 0.1);
+            border-radius: 12px 12px 0 0;
+        }
+
+        .modal-title {
+            color: var(--danger);
+            font-family: var(--font-title);
+            font-size: 1.1rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .modal-close:hover { color: #fff; }
+
+        .modal-body {
+            flex: 1;
+            padding: 0;
+            overflow: hidden; /* Contains the scroll area */
+            position: relative;
+        }
+
+        /* Footer with Action */
+        .modal-footer {
+            padding: 20px 30px;
+            border-top: 1px solid var(--border);
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .scroll-status {
+            font-size: 0.8rem;
+            color: #888;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-agree {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 0.3s;
+            pointer-events: none; /* Disabled by default */
+        }
+
+        .btn-agree.active {
+            opacity: 1;
+            box-shadow: 0 0 15px rgba(36, 108, 5, 0.6);
+            cursor: pointer;
+            pointer-events: auto;
+            background: #4caf50;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Static Header & Warning -->
+        <header class="header">
+            <span class="system-badge">SYSTEM: sbsQ-Internal</span>
+            <h1>Access Restricted</h1>
+            <p class="subtitle">Content protected by International IP Laws & National Security Regulations. <br>Unauthorized access is monitored.</p>
+        </header>
+
+        <!-- Main Layout Grid -->
+        <div class="content-grid">
             
-              
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Tactical Mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Tactical Mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-      <div class="md-header__option">
-  <div class="md-select">
-    
-    <button class="md-header__button md-icon" aria-label="Select language">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
-    </button>
-    <div class="md-select__inner">
-      <ul class="md-select__list">
-        
-          <li class="md-select__item">
-            <a href="/sbsQ-portal/docs/tests/reports/nature_math_100_coverage_report/" hreflang="uk" class="md-select__link">
-              Ukrainian
-            </a>
-          </li>
-        
-          <li class="md-select__item">
-            <a href="/sbsQ-portal/docs/en/tests/reports/nature_math_100_coverage_report/" hreflang="en" class="md-select__link">
-              English
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/borodind-maker/sbsQ-portal" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    sbsQ-portal
-  </div>
-</a>
-      </div>
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="/sbsQ-portal/docs/en/" title="sbsQ SmartBeesSwarm Portal" class="md-nav__button md-logo" aria-label="sbsQ SmartBeesSwarm Portal" data-md-component="logo">
-      
-  <img src="/sbsQ-portal/docs/assets/images/logo.png" alt="logo">
-
-    </a>
-    sbsQ SmartBeesSwarm Portal
-  </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/borodind-maker/sbsQ-portal" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    sbsQ-portal
-  </div>
-</a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting Started
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Getting Started
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/00_QUICK_START/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Quick Start
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/FULL_CYCLE_WORKFLOW/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Full Cycle Workflow
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/SYSTEM_STATISTICS/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    System Statistics
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/BUILD_PRODUCTION/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Build & Security
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architecture
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Architecture
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/Architecture_Overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/STRATEGIC_VISION/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Strategic Vision
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/ARCHITECTURAL_PARADIGM/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Paradigm (VLG-JEPA)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/QUANTUM_NATURE_PROTOCOL/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Quantum Nature Protocol
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/HARMONIC_DECISION_MATRIX/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TCI-Multi-Dimensional Core
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/00_General/SYSTEM_CONCEPT_GOLD/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    System Concept
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    User Interfaces
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    User Interfaces
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/05_User_Interfaces/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/05_User_Interfaces/PILOT_INTERFACE/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pilot 3D Screen
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/05_User_Interfaces/ADMIN_PANEL/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    General Admin Panel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    System Tiers
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    System Tiers
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/01_Core_Intelligence/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Core Intelligence (Brain)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/01_Core_Intelligence/HARMONY_GUARDRAILS/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Harmony Guardrails
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/01_Core_Intelligence/NATIVE_AI_PIPELINE/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Native AI Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/02_Body_Execution/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Body Execution (Body)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/03_Nervous_System/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Nervous System (Comm)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/04_Infrastructure/ROBLOX_DIGITAL_TWIN/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Roblox Digital Twin
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Validation & Proofs
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Validation & Proofs
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/architecture/TESTS_CATALOGUE.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Suite Catalogue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/architecture/TRAINING_TOOLS_CATALOGUE.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Training Tools
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/architecture/SENSORS_CATALOGUE.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hardware & Sensors
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Technical Reports
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Technical Reports
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/architecture/MODULES_CATALOGUE.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Modules Catalogue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/reports/DETAILED_CODE_STATS/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Detailed Code Stats
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    API Reference
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    API Reference
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/reference/core/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Core API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/reference/brain/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Brain API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/reference/ai/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AI & Vision
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/sbsQ-portal/docs/en/reference/comm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Communications
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
+            <!-- Threat/Warning Block -->
+            <div class="alert-box">
+                <div class="alert-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    SECURITY WARNING | ДЕРЖАВНА БЕЗПЕКА
                 </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-</nav>
-                  </div>
+                <div class="alert-content">
+                    <p><strong>[UA]</strong> Система класифікується як технологія подвійного призначення. Спроба протиправного доступу до вихідного коду може розглядатися як шпигунство або диверсія відповідно КК України.</p>
+                    <div class="lang-grid">
+                        <div class="lang-item">
+                            <span class="lang-label">ENGLISH</span>
+                            This system is classified as Dual-Use Technology. Unauthorized access attempts to source code may be prosecuted as espionage.
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-label">KOREAN</span>
+                            이 시스템은 이중 용도 기술로 분류됩니다. 소스 코드에 대한 무단 액세스 시도는 간첩 행위로 기소될 수 있습니다.
+                        </div>
+                    </div>
                 </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
-                
-  <h1>404 - Not found</h1>
-
-              </article>
             </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+            <!-- Invitation to Simulation -->
+            <div class="action-area">
+                <h2 style="font-family: 'Syncopate'; margin-bottom: 15px; color: #fff; font-size: 1.1rem;">Public Simulation Access</h2>
+                <p style="margin-bottom: 20px; color: #aaa; font-size: 0.85rem;">
+                    You are invited to access the "GAME LAND DIGITAL TWIN". This area provides a safe visualization of the algorithms.
+                </p>
+                <button class="btn-primary" onclick="openTermsModal()">Enter Simulation</button>
+                <p style="margin-top: 10px; font-size: 0.7rem; color: #555;">Acceptance of Security Terms required.</p>
+            </div>
+
         </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
+
     </div>
-  </div>
-</footer>
-      
+
+    <!-- MODAL POPUP (Terms of Service Style) -->
+    <div id="termsModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title">SECURITY CLEARANCE AGREEMENT</div>
+                <button class="modal-close" onclick="closeTermsModal()">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- The Scrollable Content -->
+                <div class="terms-scroll-container" id="termsContent" style="background: #000; padding: 25px; border-radius: 12px; height: 100%; overflow-y: scroll; border: 1px solid #333; font-family: var(--font-main);">
+    
+                    <div style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid var(--danger); padding-bottom: 20px;">
+                        <h2 style="color: var(--danger); font-family: var(--font-title); font-size: 0.9rem; letter-spacing: 2px;">ЮРИДИЧНЕ ПОПЕРЕДЖЕННЯ ТА ЗАХИСТ sbsQ</h2>
+                        <p style="color: #666; font-size: 0.7rem;">LEGAL NOTICE & IP PROTECTION PROTOCOL</p>
+                    </div>
+
+                    <section style="margin-bottom: 40px;">
+                        <h3 style="color: var(--danger); border-left: 3px solid var(--danger); padding-left: 10px; font-size: 1rem;">🇺🇦 УКРАЇНСЬКА ВЕРСІЯ</h3>
+                        
+                        <h4 style="color: #fff; margin-bottom: 5px;">1. ПРЕДМЕТ ЗАХИСТУ</h4>
+                        <p style="color: #bbb; font-size: 0.9rem;">Програмне забезпечення <strong>sbsQ</strong>, включаючи методи, алгоритми, цифрові двійники та моделі поведінки, є приватна інтелектуальна власність.</p>
+
+                        <h4 style="color: #fff; margin-bottom: 5px;">2. КРИМІНАЛЬНІ САНКЦІЇ</h4>
+                        <p style="color: #bbb; font-size: 0.9rem;"><strong>Україна:</strong> викрадення або несанкціоноване копіювання коду, методів, може кваліфікуватися як злочин проти державиків до довічного ув'язнення.</p>
+
+                        <h4 style="color: #fff; margin-bottom: 5px;">3. ЦИВІЛЬНА ВІДПОВІДАЛЬНІСТЬ</h4>
+                        <p style="color: #bbb; font-size: 0.9rem;">Автор залишає за собою право на відшкодування збитків у <strong>десятикратному розмірі</strong> від вартості ліцензії через міжнародні суди та Interpol.</p>
+
+                        <h4 style="color: #fff; margin-bottom: 5px;">4. ЗГОДА З УМОВАМИ</h4>
+                        <p style="color: #bbb; font-size: 0.9rem;">Натискаючи кнопку «Ознайомився», ви підтверджуєте, що усвідомлюєте наслідки протиправного використання технології sbsQ.</p>
+                    </section>
+
+                    <hr style="border: 0; border-top: 1px solid #222; margin: 30px 0;">
+
+                    <section style="margin-bottom: 40px;">
+                        <h3 style="color: var(--secondary); border-left: 3px solid var(--secondary); padding-left: 10px; font-size: 1rem;">🇬🇧 ENGLISH VERSION</h3>
+                        
+                        <h4 style="color: #fff;">1) INTERNATIONAL LAW</h4>
+                        <ul style="color: #bbb; font-size: 0.85rem; padding-left: 20px;">
+                            <li><a href="https://www.wipo.int/treaties/en/ip/berne/" target="_blank" style="color: var(--secondary);">Berne Convention</a> – Art. 2(1), 5, 9, 12</li>
+                            <li><a href="https://www.wto.org/english/docs_e/legal_e/27-trips.pdf" target="_blank" style="color: var(--secondary);">TRIPS Agreement</a> – Art. 10(1), 28, 41, 61</li>
+                            <li><a href="https://www.wipo.int/treaties/en/ip/wct/" target="_blank" style="color: var(--secondary);">WIPO Copyright Treaty (WCT)</a></li>
+                            <li><a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target="_blank" style="color: var(--secondary);">UDHR</a> – Art. 17 (Property Rights)</li>
+                        </ul>
+
+                        <h4 style="color: #fff;">2) UNITED STATES LAW</h4>
+                        <ul style="color: #bbb; font-size: 0.85rem; padding-left: 20px;">
+                            <li><a href="https://www.law.cornell.edu/uscode/text/17" target="_blank" style="color: var(--secondary);">U.S. Copyright Act</a> – §102, §506</li>
+                            <li><a href="https://www.law.cornell.edu/uscode/text/17/1201" target="_blank" style="color: var(--secondary);">DMCA §1201</a> (Anti-Circumvention)</li>
+                        </ul>
+
+                        <h4 style="color: #fff;">3) UKRAINE LAW</h4>
+                        <ul style="color: #bbb; font-size: 0.85rem; padding-left: 20px;">
+                            <li><a href="https://zakon.rada.gov.ua/laws/show/254%D0%BA/96-%D0%B2%D1%80#Text" target="_blank" style="color: var(--secondary);">Constitution</a> – Art. 41, 54</li>
+                            <li><a href="https://zakon.rada.gov.ua/laws/show/2341-14#Text" target="_blank" style="color: var(--secondary);">Criminal Code</a> – Art. 176, 361, 333</li>
+                        </ul>
+                    </section>
+
+                    <hr style="border: 0; border-top: 1px solid #222; margin: 30px 0;">
+
+                    <section style="margin-bottom: 40px;">
+                        <h3 style="color: #fff; border-left: 3px solid #fff; padding-left: 10px; font-size: 1rem;">🇰🇷 한국어 버전 (KOREAN)</h3>
+                        
+                        <h4 style="color: #fff;">1) 국제법</h4>
+                        <ul style="color: #bbb; font-size: 0.85rem; padding-left: 20px;">
+                            <li>베른 협약 (Berne Convention)</li>
+                            <li>TRIPS 협정 (WTO)</li>
+                        </ul>
+
+                        <h4 style="color: #fff;">2) 대한민국 법</h4>
+                        <ul style="color: #bbb; font-size: 0.85rem; padding-left: 20px;">
+                            <li><a href="https://elaw.klri.re.kr/eng_service/lawView.do?hseq=1&amp;lang=ENG" target="_blank" style="color: var(--secondary);">대한민국 헌법</a> – 제23조</li>
+                            <li><a href="https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=57809#0000" target="_blank" style="color: var(--secondary);">저작권법</a> – 제4조, 제97-5조</li>
+                            <li><a href="https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53072&amp;lang=ENG" target="_blank" style="color: var(--secondary);">부정경쟁방지법</a></li>
+                        </ul>
+                    </section>
+
+                    <div style="text-align: center; padding: 50px 0 20px 0; border-top: 1px dashed #333;">
+                        <p style="color: var(--danger); font-weight: bold; font-family: var(--font-title); font-size: 0.7rem;">[ END OF DOCUMENT / КІНЕЦЬ ДОКУМЕНТА ]</p>
+                        <p style="color: #444; font-size: 0.6rem;">Verification Code: SBSQ-SEC-2026-ALPHA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="scroll-status" id="scrollStatus">
+                    <span>📜 Scroll to the bottom to accept</span>
+                </div>
+                <button id="btnAgree" class="btn-agree" onclick="proceedToSim()">
+                    I ACKNOWLEDGE / ОЗНАЙОМИВСЯ
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "/sbsQ-portal/docs/", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.expand", "navigation.top", "navigation.tracking"], "search": "/sbsQ-portal/docs/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
-      <script src="/sbsQ-portal/docs/assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="/sbsQ-portal/docs/assets/custom.js"></script>
-      
-    
-  </body>
+
+    <script>
+        const modal = document.getElementById('termsModal');
+        const termsBox = document.getElementById('termsContent');
+        const btnAgree = document.getElementById('btnAgree');
+        const scrollStatus = document.getElementById('scrollStatus');
+        const targetUrl = "https://borodind-maker.github.io/sbsQ-portal/docs/04_Infrastructure/ROBLOX_DIGITAL_TWIN/";
+        let isScrolledResult = false;
+
+        function openTermsModal() {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Stop background scroll
+            
+            // Reset state
+            termsBox.scrollTop = 0;
+            btnAgree.classList.remove('active');
+            isScrolledResult = false;
+            updateStatus(false);
+        }
+
+        function closeTermsModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateStatus(done) {
+            if (done) {
+                scrollStatus.innerHTML = '<span style="color:#4caf50">✅ Ready to proceed</span>';
+            } else {
+                scrollStatus.innerHTML = '<span>📜 Please read the full text...</span>';
+            }
+        }
+
+        // Scroll listener to detect bottom
+        termsBox.addEventListener('scroll', () => {
+            // Tolerance of 10px
+            const scrollBottom = termsBox.scrollTop + termsBox.clientHeight;
+            const scrollHeight = termsBox.scrollHeight;
+
+            if (scrollHeight - scrollBottom <= 20) {
+                if (!isScrolledResult) {
+                    isScrolledResult = true;
+                    btnAgree.classList.add('active');
+                    updateStatus(true);
+                }
+            }
+        });
+
+        function proceedToSim() {
+            if (isScrolledResult) {
+                window.location.href = targetUrl;
+            }
+        }
+
+        // Close on outside click
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeTermsModal();
+            }
+        }
+    </script>
+</body>
 </html>
