@@ -3,32 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartBeesSwarm Quantum | The Future of Autonomous Swarms</title>
-    <meta name="description" content="SmartBees Quantum - перша у світі операційна система для автономних роїв, що базується на природних константах та трійковій логіці.">
-    <meta name="keywords" content="SmartBees, Quantum, Swarm, Autonomous, Drones, AI, Ukraine">
+    <title>SmartBees Quantum | The Future of Autonomous Swarms</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #246с05;
-            --primary-glow: rgba(143, 222, 109, 0.4);
+            /* Default Dark/Green Theme (User Preferred) */
+            --primary: #1e8f01;
+            --primary-glow: rgba(30, 143, 1, 0.4);
             --secondary: #00f2ff;
             --secondary-glow: rgba(0, 242, 255, 0.4);
             --bg: #020202;
             --card-bg: rgba(255, 255, 255, 0.02);
             --glass: rgba(255, 255, 255, 0.05);
             --border: rgba(255, 255, 255, 0.08);
-            --text: #c71414;
-            --text-dim: #f8f84f;
-            --font-main: 'Courier New', Courier, monospace;
+            --text: #ffffff;
+            --text-dim: #94a3b8;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
             --font-title: 'Syncopate', sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Light Theme */
+        body.light-theme {
+            --primary: #156301;
+            --primary-glow: rgba(21, 99, 1, 0.2);
+            --bg: #f8fafceb;
+            --card-bg: #ffffff;
+            --glass: rgba(0, 0, 0, 0.05);
+            --border: rgba(0, 0, 0, 0.1);
+            --text: #0f172a;
+            --text-dim: #475569;
         }
 
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; padding: 0; box-sizing: border-box;
+            transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+            font-size: 100%; /* Scale base for all REM elements */
+            scroll-behavior: smooth;
         }
 
         body {
@@ -37,13 +55,8 @@
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        /* Ambient Animations */
-        @keyframes pulse-bg {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
+            width: 100%;
+            max-width: 100vw;
         }
 
         .bg-mesh {
@@ -51,10 +64,8 @@
             top: 0; left: 0; width: 100%; height: 100%;
             background-image: 
                 radial-gradient(at 0% 0%, hsla(100, 60%, 15%, 0.15) 0, transparent 50%), 
-                radial-gradient(at 100% 0%, hsla(180, 60%, 15%, 0.15) 0, transparent 50%),
-                radial-gradient(at 50% 50%, hsla(100, 60%, 5%, 0.1) 0, transparent 50%);
+                radial-gradient(at 100% 0%, hsla(180, 60%, 15%, 0.15) 0, transparent 50%);
             z-index: -1;
-            animation: pulse-bg 10s infinite alternate;
         }
 
         /* Navbar */
@@ -63,7 +74,7 @@
             top: 0; width: 100%; height: 90px;
             display: flex; justify-content: space-between; align-items: center;
             padding: 0 5%;
-            background: rgba(2, 2, 2, 0.7);
+            background: var(--bg);
             backdrop-filter: blur(30px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
@@ -79,7 +90,7 @@
         }
 
         .nav-links {
-            display: flex; gap: 40px; align-items: center;
+            display: flex; gap: 30px; align-items: center;
         }
 
         .nav-links a {
@@ -98,29 +109,39 @@
             color: var(--primary);
         }
 
-        .lang-toggle {
-            display: flex; gap: 5px;
+        .controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
             background: var(--glass);
-            padding: 4px; border-radius: 30px;
+            padding: 5px 12px;
+            border-radius: 50px;
             border: 1px solid var(--border);
         }
 
-        .lang-toggle button {
+        .ctrl-btn {
             background: none; border: none; color: var(--text);
-            padding: 6px 14px; border-radius: 20px;
-            cursor: pointer; font-size: 0.7rem; font-weight: 800;
-            transition: 0.3s;
+            padding: 6px; border-radius: 50%; width: 34px; height: 34px;
+            cursor: pointer; font-size: 0.85rem; font-weight: 900;
+            display: flex; align-items: center; justify-content: center;
+            transition: 0.2s;
         }
+        .ctrl-btn:hover { background: var(--primary); color: #000; }
 
-        .lang-toggle button.active {
-            background: var(--primary);
-            color: #000;
+        /* Google Translate Widget Styling */
+        #google_translate_element {
+            display: inline-block;
+        }
+        .goog-te-gadget-simple {
+            background: transparent !important;
+            border: none !important;
+            padding: 4px !important;
         }
 
         /* Hero */
         .hero {
-            height: 100vh;
-            display: flex; align-items: center; padding: 0 5%;
+            min-height: 100vh;
+            display: flex; align-items: center; padding: 120px 5% 50px;
             position: relative; overflow: hidden;
         }
 
@@ -137,7 +158,7 @@
 
         .hero h1 {
             font-family: var(--font-title);
-            font-size: 5vw; line-height: 1;
+            font-size: 4.5rem; line-height: 1.1;
             margin-bottom: 30px; text-transform: uppercase;
             letter-spacing: -2px;
         }
@@ -146,6 +167,7 @@
             display: block;
             color: transparent;
             -webkit-text-stroke: 1px var(--primary);
+            text-shadow: 0 0 20px var(--primary-glow);
         }
 
         .hero p {
@@ -156,30 +178,28 @@
 
         .hero-visual {
             flex: 1; display: flex; justify-content: center; align-items: center;
-            position: relative;
         }
 
         .main-img-wrap {
-            width: 100%; height: 60vh;
-            border-radius: 100px 20px 100px 20px;
+            width: 100%; border-radius: 40px;
             border: 1px solid var(--border);
             overflow: hidden;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
-            transform: skewY(-2deg);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.6);
         }
 
         .main-img-wrap img {
-            width: 100%; height: 100%; object-fit: cover;
-            filter: brightness(0.8) contrast(1.2);
+            width: 100%; height: auto; display: block;
+            filter: contrast(1.1);
         }
 
-        /* Dynamic Stats - SANITIZED: No secret constants exposed */
+        /* Dynamic Stats */
         .stats-banner {
             background: var(--glass);
-            display: flex; justify-content: space-around;
+            display: grid; grid-template-columns: repeat(4, 1fr);
             padding: 60px 5%;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
+            text-align: center;
         }
 
         .stat-item h2 {
@@ -203,27 +223,12 @@
         }
 
         .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
+            background: var(--card-bg); border: 1px solid var(--border);
             padding: 50px; border-radius: 40px;
-            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative; overflow: hidden;
+            transition: 0.4s;
         }
 
-        .card:hover {
-            background: rgba(255,255,255,0.06);
-            border-color: var(--primary);
-            transform: translateY(-20px);
-        }
-
-        .card::after {
-            content: ''; position: absolute; top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
-            opacity: 0; transition: 0.5s;
-        }
-
-        .card:hover::after { opacity: 0.2; }
+        .card:hover { border-color: var(--primary); transform: translateY(-10px); }
 
         .card h3 {
             font-family: var(--font-title);
@@ -231,232 +236,141 @@
             letter-spacing: 1px; color: var(--secondary);
         }
 
-        .card p { color: var(--text-dim); font-size: 1rem; }
-
-        /* Multi-lang Utility */
-        [data-lang="en"] .ua { display: none; }
-        [data-lang="ua"] .en { display: none; }
-
         /* Buttons */
         .btn {
             padding: 20px 45px; border-radius: 50px;
             font-weight: 800; text-transform: uppercase;
             font-size: 0.8rem; letter-spacing: 2px;
             text-decoration: none; display: inline-flex;
-            align-items: center; gap: 12px;
             transition: 0.4s;
         }
 
         .btn-fill {
-            background: var(--primary); color: #000;
+            background: var(--primary); color: #fff;
             box-shadow: 0 15px 40px var(--primary-glow);
         }
 
-        .btn-fill:hover {
-            transform: scale(1.05) translateY(-5px);
-            box-shadow: 0 25px 60px var(--primary-glow);
-        }
-
-        /* Footer */
         footer {
-            background: #000; padding: 100px 5% 50px;
+            background: rgba(0,0,0,0.1); padding: 80px 5%;
             border-top: 1px solid var(--border);
+            text-align: center; font-size: 0.85rem; color: var(--text-dim);
         }
 
-        .footer-wrap {
-            display: flex; justify-content: space-between; align-items: flex-start;
-        }
-
-        .footer-logo { font-family: var(--font-title); font-size: 2.5rem; color: var(--primary); }
-
-        /* Tablet/Mobile fixes */
         @media (max-width: 1024px) {
-            .hero { flex-direction: column; text-align: center; height: auto; padding-top: 200px; }
-            .hero h1 { font-size: 10vw; }
-            .grid { grid-template-columns: 1fr; }
-            .stat-item { margin-bottom: 30px; }
+            .hero { flex-direction: column; text-align: center; }
+            .hero h1 { font-size: 3rem; }
+            .grid, .stats-banner { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
-<body data-lang="ua">
+<body id="mainBody">
 
     <div class="bg-mesh"></div>
 
     <nav>
-        <div class="logo">Σ SmartBeesSwarm</div>
+        <div class="logo">Σ SBS</div>
         <div class="nav-links">
-            <a href="#sectors" class="ua">Рішення</a>
-            <a href="#sectors" class="en">Solutions</a>
-            <a href="docs/00_General/00_QUICK_START/" class="ua">Технології</a>
-            <a href="docs/00_General/00_QUICK_START/" class="en">Tech</a>
-            <a href="docs/" class="ua">Документація</a>
-            <a href="docs/" class="en">Documentation</a>
-            <div class="lang-toggle">
-                <button onclick="setLang('ua')" class="active">UA</button>
-                <button onclick="setLang('en')">EN</button>
+            <a href="#sectors">Рішення</a>
+            <a href="#tech">Технології</a>
+            <div class="controls">
+                <button class="ctrl-btn" onclick="toggleTheme()" id="tBtn">🌙</button>
+                <button class="ctrl-btn" onclick="changeFontSize(5)">A+</button>
+                <button class="ctrl-btn" onclick="changeFontSize(-5)">A-</button>
             </div>
+            <div id="google_translate_element"></div>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-label ua">Autonomous Swarm OS v1.6</span>
-            <span class="hero-label en">Autonomous Swarm OS v1.6</span>
-            
-            <h1 class="ua">Довірена <span>Гармонія</span> Роїв</h1>
-            <h1 class="en">Trusted Swarm <span>Harmony</span></h1>
-            
-            <p class="ua">Керуйте майбутнім з математичною точністю. SmartBees — це перша у світі операційна система для роїв, що базується на природних константах та трійковій логіці.</p>
-            <p class="en">Control the future with mathematical precision. SmartBees is the world's first swarm OS based on natural constants and ternary logic.</p>
-            
+            <span class="hero-label">SBS OS v1.6</span>
+            <h1>Довірена <span>Гармонія</span> Роїв</h1>
+            <p>Керуйте майбутнім з математичною точністю. SmartBeesSwarm — це перша у світі операційна система для роїв, що базується на природних константах та трійковій логіці.</p>
             <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <a href="docs/04_Infrastructure/ROBLOX_DIGITAL_TWIN/" class="btn btn-fill">
-                    <span class="ua">Отримати Демо</span>
-                    <span class="en">Request Demo</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="docs/reports/MODULES_CATALOGUE/" class="btn" style="border: 1px solid var(--border); color: #fff;">
-                    <span class="ua">Специфікації</span>
-                    <span class="en">Technical Specs</span>
-                </a>
+                <a href="#" class="btn btn-fill">Отримати Демо</a>
+                <a href="#" class="btn" style="border: 1px solid var(--border); color: var(--text);">Специфікації</a>
             </div>
         </div>
-
         <div class="hero-visual">
             <div class="main-img-wrap">
-                <img src="assets/hero_swarm.png" alt="SmartBees Quantum Swarm">
+                <img src="https://borodind-maker.github.io/sbsQ-portal/assets/hero_swarm.png" alt="SmartBeesSwarm">
             </div>
         </div>
     </section>
 
-    <!-- SANITIZED: Statistics use BRANDED terminology per OBFUSCATION_DICTIONARY -->
     <div class="stats-banner">
-        <div class="stat-item">
-            <h2>60<span>Hz</span></h2>
-            <p class="ua">Реакція рефлексів</p>
-            <p class="en">Reflex latency</p>
-        </div>
-        <div class="stat-item">
-            <h2>50<span>x</span></h2>
-            <p class="ua">C++ Оптимізація</p>
-            <p class="en">C++ Optimization</p>
-        </div>
-        <div class="stat-item">
-            <h2>GHS</h2>
-            <p class="ua">Планетарний Резонанс</p>
-            <p class="en">Planetary Resonance</p>
-        </div>
-        <div class="stat-item">
-            <h2>TCI</h2>
-            <p class="ua">Гармонічний Поріг</p>
-            <p class="en">Harmonic Threshold</p>
-        </div>
+        <div class="stat-item"><h2>60Hz</h2><p>Реакція рефлексів</p></div>
+        <div class="stat-item"><h2>50x</h2><p>C++ Оптимізація</p></div>
+        <div class="stat-item"><h2>7.83</h2><p>Sync Schumann</p></div>
+        <div class="stat-item"><h2>Φ</h2><p>Ratio</p></div>
     </div>
 
     <section class="sectors" id="sectors">
-        <span class="hero-label ua" style="text-align: center;">Галузеві рішення</span>
-        <span class="hero-label en" style="text-align: center;">Industries</span>
-        
         <div class="grid">
-            <a href="docs/reference/sensors/" class="card" style="text-decoration: none; display: block; height: 100%;">
+            <div class="card">
                 <h3>AGRICULTURE 4.0</h3>
-                <p class="ua">Автономний моніторинг посівів та точкове внесення з використанням ройової координації.</p>
-                <p class="en">Autonomous crop monitoring and precision application using swarm coordination.</p>
-            </a>
-            <a href="docs/00_General/00_QUICK_START/" class="card" style="text-decoration: none; display: block; height: 100%;">
+                <p>Автономний моніторинг посівів та точкове внесення з використанням ройової координації.</p>
+            </div>
+            <div class="card">
                 <h3>LOGISTICS</h3>
-                <p class="ua">Динамічна доставка та складське пакування за алгоритмами «Бджолиних сот».</p>
-                <p class="en">Dynamic delivery and warehouse packing via "Honey-Comb" algorithms.</p>
-            </a>
-            <a href="docs/01_Core_Intelligence/HARMONY_GUARDRAILS/" class="card" style="text-decoration: none; display: block; height: 100%;">
+                <p>Динамічна доставка та складське пакування за алгоритмами «Бджолиних сот».</p>
+            </div>
+            <div class="card">
                 <h3>DEFENSE</h3>
-                <p class="ua">Стійкі до завад мережі зв'язку та автономне патрулювання за протоколами Adaptive Pathing.</p>
-                <p class="en">Interference-resilient communication meshes and autonomous patrolling using Adaptive Pathing protocols.</p>
-            </a>
-        </div>
-    </section>
-
-    <style>
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            cursor: pointer;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(143, 222, 109, 0.2);
-            background: rgba(143, 222, 109, 0.05);
-        }
-    </style>
-
-    <!-- Validation Evidence Section -->
-    <section class="sectors" id="validation">
-        <span class="hero-label ua" style="text-align: center;">Підтвердження та Валідація</span>
-        <span class="hero-label en" style="text-align: center;">Validation & Evidence</span>
-        
-        <div class="grid">
-            <div class="card">
-                <h3>260,000+ LOC</h3>
-                <p class="ua">Повний об'єм коду системи, задокументований та верифікований.</p>
-                <p class="en">Full system codebase, documented and verified.</p>
+                <p>Стійкі до РЕБ мережі зв'язку та автономне патрулювання за протоколами Moebius.</p>
             </div>
-            <div class="card">
-                <h3>910+ TESTS</h3>
-                <p class="ua">Комплексний набір тестів для всіх модулів системи.</p>
-                <p class="en">Comprehensive test suite covering all system modules.</p>
-            </div>
-            <div class="card">
-                <h3>1M+ SIMULATIONS</h3>
-                <p class="ua">Результати стрес-тестування та симуляцій доступні в репортах.</p>
-                <p class="en">Stress test and simulation results available in reports.</p>
-            </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 60px;">
-            <a href="docs/reports/sim_tests/" class="btn btn-fill">
-                <span class="ua">Переглянути Звіти Симуляцій</span>
-                <span class="en">View Simulation Reports</span>
-            </a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-wrap">
-            <div>
-                <div class="footer-logo">sbsQ</div>
-                <p style="color: var(--text-dim); max-width: 300px; font-size: 0.9rem;">The only swarm system that dreams. Designed for biological intelligence excellence.</p>
-            </div>
-            <div style="display: flex; gap: 80px;">
-                <div class="nav-links" style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
-                    <a href="docs/">Documentation</a>
-                    <a href="docs/reports/">Reports</a>
-                    <a href="docs/architecture/TESTS_CATALOGUE/">Test Suite</a>
-                </div>
-                <div class="nav-links" style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
-                    <a href="docs/00_General/Architecture_Overview/">Architecture</a>
-                    <a href="docs/reports/sim_tests/">Simulations</a>
-                    <a href="docs/00_General/SYSTEM_STATISTICS/">Statistics</a>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem; display: flex; justify-content: space-between;">
-            <p>&copy; 2026 SmartBees Quantum Intelligence. All rights reserved.</p>
-            <p>Made in Ukraine with 💚 and TCI-Quantum-Inspired Architecture.</p>
-        </div>
+        <p>&copy; 2026 SmartBees Quantum Intelligence. Made in Ukraine with 💚 and Ternary Logic.</p>
     </footer>
 
-    <script>
-        function setLang(lang) {
-            document.body.setAttribute('data-lang', lang);
-            document.querySelectorAll('.lang-toggle button').forEach(btn => {
-                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
-            });
-            localStorage.setItem('sbs_lang', lang);
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'uk',
+                includedLanguages: 'uk,en,de,ko',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
         }
-        
-        // Auto load saved preference
-        const savedLang = localStorage.getItem('sbs_lang') || 'ua';
-        setLang(savedLang);
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        const UI = {
+            state: {
+                size: parseInt(localStorage.getItem('s_fsize')) || 100,
+                theme: localStorage.getItem('s_theme') || 'dark'
+            },
+            apply() {
+                document.documentElement.style.fontSize = this.state.size + '%';
+                const body = document.getElementById('mainBody');
+                const btn = document.getElementById('tBtn');
+                if (this.state.theme === 'light') {
+                    body.classList.add('light-theme');
+                    btn.innerText = '☀️';
+                } else {
+                    body.classList.remove('light-theme');
+                    btn.innerText = '🌙';
+                }
+                localStorage.setItem('s_fsize', this.state.size);
+                localStorage.setItem('s_theme', this.state.theme);
+            }
+        };
+
+        function toggleTheme() {
+            UI.state.theme = UI.state.theme === 'dark' ? 'light' : 'dark';
+            UI.apply();
+        }
+
+        function changeFontSize(delta) {
+            UI.state.size = Math.min(Math.max(UI.state.size + delta, 70), 150);
+            UI.apply();
+        }
+
+        UI.apply();
     </script>
 </body>
 </html>
