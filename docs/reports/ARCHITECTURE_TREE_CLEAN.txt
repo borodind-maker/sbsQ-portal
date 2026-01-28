@@ -3,14 +3,14 @@
 ║               💎 SmartBees Quantum (sbsQ) v1.6 Architecture                  ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-📊 Статистика:
-   • Python модулів      : 14
-   • Директорій          : 120
-   • Файлів              : 234
-   • Розмір коду         : 1.3 GB
+📊 Statistics:
+   • Python Modules      : 14
+   • Directories         : 120
+   • Total Files         : 234
+   • Code Size           : 1.3 GB
 
-ℹ️ Легенда:
-   📁 Folder   📦 Пакет   🐍 Python код   📝 Документація   ⚙️ Конфігурація
+ℹ️ Legend:
+   📁 Folder   📦 Package   🐍 Python Code   📝 Documentation   ⚙️ Configuration
 
 ════════════════════════════════════════════════════════════════════════════════
 
@@ -286,7 +286,7 @@
     │   │   │   └── 🌐 index.html (42.7 KB)
     │   │   ├── 📁 en/
     │   │   │   ├── 📝 ARCHITECTURE_LOGICAL_DIRS.md (10.5 KB)
-    │   │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (132.8 KB)
+    │   │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (8.0 KB)
     │   │   │   ├── 📝 DETAILED_CODE_STATS.md (751.0 B)
     │   │   │   ├── 📝 MODULES_CATALOGUE.md (367.7 KB)
     │   │   │   └── 📝 MODULES_LIST_COMPACT.md (161.6 KB)
@@ -296,14 +296,14 @@
     │   │   │   └── 🌐 index.html (287.0 KB)
     │   │   ├── 📁 ua/
     │   │   │   ├── 📝 ARCHITECTURE_LOGICAL_DIRS.md (10.8 KB)
-    │   │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (8.0 KB)
+    │   │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (21.4 KB)
     │   │   │   ├── 📝 DETAILED_CODE_STATS.md (1.1 KB)
     │   │   │   ├── 📝 MODULES_CATALOGUE.md (391.4 KB)
     │   │   │   └── 📝 MODULES_LIST_COMPACT.md (161.9 KB)
     │   │   ├── 📝 ARCHITECTURE_LOGICAL_DIRS.en.md (10.5 KB)
     │   │   ├── 📝 ARCHITECTURE_LOGICAL_DIRS.md (10.8 KB)
     │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.en.txt (132.8 KB)
-    │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (132.9 KB)
+    │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (21.4 KB)
     │   │   ├── 📝 DETAILED_CODE_STATS.en.md (751.0 B)
     │   │   ├── 📝 DETAILED_CODE_STATS.md (1.1 KB)
     │   │   ├── 🌐 index.html (41.5 KB)

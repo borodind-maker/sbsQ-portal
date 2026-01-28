@@ -3,14 +3,14 @@
 ║               💎 SmartBees Quantum (sbsQ) v1.6 Architecture                  ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-📊 Статистика:
-   • Python модулів      : 1406
-   • Директорій          : 352
-   • Файлів              : 1938
-   • Розмір коду         : 1.3 GB
+📊 Statistics:
+   • Python Modules      : 1406
+   • Directories         : 352
+   • Total Files         : 1938
+   • Code Size           : 1.3 GB
 
-ℹ️ Легенда:
-   📁 Folder   📦 Пакет   🐍 Python код   📝 Документація   ⚙️ Конфігурація
+ℹ️ Legend:
+   📁 Folder   📦 Package   🐍 Python Code   📝 Documentation   ⚙️ Configuration
 
 ════════════════════════════════════════════════════════════════════════════════
 
@@ -30,7 +30,7 @@
     │   ├── 📁 en/
     │   │   ├── 📝 ARCHITECTURE_LOGICAL_DIRS.md (15.3 KB)
     │   │   ├── 📝 ARCHITECTURE_SUMMARY.md (7.5 KB)
-    │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (53.6 KB)
+    │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (0.0 B)
     │   │   ├── 📄 ARCHITECTURE_VISUAL.txt (22.7 KB)
     │   │   ├── 📝 MODULES_CATALOGUE.md (372.8 KB)
     │   │   ├── 📝 MODULES_LIST_COMPACT.md (55.5 KB)
@@ -38,7 +38,7 @@
     │   ├── 📁 ua/
     │   │   ├── 📝 ARCHITECTURE_LOGICAL_DIRS.md (16.2 KB)
     │   │   ├── 📝 ARCHITECTURE_SUMMARY.md (10.5 KB)
-    │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (0.0 B)
+    │   │   ├── 📄 ARCHITECTURE_TREE_CLEAN.txt (141.4 KB)
     │   │   ├── 📄 ARCHITECTURE_VISUAL.txt (22.7 KB)
     │   │   ├── 📝 MODULES_CATALOGUE.md (397.0 KB)
     │   │   ├── 📝 MODULES_LIST_COMPACT.md (55.8 KB)
