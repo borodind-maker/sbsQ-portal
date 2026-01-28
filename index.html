@@ -131,52 +131,101 @@
         }
         .ctrl-btn:hover { background: var(--primary); color: #000; }
 
-        /* --- GOOGLE TRANSLATE CUSTOM STYLES --- 
-           Hiding the gray bar and styling the dropdown
-        */
-        .goog-te-banner-frame.skiptranslate, 
-        .goog-te-gadget-icon,
-        #goog-gt-tt {
-            display: none !important; /* Hide original Google UI elements */
+        /* --- CUSTOM LANGUAGE SELECTOR --- */
+        .language-selector {
+            position: relative;
         }
 
-        #google_translate_element {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .goog-te-gadget-simple {
-            background: var(--glass) !important;
-            border: 1px solid var(--border) !important;
-            padding: 6px 15px !important;
-            border-radius: 50px !important;
-            font-family: var(--font-main) !important;
-            font-size: 0.75rem !important;
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 50px;
+            color: var(--text);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-main);
+            font-size: 0.75rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            cursor: pointer;
-            display: flex !important;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary);
+            background: var(--primary-glow);
+        }
+
+        .lang-btn .flag {
+            font-size: 1.1rem;
+        }
+
+        .lang-btn .chevron {
+            transition: transform 0.3s;
+            margin-left: 2px;
+        }
+
+        .lang-btn.active .chevron {
+            transform: rotate(180deg);
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 8px;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+        }
+
+        .lang-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: flex;
             align-items: center;
-            transition: var(--transition);
+            gap: 12px;
+            width: 100%;
+            padding: 10px 12px;
+            background: transparent;
+            border: none;
+            border-radius: 12px;
+            color: var(--text);
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+            text-align: left;
         }
 
-        .goog-te-gadget-simple:hover {
-            border-color: var(--primary) !important;
-            background: var(--primary-glow) !important;
+        .lang-option:hover {
+            background: var(--glass);
         }
 
-        .goog-te-gadget-simple img {
-            display: none !important; /* Hide Google logo icon */
-        }
-
-        .goog-te-menu-value span {
-            color: var(--text) !important;
-            border-left: none !important;
+        .lang-option.active {
+            background: var(--primary);
+            color: #000;
             font-weight: 600;
         }
 
-        /* Force fix for body displacement */
-        body { top: 0 !important; }
+        .lang-option .flag {
+            font-size: 1.4rem;
+        }
 
         /* Hero Section */
         .hero {
@@ -317,7 +366,29 @@
                 <button class="ctrl-btn" onclick="toggleTheme()" id="tBtn">🌙</button>
                 <button class="ctrl-btn" onclick="changeFontSize(5)">A+</button>
                 <button class="ctrl-btn" onclick="changeFontSize(-5)">A-</button>
-                <div id="google_translate_element"></div>
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <span class="flag">🇺🇦</span>
+                        <span class="lang-code">UA</span>
+                        <svg class="chevron" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="uk" data-flag="🇺🇦" data-code="UA">
+                            <span class="flag">🇺🇦</span>
+                            <span class="lang-name">Українська</span>
+                        </button>
+                        <button class="lang-option" data-lang="en" data-flag="🇬🇧" data-code="EN">
+                            <span class="flag">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                        </button>
+                        <button class="lang-option" data-lang="de" data-flag="🇩🇪" data-code="DE">
+                            <span class="flag">🇩🇪</span>
+                            <span class="lang-name">Deutsch</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -366,17 +437,164 @@
         <p>&copy; 2026 SmartBees Quantum Intelligence. Made in Ukraine with 💚 and Ternary Logic.</p>
     </footer>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'uk',
-                includedLanguages: 'uk,en,de,ko',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false // Prevent the automatic gray banner
-            }, 'google_translate_element');
+    <script>
+        // Translations
+        const translations = {
+            uk: {
+                navSolutions: "Рішення",
+                navTech: "Технології",
+                heroLabel: "SBS OS v1.6",
+                heroTitle: "Довірена",
+                heroTitleSpan: "Гармонія",
+                heroTitleEnd: "Роїв",
+                heroText: "Керуйте майбутнім з математичною точністю. SmartBeesSwarm — це перша у світі операційна система для роїв, що базується на природних константах та трійковій логіці.",
+                demoBtn: "Демо",
+                stat1Label: "Реакція рефлексів",
+                stat2Label: "C++ Оптимізація",
+                stat3Label: "Sync",
+                stat4Label: "Ratio",
+                sector1Title: "AGRICULTURE 4.0",
+                sector1Text: "Автономний моніторинг посівів та точкове внесення з використанням ройової координації.",
+                sector2Title: "LOGISTICS",
+                sector2Text: "Динамічна доставка та складське пакування за алгоритмами «Бджолиних сот».",
+                sector3Title: "DEFENSE",
+                sector3Text: "Стійкі до РЕБ мережі зв'язку та автономне патрулювання за протоколами Moebius."
+            },
+            en: {
+                navSolutions: "Solutions",
+                navTech: "Technologies",
+                heroLabel: "SBS OS v1.6",
+                heroTitle: "Trusted",
+                heroTitleSpan: "Harmony",
+                heroTitleEnd: "Swarms",
+                heroText: "Control the future with mathematical precision. SmartBeesSwarm is the world's first operating system for swarms based on natural constants and ternary logic.",
+                demoBtn: "Demo",
+                stat1Label: "Reflex Response",
+                stat2Label: "C++ Optimization",
+                stat3Label: "Sync",
+                stat4Label: "Ratio",
+                sector1Title: "AGRICULTURE 4.0",
+                sector1Text: "Autonomous crop monitoring and precision application using swarm coordination.",
+                sector2Title: "LOGISTICS",
+                sector2Text: "Dynamic delivery and warehouse packing with Honeycomb algorithms.",
+                sector3Title: "DEFENSE",
+                sector3Text: "EW-resistant communication networks and autonomous patrolling with Moebius protocols."
+            },
+            de: {
+                navSolutions: "Lösungen",
+                navTech: "Technologien",
+                heroLabel: "SBS OS v1.6",
+                heroTitle: "Vertrauenswürdige",
+                heroTitleSpan: "Harmonie",
+                heroTitleEnd: "Schwärme",
+                heroText: "Kontrollieren Sie die Zukunft mit mathematischer Präzision. SmartBeesSwarm ist das weltweit erste Betriebssystem für Schwärme, das auf natürlichen Konstanten und ternärer Logik basiert.",
+                demoBtn: "Demo",
+                stat1Label: "Reflexreaktion",
+                stat2Label: "C++ Optimierung",
+                stat3Label: "Sync",
+                stat4Label: "Verhältnis",
+                sector1Title: "LANDWIRTSCHAFT 4.0",
+                sector1Text: "Autonome Ernteüberwachung und Präzisionsanwendung mit Schwarmkoordination.",
+                sector2Title: "LOGISTIK",
+                sector2Text: "Dynamische Lieferung und Lagerverpackung mit Honeycomb-Algorithmen.",
+                sector3Title: "VERTEIDIGUNG",
+                sector3Text: "EW-resistente Kommunikationsnetzwerke und autonomes Patrouillieren mit Moebius-Protokollen."
+            }
+        };
+
+        // Language Selector Logic
+        const langBtn = document.getElementById('langBtn');
+        const langDropdown = document.getElementById('langDropdown');
+        const langOptions = document.querySelectorAll('.lang-option');
+
+        // Toggle dropdown
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langBtn.classList.toggle('active');
+            langDropdown.classList.toggle('show');
+        });
+
+        // Close on outside click
+        document.addEventListener('click', () => {
+            langBtn.classList.remove('active');
+            langDropdown.classList.remove('show');
+        });
+
+        // Change language
+        langOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const lang = option.dataset.lang;
+                const flag = option.dataset.flag;
+                const code = option.dataset.code;
+                
+                setLanguage(lang);
+                
+                // Update UI
+                langOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                
+                // Update button
+                langBtn.querySelector('.flag').textContent = flag;
+                langBtn.querySelector('.lang-code').textContent = code;
+                
+                // Close dropdown
+                langBtn.classList.remove('active');
+                langDropdown.classList.remove('show');
+            });
+        });
+
+        // Apply translations
+        function setLanguage(lang) {
+            const t = translations[lang];
+            
+            // Navigation
+            document.querySelectorAll('.nav-links a')[0].textContent = t.navSolutions;
+            document.querySelectorAll('.nav-links a')[1].textContent = t.navTech;
+            
+            // Hero section
+            document.querySelector('.hero-label').textContent = t.heroLabel;
+            document.querySelector('.hero h1').innerHTML = 
+                `${t.heroTitle} <span>${t.heroTitleSpan}</span> ${t.heroTitleEnd}`;
+            document.querySelector('.hero p').textContent = t.heroText;
+            document.querySelector('.btn').textContent = t.demoBtn;
+            
+            // Stats
+            const statItems = document.querySelectorAll('.stat-item p');
+            statItems[0].textContent = t.stat1Label;
+            statItems[1].textContent = t.stat2Label;
+            statItems[2].textContent = t.stat3Label;
+            statItems[3].textContent = t.stat4Label;
+            
+            // Sectors
+            const cards = document.querySelectorAll('.card');
+            cards[0].querySelector('h3').textContent = t.sector1Title;
+            cards[0].querySelector('p').textContent = t.sector1Text;
+            cards[1].querySelector('h3').textContent = t.sector2Title;
+            cards[1].querySelector('p').textContent = t.sector2Text;
+            cards[2].querySelector('h3').textContent = t.sector3Title;
+            cards[2].querySelector('p').textContent = t.sector3Text;
+            
+            // Save preference
+            localStorage.setItem('preferredLang', lang);
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // Load saved language or detect browser language
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang) {
+            const option = document.querySelector(`[data-lang="${savedLang}"]`);
+            if (option) {
+                langBtn.querySelector('.flag').textContent = option.dataset.flag;
+                langBtn.querySelector('.lang-code').textContent = option.dataset.code;
+                langOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                setLanguage(savedLang);
+            }
         }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
         const UI = {
