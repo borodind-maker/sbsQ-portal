@@ -359,9 +359,9 @@
 
     <nav>
         <div class="logo">Σ SBS</div>
-        <div class="nav-links">
-            <a href="docs/FAQ_uk.md">FAQ</a>
-            <a href="https://borodind-maker.github.io/sbsQ-portal/docs">Документація</a>
+        <div class="nav-links" id="navLinks">
+            <a href="docs/FAQ_uk.md" id="faqLink">FAQ</a>
+            <a href="https://borodind-maker.github.io/sbsQ-portal/docs" id="docsLink">Документація</a>
             <div class="controls">
                 <button class="ctrl-btn" onclick="toggleTheme()" id="tBtn">🌙</button>
                 <button class="ctrl-btn" onclick="changeFontSize(5)">A+</button>
@@ -386,6 +386,14 @@
                         <button class="lang-option" data-lang="de" data-flag="🇩🇪" data-code="DE">
                             <span class="flag">🇩🇪</span>
                             <span class="lang-name">Deutsch</span>
+                        </button>
+                        <button class="lang-option" data-lang="ko" data-flag="🇰🇷" data-code="KO">
+                            <span class="flag">🇰🇷</span>
+                            <span class="lang-name">한국어</span>
+                        </button>
+                        <button class="lang-option" data-lang="th" data-flag="🇹🇭" data-code="TH">
+                            <span class="flag">🇹🇭</span>
+                            <span class="lang-name">ไทย</span>
                         </button>
                     </div>
                 </div>
@@ -441,8 +449,8 @@
         // Translations
         const translations = {
             uk: {
-                navSolutions: "Рішення",
-                navTech: "Технології",
+                navFAQ: "FAQ",
+                navDocs: "Документація",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "Довірена",
                 heroTitleSpan: "Гармонія",
@@ -461,8 +469,8 @@
                 sector3Text: "Стійкі до РЕБ мережі зв'язку та автономне патрулювання за протоколами Moebius."
             },
             en: {
-                navSolutions: "Solutions",
-                navTech: "Technologies",
+                navFAQ: "FAQ",
+                navDocs: "Documentation",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "Trusted",
                 heroTitleSpan: "Harmony",
@@ -481,8 +489,8 @@
                 sector3Text: "EW-resistant communication networks and autonomous patrolling with Moebius protocols."
             },
             de: {
-                navSolutions: "Lösungen",
-                navTech: "Technologien",
+                navFAQ: "FAQ",
+                navDocs: "Dokumentation",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "Vertrauenswürdige",
                 heroTitleSpan: "Harmonie",
@@ -499,6 +507,46 @@
                 sector2Text: "Dynamische Lieferung und Lagerverpackung mit Honeycomb-Algorithmen.",
                 sector3Title: "VERTEIDIGUNG",
                 sector3Text: "EW-resistente Kommunikationsnetzwerke und autonomes Patrouillieren mit Moebius-Protokollen."
+            },
+            ko: {
+                navFAQ: "FAQ",
+                navDocs: "문서",
+                heroLabel: "SBS OS v1.6",
+                heroTitle: "신뢰할 수 있는",
+                heroTitleSpan: "조화로운",
+                heroTitleEnd: "군집",
+                heroText: "수학적 정밀함으로 미래를 제어하십시오. SmartBeesSwarm은 자연 상수와 3진 논리를 기반으로 한 세계 최초의 군집용 운영 체제입니다.",
+                demoBtn: "데모",
+                stat1Label: "반사 반응",
+                stat2Label: "C++ 최적화",
+                stat3Label: "동기화",
+                stat4Label: "비율",
+                sector1Title: "농업 4.0",
+                sector1Text: "군집 조정을 이용한 자율 작물 모니터링 및 정밀 살포.",
+                sector2Title: "물류",
+                sector2Text: "Honeycomb 알고리즘을 통한 역동적인 배송 및 창고 포장.",
+                sector3Title: "국방",
+                sector3Text: "전자전 내성 통신 네트워크 및 Moebius 프로โต콜을 이용한 자율 순찰."
+            },
+            th: {
+                navFAQ: "FAQ",
+                navDocs: "เอกสารประกอบ",
+                heroLabel: "SBS OS v1.6",
+                heroTitle: "ที่ไว้วางใจได้",
+                heroTitleSpan: "ความกลมกลืน",
+                heroTitleEnd: "ของฝูงโดรน",
+                heroText: "ควบคุมอนาคตด้วยความแม่นยำทางคณิตศาสตร์ SmartBeesSwarm คือระบบปฏิบัติการตัวแรกของโลกสำหรับฝูงโดรนที่ใช้ค่าคงที่ทางธรรมชาติและตรรกะแบบเทอร์นารี",
+                demoBtn: "เดโม",
+                stat1Label: "การตอบสนองของเรฟเล็กซ์",
+                stat2Label: "การปรับแต่ง C++",
+                stat3Label: "การซิงค์",
+                stat4Label: "อัตราส่วน",
+                sector1Title: "เกษตรกรรม 4.0",
+                sector1Text: "การตรวจสอบพืชผลอัตโนมัติและการฉีดพ่นที่แม่นยำโดยใช้การประสานงานของฝูงโดรน",
+                sector2Title: "โลจิสติกส์",
+                sector2Text: "การจัดส่งแบบไดนามิกและการบรรจุหีบห่อคลังสินค้าด้วยอัลกอริทึม Honeycomb",
+                sector3Title: "การป้องกัน",
+                sector3Text: "เครือข่ายการสื่อสารที่ทนทานต่อ EW และการลาดตระเวนอัตโนมัติด้วยโปรโตคอล Moebius"
             }
         };
 
@@ -549,8 +597,9 @@
             const t = translations[lang];
             
             // Navigation
-            document.querySelectorAll('.nav-links a')[0].textContent = t.navSolutions;
-            document.querySelectorAll('.nav-links a')[1].textContent = t.navTech;
+            document.getElementById('faqLink').textContent = t.navFAQ;
+            document.getElementById('faqLink').href = `docs/FAQ_${lang}.md`;
+            document.getElementById('docsLink').textContent = t.navDocs;
             
             // Hero section
             document.querySelector('.hero-label').textContent = t.heroLabel;
