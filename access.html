@@ -301,10 +301,22 @@
     <div class="container">
         <!-- Static Header & Warning -->
         <header class="header">
-            <span class="system-badge">SYSTEM: sbsQ-Internal</span>
-            <h1>Access Restricted</h1>
-            <p class="subtitle">Content protected by International IP Laws & National Security Regulations. <br>Unauthorized access is monitored.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <span class="system-badge" style="border-color: #4caf50; color: #4caf50;">STATUS: ENCRYPTED_STABLE</span>
+                <span style="font-size: 0.6rem; color: #444; font-family: 'Roboto Mono';">LATENCY: 12ms | NODE: SBS-MAIN-UA</span>
+            </div>
+            <span class="system-badge">CLASSIFICATION: DUAL-USE (COMMERCIAL/TACTICAL)</span>
+            <h1>Security Access Portal</h1>
+            <p class="subtitle">SBSQ SmartBeesSwarm Unified Interface. <br>Access restricted to authorized partners and verified developers.</p>
         </header>
+
+        <!-- Mock Terminal Log -->
+        <div style="background: rgba(0,0,0,0.5); border: 1px solid var(--border); padding: 10px; border-radius: 4px; font-family: 'Roboto Mono', monospace; font-size: 0.6rem; color: #4caf50; margin-bottom: 20px; overflow: hidden; height: 60px; line-height: 1.2;">
+            <div>[OK] INITIALIZING SECURE_HANDSHAKE_V2...</div>
+            <div>[OK] VERIFYING HASH: 5ec13d9...</div>
+            <div>[OK] SYNCING TCI_MATRIX_7_LEVELS...</div>
+            <div>[WAIT] AWAITING USER_CLEARANCE_ACKNOWLEDGMENT...</div>
+        </div>
 
         <!-- Main Layout Grid -->
         <div class="content-grid">
@@ -330,14 +342,27 @@
                 </div>
             </div>
 
-            <!-- Invitation to Simulation -->
+            <!-- Invitation to nodes -->
             <div class="action-area">
-                <h2 style="font-family: 'Syncopate'; margin-bottom: 15px; color: #1e8f01; font-size: 1.1rem;">Public Simulation Access</h2>
-                <p style="margin-bottom: 20px; color: #1e8f01; font-size: 0.85rem;">
-                    You are invited to access the "GAME LAND DIGITAL TWIN". This area provides a safe visualization of the algorithms.
-                </p>
-                <button class="btn-primary" onclick="openTermsModal()">Enter Simulation</button>
-                <p style="margin-top: 10px; font-size: 0.7rem; color: #1e8f01;">Acceptance of Security Terms required.</p>
+                <h2 style="font-family: 'Syncopate'; margin-bottom: 20px; color: var(--secondary); font-size: 1.1rem; letter-spacing: 2px;">SELECT ACCESS NODE</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr; gap: 15px; width: 100%;">
+                    <!-- Node 1: Documentation -->
+                    <div style="padding: 15px; border: 1px solid var(--border); border-radius: 8px; text-align: left; background: rgba(0,0,0,0.3);">
+                        <div style="font-weight: bold; color: #fff; margin-bottom: 5px; font-size: 0.8rem;">[ NODE_01 ] TECHNICAL DOCUMENTATION</div>
+                        <p style="font-size: 0.7rem; color: var(--text-dim); margin-bottom: 12px;">Full system architecture, API references, and Obfuscated FAQ for all locales.</p>
+                        <button class="btn-primary" style="background: var(--secondary);" onclick="openTermsModal('docs')">Enter Documentation</button>
+                    </div>
+
+                    <!-- Node 2: Simulation -->
+                    <div style="padding: 15px; border: 1px solid var(--border); border-radius: 8px; text-align: left; background: rgba(0,0,0,0.3);">
+                        <div style="font-weight: bold; color: #fff; margin-bottom: 5px; font-size: 0.8rem;">[ NODE_02 ] DIGITAL TWIN SIMULATION</div>
+                        <p style="font-size: 0.7rem; color: var(--text-dim); margin-bottom: 12px;">Visual validation of swarm algorithms within the Roblox Digital Twin environment.</p>
+                        <button class="btn-primary" style="background: #333; color: #fff; border: 1px solid #555;" onclick="openTermsModal('sim')">Launch Simulation</button>
+                    </div>
+                </div>
+
+                <p style="margin-top: 20px; font-size: 0.65rem; color: #4caf50; opacity: 0.8;">Verification of Security Clearance Agreement required for both nodes.</p>
             </div>
 
         </div>
@@ -445,10 +470,17 @@
         const termsBox = document.getElementById('termsContent');
         const btnAgree = document.getElementById('btnAgree');
         const scrollStatus = document.getElementById('scrollStatus');
-        const targetUrl = "https://borodind-maker.github.io/sbsQ-portal/04_Infrastructure/ROBLOX_DIGITAL_TWIN/";
+        
+        const URLS = {
+            docs: "https://borodind-maker.github.io/sbsQ-portal/docs",
+            sim: "https://borodind-maker.github.io/sbsQ-portal/04_Infrastructure/ROBLOX_DIGITAL_TWIN/"
+        };
+        
+        let currentTarget = "";
         let isScrolledResult = false;
 
-        function openTermsModal() {
+        function openTermsModal(type) {
+            currentTarget = type;
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden'; // Stop background scroll
             
@@ -468,17 +500,16 @@
             if (done) {
                 scrollStatus.innerHTML = '<span style="color:#4caf50">✅ Ready to proceed</span>';
             } else {
-                scrollStatus.innerHTML = '<span>📜 Please read the full text...</span>';
+                scrollStatus.innerHTML = '<span>📜 Please read the full security disclosure...</span>';
             }
         }
 
         // Scroll listener to detect bottom
         termsBox.addEventListener('scroll', () => {
-            // Tolerance of 10px
             const scrollBottom = termsBox.scrollTop + termsBox.clientHeight;
             const scrollHeight = termsBox.scrollHeight;
 
-            if (scrollHeight - scrollBottom <= 20) {
+            if (scrollHeight - scrollBottom <= 30) {
                 if (!isScrolledResult) {
                     isScrolledResult = true;
                     btnAgree.classList.add('active');
@@ -488,8 +519,8 @@
         });
 
         function proceedToSim() {
-            if (isScrolledResult) {
-                window.location.href = targetUrl;
+            if (isScrolledResult && currentTarget) {
+                window.location.href = URLS[currentTarget];
             }
         }
 

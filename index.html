@@ -361,7 +361,7 @@
         <div class="logo">Σ SBS</div>
         <div class="nav-links" id="navLinks">
             <a href="docs/FAQ_uk.md" id="faqLink">FAQ</a>
-            <a href="https://borodind-maker.github.io/sbsQ-portal/docs" id="docsLink">Документація</a>
+            <a href="access.html" id="docsLink">Документація</a>
             <div class="controls">
                 <button class="ctrl-btn" onclick="toggleTheme()" id="tBtn">🌙</button>
                 <button class="ctrl-btn" onclick="changeFontSize(5)">A+</button>
@@ -624,6 +624,7 @@
             document.getElementById('faqLink').textContent = t.navFAQ;
             document.getElementById('faqLink').href = `docs/FAQ_${lang}.md`;
             document.getElementById('docsLink').textContent = t.navDocs;
+            document.getElementById('docsLink').href = 'access.html'; // Gateway always
             
             // Hero section
             document.querySelector('.hero-label').textContent = t.heroLabel;
