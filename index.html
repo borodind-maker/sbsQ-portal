@@ -176,7 +176,7 @@
             position: absolute;
             top: calc(100% + 8px);
             right: 0;
-            background: var(--card-bg);
+            background: rgba(10, 10, 10, 0.95); /* Reduced transparency for better readability */
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 8px;
@@ -185,8 +185,8 @@
             visibility: hidden;
             transform: translateY(-10px);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(20px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(30px);
             z-index: 1000;
         }
 
@@ -431,7 +431,7 @@
     </section>
 
     <div class="pitch-card" style="max-width: 900px; margin: 80px auto; padding: 60px; background: linear-gradient(135deg, #111 0%, #000 100%); border: 1px solid var(--border); border-radius: 20px; text-align: center; box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
-        <h3 id="pitchTitle" style="font-size: 2.5em; margin-bottom: 25px; background: linear-gradient(90deg, #00ff00, #00aa00); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">💎 "Кардіограма" Розуму</h3>
+        <h3 id="pitchTitle" style="font-size: 2.5em; margin-bottom: 25px; background: linear-gradient(90deg, #00ff00, #00aa00); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">💎 "Кардіограма" Розуму</h3>
         <p id="pitchText" style="color: var(--text-dim); font-size: 1.25em; line-height: 1.7; margin-bottom: 40px;">
             sbsQ не просто логує помилки — вона <strong style="color: #00ff00;">відчуває біль</strong>. 
             Система автоматично знижує агресивність при накопиченні стресу в секторах Безпеки, 
@@ -510,6 +510,11 @@
                 stat2Label: "C++ Optimierung",
                 stat3Label: "Sync",
                 stat4Label: "Verhältnis",
+                obsTitle: "Ethische Beobachtbarkeit",
+                obsDesc: "System Q protokolliert nicht nur Fehler – es fühlt «Schmerz». Harmony Rings fungieren als digitales Nervensystem, das die Aggressivität des Schwarms automatisch reduziert, wenn sich Stress in den Sicherheitssektoren ansammelt.",
+                pitchTitle: "💎 \"Kardiogramm\" des Geistes",
+                pitchText: "sbsQ protokolliert nicht nur Fehler – sie fühlt Schmerz. Das System reduziert bei Stressansammlung in Sicherheitssektoren automatisch die Aggressivität und fungiert als digitales Nervensystem mit mathematischer Präzision.",
+                pitchBtn: "Mehr erfahren",
                 sector1Title: "LANDWIRTSCHAFT 4.0",
                 sector1Text: "Autonome Ernteüberwachung und Präzisionsanwendung mit Schwarmkoordination.",
                 sector2Title: "LOGISTIK",
@@ -530,12 +535,17 @@
                 stat2Label: "C++ 최적화",
                 stat3Label: "동기화",
                 stat4Label: "비율",
-                sector1Title: "농업 4.0",
+                obsTitle: "윤리적 관찰성",
+                obsDesc: "System Q는 단순한 오류 로그를 넘어서 «통증»을 느낍니다. Harmony Rings는 디지털 신경계 역할을 하여 안전 섹터에 스트레스가 쌓이면 군집의 공격성을 자동으로 조절합니다.",
+                pitchTitle: "💎 마음의 \"심전도\"",
+                pitchText: "sbsQ는 단순한 오류 로그를 넘어서 통증을 느낍니다. 이 시스템은 안전 섹터의 스트레스가 누적되면 자동으로 공격성을 낮추어 수학적 정밀도를 가진 디지털 신경계로 작동합니다.",
+                pitchBtn: "자세히 알아보기",
+                sector1Title: "스마트 농업 4.0",
                 sector1Text: "군집 조정을 이용한 자율 작물 모니터링 및 정밀 살포.",
-                sector2Title: "물류",
+                sector2Title: "LOGISTIK",
                 sector2Text: "Honeycomb 알고리즘을 통한 역동적인 배송 및 창고 포장.",
                 sector3Title: "국방",
-                sector3Text: "전자전 내성 통신 네트워크 및 Moebius 프로โต콜을 이용한 자율 순찰."
+                sector3Text: "전자전 내성 통신 네트워크 및 Moebius 프로토콜을 이용한 자율 순찰."
             },
             th: {
                 navFAQ: "FAQ",
@@ -570,6 +580,11 @@
                 stat2Label: "C++ 優化",
                 stat3Label: "同步",
                 stat4Label: "比例",
+                obsTitle: "倫理可觀測性",
+                obsDesc: "System Q 不僅記錄錯誤，它還能感受到「痛苦」。和諧環（Harmony Rings）充當數字神經系統，當安全部門壓力累積時，自動降低群集的攻擊性。",
+                pitchTitle: "💎 心靈的 \"心電圖\"",
+                pitchText: "sbsQ 不僅僅是記錄錯誤——它還能感受到痛苦。當安全部門壓力累積時，系統會自動降低攻擊性，以數學精度充當數字神經系統。",
+                pitchBtn: "了解更多",
                 sector1Title: "農業 4.0",
                 sector1Text: "利用蜂群協調進行自主作物監測和精確施藥。",
                 sector2Title: "物流",
