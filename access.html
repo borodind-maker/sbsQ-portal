@@ -50,13 +50,13 @@
             justify-content: center;
         }
 
-        /* HEADER SECTION */
-        .system-top-bar {
+        /* SYSTEM BAR (Now at bottom) */
+        .system-bar {
             position: fixed;
-            top: 0; left: 0; right: 0;
+            bottom: 0; left: 0; right: 0;
             height: 30px;
-            background: rgba(0,0,0,0.8);
-            border-bottom: 1px solid var(--border);
+            background: rgba(0,0,0,0.9);
+            border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -70,23 +70,30 @@
 
         .header {
             text-align: center;
-            margin: 4vh 0 2vh;
-            padding-bottom: 1.5vh;
+            margin: 2vh 0 2vh;
+            padding-bottom: 1vh;
             flex-shrink: 0;
         }
 
         .system-badge {
-            font-family: var(--font-main);
-            background: rgba(36, 108, 5, 0.1);
-            color: var(--secondary);
-            padding: 2px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            margin-bottom: 12px;
+            font-family: var(--font-title);
+            background: rgba(36, 108, 5, 0.2);
+            color: #00ff00;
+            padding: 5px 20px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
             display: inline-block;
-            border: 1px solid rgba(36, 108, 5, 0.3);
+            border: 2px solid #00ff00;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); border-color: rgba(0, 255, 0, 0.5); }
+            to { box-shadow: 0 0 30px rgba(0, 255, 0, 0.6); border-color: #00ff00; }
         }
 
         h1 {
@@ -212,6 +219,21 @@
             transform: translateY(-2px);
             box-shadow: 0 0 40px var(--secondary-glow);
             background-color: #fff;
+            color: #000;
+        }
+
+        .btn-sim {
+            background: linear-gradient(90deg, #1e8f01, #00ff00);
+            color: #000 !important;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.4);
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-sim:hover {
+            background: #fff !important;
+            box-shadow: 0 0 50px #00ff00;
+            transform: scale(1.02);
         }
 
         /* MODAL (Google/Microsoft Style) */
@@ -321,11 +343,6 @@
 </head>
 <body>
 
-    <div class="system-top-bar">
-        <span>STATUS: ENCRYPTED_STABLE</span>
-        <span style="color: var(--text-dim);">SBSQ-MAIN-NODE-UA // LATENCY: 12ms</span>
-    </div>
-
     <div class="container">
         <!-- Static Header & Warning -->
         <header class="header">
@@ -377,10 +394,10 @@
                         <button class="btn-primary" style="background: var(--secondary); padding: 8px;" onclick="openTermsModal('docs')">Enter Documentation</button>
                     </div>
                     <!-- Node 2: Simulation -->
-                    <div style="padding: 10px 15px; border: 1px solid var(--border); border-radius: 8px; text-align: left; background: rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: center;">
+                    <div style="padding: 10px 15px; border: 1px solid var(--border); border-radius: 8px; text-align: left; background: rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: center; border-left: 3px solid #00ff00;">
                         <div style="font-weight: bold; color: #fff; margin-bottom: 3px; font-size: 0.75rem;">[ NODE_02 ] DIGITAL TWIN SIMULATION</div>
                         <p style="font-size: 0.65rem; color: var(--text-dim); margin-bottom: 8px;">Roblox environment validation.</p>
-                        <button class="btn-primary" style="background: #222; color: #fff; border: 1px solid #444; padding: 8px;" onclick="openTermsModal('sim')">Launch Simulation</button>
+                        <button class="btn-primary btn-sim" style="padding: 8px;" onclick="openTermsModal('sim')">Launch Simulation</button>
                     </div>
                 </div>
 
@@ -389,6 +406,11 @@
 
         </div>
 
+    </div>
+
+    <div class="system-bar">
+        <span>STATUS: ENCRYPTED_STABLE</span>
+        <span style="color: var(--text-dim);">SBSQ-MAIN-NODE-UA // LATENCY: 12ms</span>
     </div>
 
     <!-- MODAL POPUP (Terms of Service Style) -->
