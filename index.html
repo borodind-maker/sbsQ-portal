@@ -303,23 +303,62 @@
             font-size: 0.7rem; color: var(--text-dim);
         }
 
-        /* Sector Cards */
-        .sectors {
-            padding: 150px 5%;
+        /* Manifesto Grid */
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 5%;
         }
 
         .card {
-            background: var(--card-bg); border: 1px solid var(--border);
-            padding: 50px; border-radius: 40px;
-            transition: 0.4s;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            height: 100%;
         }
 
-        .card:hover { border-color: var(--primary); transform: translateY(-10px); }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.1);
+        }
 
         .card h3 {
             font-family: var(--font-title);
             font-size: 1.2rem; margin-bottom: 20px;
             letter-spacing: 1px; color: var(--secondary);
+            text-transform: uppercase;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+        }
+
+        .card ul {
+            margin-top: 15px;
+            padding-left: 20px;
+            list-style-type: square;
+        }
+        
+        .card li { margin-bottom: 8px; }
+
+        /* Mobius Trap Highlight */
+        .card-mobius.highlight {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(0, 50, 0, 0.8), rgba(0, 20, 0, 0.9));
+            border: 2px solid #00ff00;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.1);
+        }
+
+        .card-mobius h3 {
+            color: #00ff00;
+            font-size: 2rem;
         }
         .btn {
             padding: 20px 45px; border-radius: 50px;
@@ -413,22 +452,26 @@
         <div class="stat-item"><h2>Φ</h2><p>Ratio</p></div>
     </div>
 
-    <section class="observability" id="observability" style="padding: 100px 5%; background: rgba(255,255,255,0.01); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h2 id="obsTitle" style="font-family: var(--font-title); font-size: 2.5em; margin-bottom: 20px;">Етична Спостережуваність</h2>
-            <p id="obsDesc" style="color: var(--text-dim); font-size: 1.2em; max-width: 800px; margin: 0 auto 50px;">
-                Система Q не просто фіксує помилки — вона відчуває <strong>«біль»</strong>. 
-                Кільця Гармонії діють як цифрова нервова система, що автоматично знижує агресивність рою при накопиченні стресу в секторах Безпеки.
-            </p>
-            
-            <!-- Harmony Ring Visualization (Simplified for root index) -->
-            <div style="position: relative; width: 300px; height: 300px; margin: 0 auto; border: 2px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-size: 0.8em; box-shadow: 0 0 20px var(--primary-glow);">CORE</div>
-                <div style="position: absolute; top: 10px; width: 20px; height: 20px; background: #ff0000; border-radius: 50%; box-shadow: 0 0 15px rgba(255,0,0,0.5);"></div>
-                <div style="position: absolute; right: 40px; top: 40px; width: 15px; height: 15px; background: #ffaa00; border-radius: 50%;"></div>
-                <div style="position: absolute; left: 10%; top: 50%; width: 10px; height: 10px; background: var(--primary); border-radius: 50%;"></div>
-                <!-- CSS Pulse Animation in real impl would go here -->
-            </div>
+    <section class="manifesto-grid">
+        <div class="card card-physiology">
+            <h3 data-i18n="card1_title"></h3>
+            <p data-i18n="card1_text"></p>
+        </div>
+        <div class="card card-council">
+            <h3 data-i18n="card2_title"></h3>
+            <p data-i18n="card2_text"></p>
+        </div>
+        <div class="card card-entropy">
+            <h3 data-i18n="card3_title"></h3>
+            <p data-i18n="card3_text"></p>
+        </div>
+        <div class="card card-ternary">
+            <h3 data-i18n="card4_title"></h3>
+            <p data-i18n="card4_text"></p>
+        </div>
+        <div class="card card-mobius highlight">
+            <h3 data-i18n="card5_title"></h3>
+            <p data-i18n="card5_text"></p>
         </div>
     </section>
 
@@ -467,12 +510,19 @@
                 pitchTitle: "💎 \"Кардіограма\" Розуму",
                 pitchText: "sbsQ не просто логує помилки — вона відчуває біль. Система автоматично знижує агресивність при накопиченні стресу в секторах Безпеки, працюючи як цифрова нервова система з математичною точністю.",
                 pitchBtn: "Дізнатися більше",
-                sector1Title: "AGRICULTURE 4.0",
-                sector1Text: "Автономний моніторинг посівів та точкове внесення з використанням ройової координації.",
-                sector2Title: "LOGISTICS",
-                sector2Text: "Динамічна доставка та складське пакування за алгоритмами «Бджолиних сот».",
-                sector3Title: "DEFENSE",
-                sector3Text: "Стійкі до РЕБ мережі зв'язку та автономне патрулювання за протоколами Moebius."
+                
+                // Manifesto
+                manifesto_title: "Маніфест Алгоритмічного Суверенітету",
+                card1_title: "Кільце Гармонії: Цифрова Фізіологія",
+                card1_text: "Від «Логіки» до «Фізіології». Система Q не просто фіксує помилки — вона відчуває <b>«біль»</b>. <ul><li><b>9 секторів інваріантів:</b> Від Безпеки до Часу.</li><li><b>Межа еластичності:</b> Математичний запобіжник від деформації структури.</li></ul>",
+                card2_title: "Рада 5 Агентів: Когнітивний Резонанс",
+                card2_text: "Замість авторитарного ШІ — демократія ортогональних полюсів. <ul><li><b>Аналітик та Скептик:</b> Постійна діалектика можливостей та заборон.</li><li><b>Tabula Rasa:</b> Миттєве скидання при виявленні самообману (Groupthink).</li></ul>",
+                card3_title: "Entropy Pump: Метаболізм Хаосу",
+                card3_text: "Для ворога РЕБ — це зброя. Для нас — паливо. <ul><li><b>Трансформація завад:</b> Перетворення енергії придушення у ресурс для шифрування.</li><li><b>Cyber-Aikido:</b> Використання сили агресора для зміцнення власної стійкості.</li></ul>",
+                card4_title: "Трійкова Свобода: BitNet Bridge",
+                card4_text: "Відмова від бінарного рабства на користь логіки {-1, 0, 1}. <ul><li><b>Multiplication-Free:</b> Енергоефективність, що дозволяє ШІ працювати на звичайних смартфонах тижнями.</li><li><b>Bicameral Dream:</b> Самонавчання через «цифрові сни» під час зарядки.</li></ul>",
+                card5_title: "Mobius Trap: Момент Істини",
+                card5_text: "<b>Система може не знайти виходу, але вона ніколи не обере шлях у прірву.</b> <br>Топологічна неможливість зради себе: якщо рішення руйнує цілісність — воно відхиляється на рівні інстинкту."
             },
             en: {
                 navFAQ: "FAQ",
@@ -497,7 +547,18 @@
                 sector2Title: "LOGISTICS",
                 sector2Text: "Dynamic delivery and warehouse packing with Honeycomb algorithms.",
                 sector3Title: "DEFENSE",
-                sector3Text: "EW-resistant communication networks and autonomous patrolling with Moebius protocols."
+                // Manifesto (EN Placeholders)
+                manifesto_title: "Manifesto of Algorithmic Sovereignty",
+                card1_title: "Harmony Ring: Digital Physiology",
+                card1_text: "From 'Logic' to 'Physiology'. System Q doesn't just log errors — it feels <b>'pain'</b>. <ul><li><b>9 Invariant Sectors:</b> From Safety to Time.</li><li><b>Elastic Limit:</b> Mathematical safeguard against structural deformation.</li></ul>",
+                card2_title: "Council of 5 Agents: Cognitive Resonance",
+                card2_text: "Instead of authoritarian AI — a democracy of orthogonal poles. <ul><li><b>Analyst & Skeptic:</b> Constant dialectic of possibilities and prohibitions.</li><li><b>Tabula Rasa:</b> Instant reset upon detection of self-deception (Groupthink).</li></ul>",
+                card3_title: "Entropy Pump: Chaos Metabolism",
+                card3_text: "For the enemy, EW is a weapon. For us — fuel. <ul><li><b>Interference Transformation:</b> Converting suppression energy into encryption resources.</li><li><b>Cyber-Aikido:</b> Using the aggressor's strength to fortify our own resilience.</li></ul>",
+                card4_title: "Ternary Freedom: BitNet Bridge",
+                card4_text: "Rejecting binary slavery for {-1, 0, 1} logic. <ul><li><b>Multiplication-Free:</b> Energy efficiency allowing AI to run on smartphones for weeks.</li><li><b>Bicameral Dream:</b> Self-learning through 'digital dreams' during charging.</li></ul>",
+                card5_title: "Mobius Trap: Moment of Truth",
+                card5_text: "<b>The system may not find a way out, but it will never choose the path to the abyss.</b> <br>Topological impossibility of self-betrayal: if a decision destroys integrity — it is rejected at the instinct level."
             },
             de: {
                 navFAQ: "FAQ",
@@ -663,13 +724,16 @@
             statItems[3].textContent = t.stat4Label;
             
             // Sectors
-            const cards = document.querySelectorAll('.card');
-            cards[0].querySelector('h3').textContent = t.sector1Title;
-            cards[0].querySelector('p').textContent = t.sector1Text;
-            cards[1].querySelector('h3').textContent = t.sector2Title;
-            cards[1].querySelector('p').textContent = t.sector2Text;
-            cards[2].querySelector('h3').textContent = t.sector3Title;
-            cards[2].querySelector('p').textContent = t.sector3Text;
+            
+            // Manifesto Content injection
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                } else if (translations['en'] && translations['en'][key]) {
+                     el.innerHTML = translations['en'][key]; // Fallback to EN
+                }
+            });
             
             // Save preference
             localStorage.setItem('preferredLang', lang);
