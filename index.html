@@ -23,6 +23,7 @@
             --font-main: 'Plus Jakarta Sans', sans-serif;
             --font-title: 'Syncopate', sans-serif;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --dropdown-bg: rgba(10, 10, 10, 0.95);
         }
 
         /* Light Theme */
@@ -35,6 +36,7 @@
             --border: rgba(0, 0, 0, 0.1);
             --text: #0f172a;
             --text-dim: #475569;
+            --dropdown-bg: rgba(255, 255, 255, 0.98);
         }
 
         /* General Reset */
@@ -176,7 +178,7 @@
             position: absolute;
             top: calc(100% + 8px);
             right: 0;
-            background: rgba(10, 10, 10, 0.95); /* Reduced transparency for better readability */
+            background: var(--dropdown-bg);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 8px;
@@ -353,7 +355,7 @@
     <nav>
         <div class="logo">Σ SBS</div>
         <div class="nav-links" id="navLinks">
-            <a href="docs/FAQ_uk.md" id="faqLink">FAQ</a>
+            <a href="docs/FAQ.uk.md" id="faqLink">FAQ</a>
             <a href="access.html" id="docsLink">Документація</a>
             <div class="controls">
                 <button class="ctrl-btn" onclick="toggleTheme()" id="tBtn">🌙</button>
@@ -642,7 +644,7 @@
             
             // Navigation
             document.getElementById('faqLink').textContent = t.navFAQ;
-            document.getElementById('faqLink').href = `docs/FAQ_${lang}.md`;
+            document.getElementById('faqLink').href = lang === 'en' ? 'docs/FAQ.md' : `docs/FAQ.${lang}.md`;
             document.getElementById('docsLink').textContent = t.navDocs;
             document.getElementById('docsLink').href = 'access.html'; // Gateway always
             
