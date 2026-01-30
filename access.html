@@ -43,10 +43,10 @@
         .container {
             max-width: 1100px;
             width: 100%;
-            padding: 2vh 20px;
+            padding: 1vh 20px;
             display: flex;
             flex-direction: column;
-            height: 96vh;
+            height: calc(100vh - 30px);
             justify-content: center;
         }
 
@@ -70,8 +70,8 @@
 
         .header {
             text-align: center;
-            margin: 2vh 0 2vh;
-            padding-bottom: 1vh;
+            margin: 1vh 0;
+            padding-bottom: 0.5vh;
             flex-shrink: 0;
         }
 
@@ -79,30 +79,30 @@
             font-family: var(--font-title);
             background: rgba(36, 108, 5, 0.2);
             color: #00ff00;
-            padding: 5px 20px;
+            padding: 4px 15px;
             border-radius: 4px;
-            font-size: 0.85rem;
-            margin-bottom: 20px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
             display: inline-block;
             border: 2px solid #00ff00;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+            letter-spacing: 2px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
             animation: pulse-glow 2s infinite alternate;
         }
 
         @keyframes pulse-glow {
-            from { box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); border-color: rgba(0, 255, 0, 0.5); }
-            to { box-shadow: 0 0 30px rgba(0, 255, 0, 0.6); border-color: #00ff00; }
+            from { box-shadow: 0 0 5px rgba(0, 255, 0, 0.2); border-color: rgba(0, 255, 0, 0.5); }
+            to { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); border-color: #00ff00; }
         }
 
         h1 {
             font-family: var(--font-title);
             color: var(--danger);
-            font-size: 1.8rem;
-            margin: 10px 0 10px;
-            letter-spacing: 4px;
-            text-shadow: 0 0 15px rgba(215, 20, 20, 0.3);
+            font-size: 1.4rem;
+            margin: 5px 0;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(215, 20, 20, 0.3);
         }
 
         .subtitle {
@@ -367,11 +367,11 @@
                     SECURITY WARNING | ДЕРЖАВНА БЕЗПЕКА
                 </div>
                 <div class="alert-content">
-                    <div style="font-size: 0.8rem; color: #fff; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; opacity: 0.9;">
+                    <div style="font-size: 0.75rem; color: #fff; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; opacity: 0.9;">
                         SBSQ SmartBeesSwarm Unified Interface.<br>
                         Access restricted to authorized partners and verified developers.
                     </div>
-                    <p><strong>[UA]</strong> Система класифікується як технологія подвійного призначення. Спроба протиправного доступу до вихідного коду може розглядатися як шпигунство або диверсія відповідно КК України.</p>
+                    <p style="margin-bottom: 8px;"><strong>[UA]</strong> Система класифікується як технологія подвійного призначення. Спроба протиправного доступу до вихідного коду може розглядатися як шпигунство або диверсія відповідно КК України.</p>
                     <div class="lang-grid">
                         <div class="lang-item">
                             <span class="lang-label">ENGLISH</span>
