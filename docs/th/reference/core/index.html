@@ -79,6 +79,8 @@
     
       <link rel="stylesheet" href="../../../assets/landing.css">
     
+      <link rel="stylesheet" href="../../../assets/ring.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1007,6 +1009,34 @@
     
   
     Harmony Guardrails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Intelligence/PHYSIOLOGY_SNAPSHOT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physiology Snapshot
   
 
     
@@ -2357,7 +2387,7 @@ Filters satellites above horizon and provides footprint calculations.</p>
 
 
 <h3 id="smartbees.core.SkyCalculator.__init__" class="doc doc-heading">
-            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">tle_starlink</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tle_geo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">tle_starlink</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tle_geo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timescale_loader</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></code>
 
 </h3>
 
@@ -2405,6 +2435,21 @@ Filters satellites above horizon and provides footprint calculations.</p>
             </td>
             <td>
                   <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>timescale_loader</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>function that returns a timescale object</p>
+              </div>
+            </td>
+            <td>
+                  <code><span title="skyfield.api.load">load</span></code>
             </td>
           </tr>
       </tbody>
