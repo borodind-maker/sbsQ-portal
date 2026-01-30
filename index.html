@@ -373,6 +373,84 @@
             box-shadow: 0 15px 40px var(--primary-glow);
         }
 
+        /* Threat Model Matrix */
+        .threat-model {
+            padding: 80px 5%;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(20, 20, 20, 0.8) 100%);
+            border-top: 1px solid var(--border);
+        }
+
+        .threat-matrix {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
+            gap: 2px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .matrix-header {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: var(--secondary);
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .matrix-cell {
+            background: var(--bg); /* Fallback to bg color */
+            background: rgba(10, 10, 10, 0.6);
+            padding: 15px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            color: var(--text-dim);
+        }
+        
+        body.light-theme .matrix-cell {
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--text);
+        }
+
+        .matrix-cell.reaction {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .threat-matrix {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                background: transparent;
+                border: none;
+            }
+            .matrix-header { display: none; }
+            .matrix-cell {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                margin-bottom: 5px;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .matrix-cell::before {
+                content: attr(data-label);
+                display: block;
+                font-size: 0.65rem;
+                text-transform: uppercase;
+                color: var(--secondary);
+                margin-bottom: 5px;
+                opacity: 0.8;
+            }
+        }
+
         footer {
             background: rgba(0,0,0,0.1); padding: 80px 5%;
             border-top: 1px solid var(--border);
@@ -475,6 +553,56 @@
         </div>
     </section>
 
+    <!-- Manifesto Summary -->
+    <section class="manifesto-summary" style="text-align: center; padding: 60px 20px; background: var(--bg);">
+        <div style="max-width: 800px; margin: 0 auto; border: 1px solid var(--border); padding: 40px; border-radius: 20px; background: var(--card-bg);">
+            <h3 data-i18n="manifesto_sum_title" style="font-family: var(--font-title); color: var(--primary); margin-bottom: 20px; font-size: 1.5rem;"></h3>
+            <div data-i18n="manifesto_sum_text" style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dim);"></div>
+        </div>
+    </section>
+
+    <!-- Threat Model Section -->
+    <section class="threat-model">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 data-i18n="threat_title" style="font-family: var(--font-title); font-size: 2rem; margin-bottom: 15px;"></h2>
+                <p data-i18n="threat_desc" style="color: var(--text-dim); max-width: 700px; margin: 0 auto;"></p>
+            </div>
+
+            <div class="threat-matrix">
+                <!-- Headers -->
+                <div class="matrix-header" data-i18n="th_col1"></div>
+                <div class="matrix-header" data-i18n="th_col2"></div>
+                <div class="matrix-header" data-i18n="th_col3"></div>
+                <div class="matrix-header" data-i18n="th_col4"></div>
+
+                <!-- Row 1: Natural Noise -->
+                <div class="matrix-cell" data-label="Category" data-i18n="th_r1_c1"></div>
+                <div class="matrix-cell" data-label="Impact" data-i18n="th_r1_c2"></div>
+                <div class="matrix-cell" data-label="Perception" data-i18n="th_r1_c3"></div>
+                <div class="matrix-cell reaction" data-label="Reaction" data-i18n="th_r1_c4"></div>
+
+                <!-- Row 2: Active EW -->
+                <div class="matrix-cell" data-label="Category" data-i18n="th_r2_c1"></div>
+                <div class="matrix-cell" data-label="Impact" data-i18n="th_r2_c2"></div>
+                <div class="matrix-cell" data-label="Perception" data-i18n="th_r2_c3"></div>
+                <div class="matrix-cell reaction" data-label="Reaction" data-i18n="th_r2_c4"></div>
+
+                <!-- Row 3: Cyber-Intrusion -->
+                <div class="matrix-cell" data-label="Category" data-i18n="th_r3_c1"></div>
+                <div class="matrix-cell" data-label="Impact" data-i18n="th_r3_c2"></div>
+                <div class="matrix-cell" data-label="Perception" data-i18n="th_r3_c3"></div>
+                <div class="matrix-cell reaction" data-label="Reaction" data-i18n="th_r3_c4"></div>
+
+                <!-- Row 4: Cognitive Attack -->
+                <div class="matrix-cell" data-label="Category" data-i18n="th_r4_c1"></div>
+                <div class="matrix-cell" data-label="Impact" data-i18n="th_r4_c2"></div>
+                <div class="matrix-cell" data-label="Perception" data-i18n="th_r4_c3"></div>
+                <div class="matrix-cell reaction" data-label="Reaction" data-i18n="th_r4_c4"></div>
+            </div>
+        </div>
+    </section>
+
     <div class="pitch-card" style="max-width: 900px; margin: 80px auto; padding: 60px; background: linear-gradient(135deg, #111 0%, #000 100%); border: 1px solid var(--border); border-radius: 20px; text-align: center; box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
         <h3 id="pitchTitle" style="font-size: 2.5em; margin-bottom: 25px; background: linear-gradient(90deg, #00ff00, #00aa00); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">💎 "Кардіограма" Розуму</h3>
         <p id="pitchText" style="color: var(--text-dim); font-size: 1.25em; line-height: 1.7; margin-bottom: 40px;">
@@ -511,18 +639,35 @@
                 pitchText: "sbsQ не просто логує помилки — вона відчуває біль. Система автоматично знижує агресивність при накопиченні стресу в секторах Безпеки, працюючи як цифрова нервова система з математичною точністю.",
                 pitchBtn: "Дізнатися більше",
                 
-                // Manifesto
-                manifesto_title: "Маніфест Алгоритмічного Суверенітету",
-                card1_title: "Кільце Гармонії: Цифрова Фізіологія",
-                card1_text: "Від «Логіки» до «Фізіології». Система Q не просто фіксує помилки — вона відчуває <b>«біль»</b>. <ul><li><b>9 секторів інваріантів:</b> Від Безпеки до Часу.</li><li><b>Межа еластичності:</b> Математичний запобіжник від деформації структури.</li></ul>",
-                card2_title: "Рада 5 Агентів: Когнітивний Резонанс",
-                card2_text: "Замість авторитарного ШІ — демократія ортогональних полюсів. <ul><li><b>Аналітик та Скептик:</b> Постійна діалектика можливостей та заборон.</li><li><b>Tabula Rasa:</b> Миттєве скидання при виявленні самообману (Groupthink).</li></ul>",
-                card3_title: "Entropy Pump: Метаболізм Хаосу",
-                card3_text: "Для ворога РЕБ — це зброя. Для нас — паливо. <ul><li><b>Трансформація завад:</b> Перетворення енергії придушення у ресурс для шифрування.</li><li><b>Cyber-Aikido:</b> Використання сили агресора для зміцнення власної стійкості.</li></ul>",
-                card4_title: "Трійкова Свобода: BitNet Bridge",
-                card4_text: "Відмова від бінарного рабства на користь логіки {-1, 0, 1}. <ul><li><b>Multiplication-Free:</b> Енергоефективність, що дозволяє ШІ працювати на звичайних смартфонах тижнями.</li><li><b>Bicameral Dream:</b> Самонавчання через «цифрові сни» під час зарядки.</li></ul>",
-                card5_title: "Mobius Trap: Момент Істини",
-                card5_text: "<b>Система може не знайти виходу, але вона ніколи не обере шлях у прірву.</b> <br>Топологічна неможливість зради себе: якщо рішення руйнує цілісність — воно відхиляється на рівні інстинкту."
+                // Manifesto (Canonical UK)
+                manifesto_title: "ЦИФРОВИЙ МАНІФЕСТ: Алгоритмічний Суверенітет",
+                
+                card1_title: "КІЛЬЦЕ ГАРМОНІЇ (Фізіологія)",
+                card1_text: "<b>«Від логіки до фізіології»</b><br>Система sbsQ не просто обробляє дані — вона має цифрову пропріоцепцію. <ul><li><b>Механіка:</b> 9 ортогональних секторів (Намір, Безпека, Час...) утворюють еластичну нервову систему.</li><li><b>Біль як запобіжник:</b> Якщо напруга в секторі Безпеки перевищує межу, система відчуває «біль» і блокує шлях.</li></ul><br><i>Не «правильно», а життєздатно.</i>",
+                
+                card2_title: "РАДА П’ЯТИ АГЕНТІВ",
+                card2_text: "<b>«Когнітивний резонанс»</b><br>Замість авторитарного ШІ — демократія ортогональних розумів. <ul><li><b>Склад:</b> Аналітик, Скептик, Історик, Синтезатор.</li><li><b>Вартовий (Z-Gate):</b> Перевіряє інваріанти.</li><li><b>Tabula Rasa:</b> Якщо Рада впадає у Groupthink, Вартовий анігілює симуляцію.</li></ul><br><i>Істина народжується з напруги.</i>",
+                
+                card3_title: "ЕНТРОПІЙНИЙ БЕНКЕТ",
+                card3_text: "<b>«Метаболізм хаосу»</b><br>Те, що для ворога — зброя РЕБ, для sbsQ — джерело енергії. <ul><li><b>Entropy Pump:</b> Поглинає шум і генерує незламні ключі.</li><li><b>Кібер-айкідо:</b> Чим агресивніший вплив, тим стабільніший зв’язок рою.</li></ul><br><i>Хаос більше не ворог. Він — поживне середовище.</i>",
+                
+                card4_title: "ТРІЙКОВА СВОБОДА",
+                card4_text: "<b>«Optimal Infinity»</b><br>Відмова від бінарного рабства на користь логіки {-1, 0, 1}. <ul><li><b>BitNet Quantum Bridge:</b> 1.58-бітна квантизація для роботи на смартфонах без перегріву.</li><li><b>Bicameral Dream:</b> Режим «цифрових снів» під час зарядки (телеметрія → рефлекси).</li></ul><br><i>Свобода = здатність утриматись від дії.</i>",
+                
+                card5_title: "МОБІУСОВА ПАСТКА",
+                card5_text: "<b>«Момент Істини»</b><br>Топологічна неможливість зради. Система фізично не здатна діяти проти власних принципів. <ul><li><b>Суть:</b> Якщо рішення руйнує цілісність — воно відхиляється на рівні інстинкту.</li></ul><br><i>Система може не знайти вихід. Але вона ніколи не вибере прірву.</i>",
+
+                manifesto_sum_title: "АКСІОМИ НОВОГО АЛГОРИТМІЧНОГО ГУМАНІЗМУ",
+                manifesto_sum_text: "1. <b>Життєздатність</b> — це здатність відчувати і уникати болю через резонанс. <br>2. <b>Суверенітет</b> — це топологічна гарантія, що система ніколи не стане інструментом агресора. <br>3. <b>Свобода</b> — це право на паузу, зафіксоване в трійковому стеку <b>Quantum Queen 3</b>.",
+
+                // Threat Model
+                threat_title: "Модель Загроз (Не-кінетична)",
+                threat_desc: "Система sbsQ сприймає світ не через «друзів та ворогів», а через Гармонію та Ентропію. Вона не атакує у відповідь, а стає некорисною для нападника.",
+                th_col1: "Категорія", th_col2: "Вплив", th_col3: "Сприйняття системою", th_col4: "Реакція (Non-Aggressive)",
+                th_r1_c1: "Природний шум", th_r1_c2: "Погода, ландшафт", th_r1_c3: "Фонова ентропія", th_r1_c4: "Пасивна фільтрація",
+                th_r2_c1: "Активний РЕБ", th_r2_c2: "Глушіння, спотворення", th_r2_c3: "Ресурс (Entropy Feast)", th_r2_c4: "Поглинання енергії для ключів",
+                th_r3_c1: "Кібер-втручання", th_r3_c2: "Root-доступ, Debugging", th_r3_c3: "Порушення інваріанту", th_r3_c4: "Ізоляція сектору (Протокол 49)",
+                th_r4_c1: "Когнітивна атака", th_r4_c2: "Prompt injection, Groupthink", th_r4_c3: "Логічний парадокс", th_r4_c4: "Tabula Rasa (Скидання стану)"
             },
             en: {
                 navFAQ: "FAQ",
@@ -547,18 +692,35 @@
                 sector2Title: "LOGISTICS",
                 sector2Text: "Dynamic delivery and warehouse packing with Honeycomb algorithms.",
                 sector3Title: "DEFENSE",
-                // Manifesto (EN Placeholders)
-                manifesto_title: "Manifesto of Algorithmic Sovereignty",
-                card1_title: "Harmony Ring: Digital Physiology",
-                card1_text: "From 'Logic' to 'Physiology'. System Q doesn't just log errors — it feels <b>'pain'</b>. <ul><li><b>9 Invariant Sectors:</b> From Safety to Time.</li><li><b>Elastic Limit:</b> Mathematical safeguard against structural deformation.</li></ul>",
-                card2_title: "Council of 5 Agents: Cognitive Resonance",
-                card2_text: "Instead of authoritarian AI — a democracy of orthogonal poles. <ul><li><b>Analyst & Skeptic:</b> Constant dialectic of possibilities and prohibitions.</li><li><b>Tabula Rasa:</b> Instant reset upon detection of self-deception (Groupthink).</li></ul>",
-                card3_title: "Entropy Pump: Chaos Metabolism",
-                card3_text: "For the enemy, EW is a weapon. For us — fuel. <ul><li><b>Interference Transformation:</b> Converting suppression energy into encryption resources.</li><li><b>Cyber-Aikido:</b> Using the aggressor's strength to fortify our own resilience.</li></ul>",
-                card4_title: "Ternary Freedom: BitNet Bridge",
-                card4_text: "Rejecting binary slavery for {-1, 0, 1} logic. <ul><li><b>Multiplication-Free:</b> Energy efficiency allowing AI to run on smartphones for weeks.</li><li><b>Bicameral Dream:</b> Self-learning through 'digital dreams' during charging.</li></ul>",
-                card5_title: "Mobius Trap: Moment of Truth",
-                card5_text: "<b>The system may not find a way out, but it will never choose the path to the abyss.</b> <br>Topological impossibility of self-betrayal: if a decision destroys integrity — it is rejected at the instinct level."
+                // Manifesto (Canonical EN)
+                manifesto_title: "DIGITAL MANIFESTO: Algorithmic Sovereignty",
+
+                card1_title: "HARMONY RING (Physiology)",
+                card1_text: "<b>«From Logic to Physiology»</b><br>System sbsQ doesn't just process data — it possesses digital proprioception. <ul><li><b>Mechanics:</b> 9 orthogonal sectors (Intent, Safety, Time...) form an elastic nervous system.</li><li><b>Pain as Safeguard:</b> If tension in the Safety sector exceeds the limit, the system feels 'pain' and blocks the path.</li></ul><br><i>Not 'correct', but viable.</i>",
+
+                card2_title: "COUNCIL OF 5 AGENTS",
+                card2_text: "<b>«Cognitive Resonance»</b><br>Instead of authoritarian AI — a democracy of orthogonal minds. <ul><li><b>Composition:</b> Analyst, Skeptic, Historian, Synthesizer.</li><li><b>Guard (Z-Gate):</b> Verifies invariants.</li><li><b>Tabula Rasa:</b> If the Council falls into Groupthink, the Guard annihilates the simulation.</li></ul><br><i>Truth is born from tension.</i>",
+
+                card3_title: "ENTROPY FEAST",
+                card3_text: "<b>«Chaos Metabolism»</b><br>What is an EW weapon for the enemy is fuel for sbsQ. <ul><li><b>Entropy Pump:</b> Absorbs noise to generate unbreakable keys.</li><li><b>Cyber-Aikido:</b> The more aggressive the influence, the more stable the swarm connection.</li></ul><br><i>Chaos is no longer an enemy. It is a nutrient.</i>",
+
+                card4_title: "TERNARY FREEDOM",
+                card4_text: "<b>«Optimal Infinity»</b><br>Rejection of binary slavery for {-1, 0, 1} logic. <ul><li><b>BitNet Quantum Bridge:</b> 1.58-bit quantization for smartphones without overheating.</li><li><b>Bicameral Dream:</b> Self-learning mode ('digital dreams') during charging (telemetry → reflexes).</li></ul><br><i>Freedom = the ability to refrain from action.</i>",
+
+                card5_title: "MOBIUS TRAP",
+                card5_text: "<b>«Moment of Truth»</b><br>Topological impossibility of betrayal. The system is physically incapable of acting against its principles. <ul><li><b>Essence:</b> If a decision destroys integrity — it is rejected at the instinct level.</li></ul><br><i>The system may not find a way out. But it will never choose the abyss.</i>",
+
+                manifesto_sum_title: "AXIOMS OF NEW ALGORITHMIC HUMANISM",
+                manifesto_sum_text: "1. <b>Viability</b> — is the ability to feel and avoid pain through resonance. <br>2. <b>Sovereignty</b> — is the topological guarantee that the system will never become a tool for an aggressor. <br>3. <b>Freedom</b> — is the right to a pause, fixed in the 3-ary stack of <b>Quantum Queen 3</b>.",
+
+                // Threat Model (EN)
+                threat_title: "Threat Model (Non-Kinetic)",
+                threat_desc: "System sbsQ perceives the world not through 'friends and foes', but through Harmony and Entropy. It does not counter-attack; it renders itself useless to the attacker.",
+                th_col1: "Category", th_col2: "Impact", th_col3: "System Perception", th_col4: "Reaction (Non-Aggressive)",
+                th_r1_c1: "Natural Noise", th_r1_c2: "Weather, Terrain", th_r1_c3: "Background Entropy", th_r1_c4: "Passive Filtering",
+                th_r2_c1: "Active EW", th_r2_c2: "Jamming, Distortion", th_r2_c3: "Resource (Entropy Feast)", th_r2_c4: "Energy Absorption for Keys",
+                th_r3_c1: "Cyber-Intrusion", th_r3_c2: "Root-access, Debugging", th_r3_c3: "Invariant Violation", th_r3_c4: "Sector Isolation (Protocol 49)",
+                th_r4_c1: "Cognitive Attack", th_r4_c2: "Prompt injection, Groupthink", th_r4_c3: "Logical Paradox", th_r4_c4: "Tabula Rasa (State Reset)"
             },
             de: {
                 navFAQ: "FAQ",
@@ -734,6 +896,8 @@
                      el.innerHTML = translations['en'][key]; // Fallback to EN
                 }
             });
+
+            // Update Manifesto Summary specifically if redundant call is needed (already covered by loop above)
             
             // Save preference
             localStorage.setItem('preferredLang', lang);
