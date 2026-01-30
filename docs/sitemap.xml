@@ -1,76 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/FAQ_de/</loc>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/FAQ/</loc>
         <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_de/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/FAQ_en/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_en/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/FAQ_ko/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_ko/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/FAQ_th/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_th/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/FAQ_uk/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_uk/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/FAQ_zh/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_zh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ/"/>
     </url>
     <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/QUICKSTART_NATURE_MATH_V2/</loc>
@@ -841,76 +781,16 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/tests/reports/nature_math_100_coverage_report/"/>
     </url>
     <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_de/</loc>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/uk/FAQ/</loc>
         <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_de/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_en/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_en/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_ko/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_ko/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_th/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_th/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_uk/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_uk/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_zh/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_zh/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ/"/>
     </url>
     <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/uk/QUICKSTART_NATURE_MATH_V2/</loc>
@@ -1681,76 +1561,16 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/tests/reports/nature_math_100_coverage_report/"/>
     </url>
     <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/de/FAQ_de/</loc>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/de/FAQ/</loc>
         <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_de/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/de/FAQ_en/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_en/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/de/FAQ_ko/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_ko/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/de/FAQ_th/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_th/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/de/FAQ_uk/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_uk/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/de/FAQ_zh/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_zh/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ/"/>
     </url>
     <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/de/QUICKSTART_NATURE_MATH_V2/</loc>
@@ -2521,76 +2341,16 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/tests/reports/nature_math_100_coverage_report/"/>
     </url>
     <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_de/</loc>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/ko/FAQ/</loc>
         <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_de/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_en/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_en/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_ko/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_ko/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_th/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_th/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_uk/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_uk/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_zh/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_zh/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ/"/>
     </url>
     <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/ko/QUICKSTART_NATURE_MATH_V2/</loc>
@@ -3361,76 +3121,16 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/tests/reports/nature_math_100_coverage_report/"/>
     </url>
     <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_de/</loc>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/zh/FAQ/</loc>
         <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_de/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_en/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_en/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_ko/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_ko/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_th/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_th/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_uk/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_uk/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_zh/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_zh/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ/"/>
     </url>
     <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/zh/QUICKSTART_NATURE_MATH_V2/</loc>
@@ -4201,76 +3901,16 @@
         <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/tests/reports/nature_math_100_coverage_report/"/>
     </url>
     <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/th/FAQ_de/</loc>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/th/FAQ/</loc>
         <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_de/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/th/FAQ_en/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_en/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/th/FAQ_ko/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_ko/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/th/FAQ_th/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_th/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/th/FAQ_uk/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_uk/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/th/FAQ_zh/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_zh/"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ/"/>
     </url>
     <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/th/QUICKSTART_NATURE_MATH_V2/</loc>
@@ -5041,76 +4681,16 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/tests/reports/nature_math_100_coverage_report/"/>
     </url>
     <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/es/FAQ_de/</loc>
+        <loc>https://borodind-maker.github.io/sbsQ-portal/es/FAQ/</loc>
         <lastmod>2026-01-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_de/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_de/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/es/FAQ_en/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_en/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_en/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/es/FAQ_ko/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_ko/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_ko/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/es/FAQ_th/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_th/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_th/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/es/FAQ_uk/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_uk/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_uk/"/>
-    </url>
-    <url>
-        <loc>https://borodind-maker.github.io/sbsQ-portal/es/FAQ_zh/</loc>
-        <lastmod>2026-01-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ_zh/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://borodind-maker.github.io/sbsQ-portal/es/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://borodind-maker.github.io/sbsQ-portal/de/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://borodind-maker.github.io/sbsQ-portal/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://borodind-maker.github.io/sbsQ-portal/ko/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://borodind-maker.github.io/sbsQ-portal/th/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://borodind-maker.github.io/sbsQ-portal/uk/FAQ/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://borodind-maker.github.io/sbsQ-portal/zh/FAQ/"/>
     </url>
     <url>
         <loc>https://borodind-maker.github.io/sbsQ-portal/es/QUICKSTART_NATURE_MATH_V2/</loc>
