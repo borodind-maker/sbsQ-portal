@@ -1,0 +1,2902 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://borodind-maker.github.io/sbsQ-portal/es/00_General/swarm_flight_formations/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../../00_General/swarm_flight_formations/" hreflang="en">
+        
+          <link rel="alternate" href="../../../uk/00_General/swarm_flight_formations/" hreflang="uk">
+        
+          <link rel="alternate" href="../../../de/00_General/swarm_flight_formations/" hreflang="de">
+        
+          <link rel="alternate" href="../../../ko/00_General/swarm_flight_formations/" hreflang="ko">
+        
+          <link rel="alternate" href="../../../zh/00_General/swarm_flight_formations/" hreflang="zh">
+        
+          <link rel="alternate" href="../../../th/00_General/swarm_flight_formations/" hreflang="th">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>🌐 Фігури Польоту Рою SmartBees - sbsQ SmartBeesSwarm Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../assets/custom.css">
+    
+      <link rel="stylesheet" href="../../../assets/landing.css">
+    
+      <link rel="stylesheet" href="../../../assets/ring.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#smartbees" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../" title="sbsQ SmartBeesSwarm Portal" class="md-header__button md-logo" aria-label="sbsQ SmartBeesSwarm Portal" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            sbsQ SmartBeesSwarm Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🌐 Фігури Польоту Рою SmartBees
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../00_General/swarm_flight_formations/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../uk/00_General/swarm_flight_formations/" hreflang="uk" class="md-select__link">
+              Ukrainian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../de/00_General/swarm_flight_formations/" hreflang="de" class="md-select__link">
+              German
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ko/00_General/swarm_flight_formations/" hreflang="ko" class="md-select__link">
+              Korean
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../zh/00_General/swarm_flight_formations/" hreflang="zh" class="md-select__link">
+              Chinese (Taiwan)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../th/00_General/swarm_flight_formations/" hreflang="th" class="md-select__link">
+              Thai
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/borodind-maker/sbsQ-portal" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sbsQ-portal
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="sbsQ SmartBeesSwarm Portal" class="md-nav__button md-logo" aria-label="sbsQ SmartBeesSwarm Portal" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    sbsQ SmartBeesSwarm Portal
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/borodind-maker/sbsQ-portal" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sbsQ-portal
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_QUICK_START/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FULL_CYCLE_WORKFLOW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full Cycle Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SYSTEM_STATISTICS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BUILD_PRODUCTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build & Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Architecture_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STRATEGIC_VISION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strategic Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURAL_PARADIGM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paradigm (VLG-JEPA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QUANTUM_NATURE_PROTOCOL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantum Nature Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HARMONIC_DECISION_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TCI-Multi-Dimensional Core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SYSTEM_CONCEPT_GOLD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Concept
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Interfaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Interfaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_User_Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_User_Interfaces/PILOT_INTERFACE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pilot 3D Screen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_User_Interfaces/ADMIN_PANEL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Admin Panel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Tiers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System Tiers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Intelligence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Intelligence (Brain)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Intelligence/HARMONY_GUARDRAILS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harmony Guardrails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Intelligence/PHYSIOLOGY_SNAPSHOT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physiology Snapshot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Intelligence/NATIVE_AI_PIPELINE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native AI Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Body_Execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Body Execution (Body)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Nervous_System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nervous System (Comm)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_Infrastructure/ROBLOX_DIGITAL_TWIN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roblox Digital Twin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation & Proofs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Validation & Proofs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/TESTS_CATALOGUE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Suite Catalogue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/TRAINING_TOOLS_CATALOGUE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/SENSORS_CATALOGUE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware & Sensors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/MODULES_CATALOGUE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules Catalogue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reports/DETAILED_CODE_STATS.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Detailed Code Stats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/brain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brain API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI & Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/comm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Огляд
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-fibonacci_sphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 1. FIBONACCI_SPHERE (Сфера Фібоначчі)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 1. FIBONACCI_SPHERE (Сфера Фібоначчі)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Математична основа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Візуалізація
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Характеристики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Використання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклад коду
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-silver_octagon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 2. SILVER_OCTAGON (Срібний Восьмикутник)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 2. SILVER_OCTAGON (Срібний Восьмикутник)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Математична основа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Візуалізація
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Характеристики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Використання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклад коду
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-padovan_spiral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌀 3. PADOVAN_SPIRAL (Спіраль Падована)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌀 3. PADOVAN_SPIRAL (Спіраль Падована)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Математична основа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Візуалізація
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Характеристики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Використання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклад коду
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hexagonal_grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐝 4. HEXAGONAL_GRID (Гексагональна Сітка)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐝 4. HEXAGONAL_GRID (Гексагональна Сітка)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Математична основа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Візуалізація
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Характеристики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Використання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклад коду
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cubic_lattice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 5. CUBIC_LATTICE (Кубічна Гратка)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 5. CUBIC_LATTICE (Кубічна Гратка)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Математична основа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Візуалізація
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Характеристики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Використання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклад коду
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-golden_rectangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 6. GOLDEN_RECTANGLE (Золотий Прямокутник)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 6. GOLDEN_RECTANGLE (Золотий Прямокутник)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Математична основа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Візуалізація
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Характеристики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Використання
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклад коду
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарії
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Порівняльна таблиця формацій
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Сценарії застосування
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Сценарії застосування">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Військові операції
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пошуково-рятувальні
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аграрні місії
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Інспекція інфраструктури
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Технічна реалізація
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Технічна реалізація">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Enum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Універсальна функція
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Ефективність покриття
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Ефективність покриття">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Математичне обґрунтування
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Посилання
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Навчальні матеріали
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎓 Навчальні матеріали">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Візуалізація
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Туторіали
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="smartbees">🌐 Фігури Польоту Рою SmartBees</h1>
+<p><strong>Версія</strong>: 2.0<br />
+<strong>Дата</strong>: 2026-01-25<br />
+<strong>Автор</strong>: sbsQ Development Team</p>
+<hr />
+<h2 id="_1">📋 Огляд</h2>
+<p>SmartBees підтримує <strong>6 типів геометричних формацій</strong> для різних тактичних завдань. Кожна формація базується на природних математичних константах для оптимального розподілу дронів у просторі.</p>
+<hr />
+<h2 id="1-fibonacci_sphere">🌟 <strong>1. FIBONACCI_SPHERE</strong> (Сфера Фібоначчі)</h2>
+<h3 id="_2">Математична основа</h3>
+<ul>
+<li><strong>Константа</strong>: Золотий перетін (PHI = 1.618033988...)</li>
+<li><strong>Кут</strong>: GOLDEN_ANGLE_RAD ≈ 2.3999 rad (137.5°)</li>
+</ul>
+<h3 id="_3">Візуалізація</h3>
+<pre><code>      ●
+   ●  ●  ●
+ ●  ●  ●  ●
+●  ●  ●  ●  ●
+ ●  ●  ●  ●
+   ●  ●  ●
+      ●
+</code></pre>
+<h3 id="_4">Характеристики</h3>
+<ul>
+<li><strong>Виміри</strong>: 3D (сферичний розподіл)</li>
+<li><strong>Ефективність покриття</strong>: 95% (сфера)</li>
+<li><strong>Складність</strong>: O(1) на позицію</li>
+<li><strong>Унікальність</strong>: Рівномірний розподіл без кластерування</li>
+</ul>
+<h3 id="_5">Використання</h3>
+<ul>
+<li>🔭 <strong>Спостереження/розвідка</strong> - рівномірний огляд у всіх напрямках</li>
+<li>📡 Моніторинг об'єкта на 360°</li>
+<li>🎯 Мінімізація сліпих зон</li>
+<li>🛡️ Захист периметра зі всіх боків</li>
+</ul>
+<h3 id="_6">Приклад коду</h3>
+<pre><code class="language-python">from smartbees.core.nature_math import QuantumNatureProtocol
+
+# 5 дронів на сфері радіусом 15м
+for i in range(5):
+    x, y, z = QuantumNatureProtocol.get_swarm_position(i, 5, radius=15.0)
+    print(f&quot;Drone {i}: ({x:.1f}, {y:.1f}, {z:.1f})&quot;)
+</code></pre>
+<h3 id="_7">Сценарії</h3>
+<ul>
+<li>Патрулювання критичної інфраструктури</li>
+<li>Охорона VIP-персон</li>
+<li>Розвідка невідомої території</li>
+</ul>
+<hr />
+<h2 id="2-silver_octagon">🛡️ <strong>2. SILVER_OCTAGON</strong> (Срібний Восьмикутник)</h2>
+<h3 id="_8">Математична основа</h3>
+<ul>
+<li><strong>Константа</strong>: Срібний перетін (SILVER_RATIO = 1 + √2 ≈ 2.414213562...)</li>
+<li><strong>Кут кроку</strong>: 45° (π/4) × SILVER_RATIO</li>
+</ul>
+<h3 id="_9">Візуалізація</h3>
+<pre><code>    ●₈
+  ●₇  ●₁
+●₆  C  ●₂   ← 8 позицій
+  ●₅  ●₃       на кільці
+    ●₄
+
+Багато кілець:
+  Ring 2:  ●────●
+          /│    │\
+Ring 1: ●  C───C  ●
+          \│    │/
+           ●────●
+</code></pre>
+<h3 id="_10">Характеристики</h3>
+<ul>
+<li><strong>Виміри</strong>: 2D + висотна диференціація</li>
+<li><strong>Ефективність покриття</strong>: 85% (кільця)</li>
+<li><strong>Складність</strong>: O(1) на позицію</li>
+<li><strong>Унікальність</strong>: Масштабування кілець за срібним перетином</li>
+</ul>
+<h3 id="_11">Використання</h3>
+<ul>
+<li>🛡️ <strong>Оборонні периметри</strong> - захист об'єкта</li>
+<li>🚧 Створення багатошарової "стіни"</li>
+<li>⚡ Швидка перебудова кілець</li>
+<li>🎯 Контроль доступу до зони</li>
+</ul>
+<h3 id="_12">Приклад коду</h3>
+<pre><code class="language-python"># 16 дронів (2 кільця по 8)
+for i in range(16):
+    x, y, z = get_silver_octagon_position(i, total=16, radius=20.0)
+    ring = i // 8
+    print(f&quot;Drone {i} (Ring {ring}): ({x:.1f}, {y:.1f}, {z:.1f})&quot;)
+</code></pre>
+<h3 id="_13">Сценарії</h3>
+<ul>
+<li>Захист воєнної бази</li>
+<li>Периметр навколо небезпечної зони</li>
+<li>Контроль кордону території</li>
+</ul>
+<hr />
+<h2 id="3-padovan_spiral">🌀 <strong>3. PADOVAN_SPIRAL</strong> (Спіраль Падована)</h2>
+<h3 id="_14">Математична основа</h3>
+<ul>
+<li><strong>Константа</strong>: Пластичне число (PLASTIC_NUMBER ≈ 1.324717957...)</li>
+<li><strong>Послідовність</strong>: P(n) = P(n-2) + P(n-3)</li>
+</ul>
+<h3 id="_15">Візуалізація</h3>
+<pre><code>        ●₅
+      ↗
+    ●₄
+  ↗
+●₃      ← Спіраль
+↑         розширюється
+●₂        природно
+↑
+●₁ (start)
+
+3D вид:
+    z
+    ↑   ●₅
+    │ ↗
+    ●₄
+  ↗
+●₃─────→ y
+│
+●₂
+│
+●₁
+│
+x
+</code></pre>
+<h3 id="_16">Характеристики</h3>
+<ul>
+<li><strong>Виміри</strong>: 3D (спіральне розширення)</li>
+<li><strong>Ефективність покриття</strong>: 80% (розширення)</li>
+<li><strong>Складність</strong>: O(1) на позицію</li>
+<li><strong>Унікальність</strong>: Природне зростання радіусу</li>
+</ul>
+<h3 id="_17">Використання</h3>
+<ul>
+<li>🔍 <strong>Пошукові операції</strong> - систематичне сканування</li>
+<li>📈 Природне розширення зони пошуку</li>
+<li>🎯 Знаходження пропалих осіб/об'єктів</li>
+<li>🌊 Розширення від епіцентру</li>
+</ul>
+<h3 id="_18">Приклад коду</h3>
+<pre><code class="language-python"># 10 дронів у пошуковій спіралі
+for i in range(10):
+    x, y, z = get_padovan_spiral_position(i, total=10, radius=5.0)
+    distance = math.sqrt(x**2 + y**2)
+    print(f&quot;Drone {i}: r={distance:.1f}m, z={z:.1f}m&quot;)
+</code></pre>
+<h3 id="_19">Сценарії</h3>
+<ul>
+<li>Пошук загублених людей у лісі</li>
+<li>Розширення зони після виявлення об'єкта</li>
+<li>Систематичне сканування невідомої території</li>
+</ul>
+<hr />
+<h2 id="4-hexagonal_grid">🐝 <strong>4. HEXAGONAL_GRID</strong> (Гексагональна Сітка)</h2>
+<h3 id="_20">Математична основа</h3>
+<ul>
+<li><strong>Константа</strong>: SQRT3 ≈ 1.732050808...</li>
+<li><strong>Ефективність</strong>: 90.69% (найкраща для площини)</li>
+</ul>
+<h3 id="_21">Візуалізація</h3>
+<pre><code>  ● ● ●
+ ● ● ● ●    ← Стільники
+● ● ● ● ●     (honeycomb)
+ ● ● ● ●
+  ● ● ●
+
+Геометрія:
+   ⬡
+  ⬡⬡    spacing = radius / √3
+ ⬡⬡⬡
+  ⬡⬡
+   ⬡
+</code></pre>
+<h3 id="_22">Характеристики</h3>
+<ul>
+<li><strong>Виміри</strong>: 2D (планарне покриття)</li>
+<li><strong>Ефективність покриття</strong>: 90.69% (максимальна!)</li>
+<li><strong>Складність</strong>: O(1) на позицію</li>
+<li><strong>Унікальність</strong>: Nature's perfect packing</li>
+</ul>
+<h3 id="_23">Використання</h3>
+<ul>
+<li>🌾 <strong>Сільське господарство</strong> - максимальне покриття полів</li>
+<li>📸 Аерофотозйомка великих площ</li>
+<li>🗺️ Картографування території</li>
+<li>🎯 Мінімальне перекриття зон</li>
+</ul>
+<h3 id="_24">Приклад коду</h3>
+<pre><code class="language-python"># 30 дронів для поля 500×500м
+area = 500 * 500  # m²
+drone_coverage = 50 * 50  # m² per drone
+spacing = 50 / SQRT3
+
+for i in range(30):
+    x, y, z = get_hexagonal_grid_position(i, spacing=spacing)
+    print(f&quot;Drone {i}: ({x:.1f}, {y:.1f})&quot;)
+</code></pre>
+<h3 id="_25">Сценарії</h3>
+<ul>
+<li>Обприскування сільгосп полів</li>
+<li>Сканування великих площ для карт</li>
+<li>Моніторинг лісових насаджень</li>
+</ul>
+<hr />
+<h2 id="5-cubic_lattice">📦 <strong>5. CUBIC_LATTICE</strong> (Кубічна Гратка)</h2>
+<h3 id="_26">Математична основа</h3>
+<ul>
+<li><strong>Константа</strong>: CUBE_ROOT_2 ≈ 1.259921050...</li>
+<li><strong>Структура</strong>: 3D куб з рівномірними інтервалами</li>
+</ul>
+<h3 id="_27">Візуалізація</h3>
+<pre><code>    ●───●───●
+   /│  /│  /│
+  ● ●─● ●─● │   ← 3×3×3 = 27 дронів
+  │ ●─│─●─│─●
+  │/  │/  │/
+  ●───●───●
+
+Вид збоку:
+z₂  ●───●───●
+    │   │   │
+z₁  ●───●───●
+    │   │   │
+z₀  ●───●───●
+    x₀  x₁  x₂
+</code></pre>
+<h3 id="_28">Характеристики</h3>
+<ul>
+<li><strong>Виміри</strong>: 3D (кубічна структура)</li>
+<li><strong>Ефективність покриття</strong>: 78% (куб)</li>
+<li><strong>Складність</strong>: O(1) на позицію</li>
+<li><strong>Унікальність</strong>: Рівномірний 3D розподіл</li>
+</ul>
+<h3 id="_29">Використання</h3>
+<ul>
+<li>📦 <strong>3D сканування</strong> будівель, складів</li>
+<li>🏗️ Інспекція високих конструкцій</li>
+<li>🌲 Моніторинг лісу (різні висоти)</li>
+<li>🏭 Інспекція заводів/фабрик</li>
+</ul>
+<h3 id="_30">Приклад коду</h3>
+<pre><code class="language-python"># 27 дронів (3×3×3) для 10-поверхової будівлі
+cells_per_side = 3
+for i in range(27):
+    x, y, z = get_cubic_lattice_position(i, cells_per_side=3, radius=15.0)
+    floor = int(z / 3) + 1
+    print(f&quot;Drone {i}: Floor {floor}, ({x:.1f}, {y:.1f}, {z:.1f})&quot;)
+</code></pre>
+<h3 id="_31">Сценарії</h3>
+<ul>
+<li>Інспекція багатоповерхівок</li>
+<li>3D моделювання будівель</li>
+<li>Інвентаризація складів</li>
+</ul>
+<hr />
+<h2 id="6-golden_rectangle">📐 <strong>6. GOLDEN_RECTANGLE</strong> (Золотий Прямокутник)</h2>
+<h3 id="_32">Математична основа</h3>
+<ul>
+<li><strong>Константа</strong>: PHI = 1.618... (співвідношення сторін)</li>
+<li><strong>Пропорція</strong>: width : height = 1.618 : 1</li>
+</ul>
+<h3 id="_33">Візуалізація</h3>
+<pre><code>●─────────────────────────●
+│  ●   ●   ●   ●   ●   ●  │
+│                         │  ← Співвідношення
+│  ●   ●   ●   ●   ●   ●  │    1.618:1
+│                         │
+│  ●   ●   ●   ●   ●   ●  │
+●─────────────────────────●
+
+Вид зверху:
+←──── 1.618 × L ────→
+↑  ● ● ● ● ● ●
+L  ● ● ● ● ● ●
+↓  ● ● ● ● ● ●
+</code></pre>
+<h3 id="_34">Характеристики</h3>
+<ul>
+<li><strong>Виміри</strong>: 2D (прямокутна зона)</li>
+<li><strong>Ефективність покриття</strong>: 82% (прямокутник)</li>
+<li><strong>Складність</strong>: O(1) на позицію</li>
+<li><strong>Унікальність</strong>: Естетично оптимальні пропорції</li>
+</ul>
+<h3 id="_35">Використання</h3>
+<ul>
+<li>🛣️ <strong>Моніторинг доріг</strong> та лінійної інфраструктури</li>
+<li>🌉 Інспекція мостів, трубопроводів</li>
+<li>📏 Прямокутні зони з оптимальним співвідношенням</li>
+<li>🏞️ Панорамна зйомка ландшафтів</li>
+</ul>
+<h3 id="_36">Приклад коду</h3>
+<pre><code class="language-python"># 15 дронів для моніторингу 2км автомагістралі
+width = 2000  # 2km
+height = width / PHI  # ~1.236 km
+for i in range(15):
+    x, y, z = get_golden_rectangle_position(i, total=15, width=width, height=height)
+    km_mark = x / 1000
+    print(f&quot;Drone {i}: km {km_mark:.2f}, lane offset {y:.1f}m&quot;)
+</code></pre>
+<h3 id="_37">Сценарії</h3>
+<ul>
+<li>Патрулювання автомагістралей</li>
+<li>Інспекція залізничних колій</li>
+<li>Моніторинг кордонів/огорож</li>
+</ul>
+<hr />
+<h2 id="_38">📊 Порівняльна таблиця формацій</h2>
+<table>
+<thead>
+<tr>
+<th>Формація</th>
+<th>Виміри</th>
+<th>Покриття</th>
+<th>Константа</th>
+<th>Кращий для</th>
+<th>Дронів (типово)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fibonacci Sphere</strong></td>
+<td>3D</td>
+<td>95%</td>
+<td>PHI (1.618)</td>
+<td>Огляд 360°</td>
+<td>5-20</td>
+</tr>
+<tr>
+<td><strong>Silver Octagon</strong></td>
+<td>2D+z</td>
+<td>85%</td>
+<td>SILVER (2.414)</td>
+<td>Периметр</td>
+<td>8, 16, 24...</td>
+</tr>
+<tr>
+<td><strong>Padovan Spiral</strong></td>
+<td>3D</td>
+<td>80%</td>
+<td>PLASTIC (1.325)</td>
+<td>Пошук</td>
+<td>10-30</td>
+</tr>
+<tr>
+<td><strong>Hexagonal Grid</strong></td>
+<td>2D</td>
+<td><strong>90.69%</strong></td>
+<td>SQRT3 (1.732)</td>
+<td>Площина</td>
+<td>20-100</td>
+</tr>
+<tr>
+<td><strong>Cubic Lattice</strong></td>
+<td>3D</td>
+<td>78%</td>
+<td>∛2 (1.260)</td>
+<td>3D об'єм</td>
+<td>27, 64, 125...</td>
+</tr>
+<tr>
+<td><strong>Golden Rectangle</strong></td>
+<td>2D</td>
+<td>82%</td>
+<td>PHI (1.618)</td>
+<td>Лінії/дороги</td>
+<td>10-50</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_39">🎯 Сценарії застосування</h2>
+<h3 id="_40">Військові операції</h3>
+<pre><code class="language-python"># Зовнішній периметр - Fibonacci Sphere
+outer_defense = FIBONACCI_SPHERE(12 drones, 100m)
+
+# Внутрішній периметр - Silver Octagon
+inner_defense = SILVER_OCTAGON(16 drones, 30m)
+
+# Патруль - Golden Rectangle
+patrol = GOLDEN_RECTANGLE(8 drones, (200m, 123m))
+</code></pre>
+<h3 id="-">Пошуково-рятувальні</h3>
+<pre><code class="language-python"># Початок пошуку - Padovan Spiral (розширення)
+search_phase1 = PADOVAN_SPIRAL(15 drones, start_r=10m)
+
+# Детальне сканування зони - Hexagonal Grid
+search_phase2 = HEXAGONAL_GRID(40 drones, area=1km²)
+</code></pre>
+<h3 id="_41">Аграрні місії</h3>
+<pre><code class="language-python"># Обприскування - Hexagonal Grid (max coverage)
+spray_field = HEXAGONAL_GRID(50 drones, field=5km²)
+
+# Моніторинг врожаю - Golden Rectangle
+monitor_rows = GOLDEN_RECTANGLE(20 drones, (500m, 309m))
+</code></pre>
+<h3 id="_42">Інспекція інфраструктури</h3>
+<pre><code class="language-python"># Будівля - Cubic Lattice (3D)
+building_scan = CUBIC_LATTICE(27 drones, (30m × 30m × 45m))
+
+# Міст - Golden Rectangle
+bridge_inspect = GOLDEN_RECTANGLE(12 drones, (100m, 62m))
+</code></pre>
+<hr />
+<h2 id="_43">🔧 Технічна реалізація</h2>
+<h3 id="api-enum">API Enum</h3>
+<pre><code class="language-python">from enum import Enum
+
+class SwarmFormationType(Enum):
+    FIBONACCI_SPHERE = &quot;fibonacci_sphere&quot;
+    SILVER_OCTAGON = &quot;silver_octagon&quot;
+    PADOVAN_SPIRAL = &quot;padovan_spiral&quot;
+    HEXAGONAL_GRID = &quot;hexagonal_grid&quot;
+    CUBIC_LATTICE = &quot;cubic_lattice&quot;
+    GOLDEN_RECTANGLE = &quot;golden_rectangle&quot;
+</code></pre>
+<h3 id="_44">Універсальна функція</h3>
+<pre><code class="language-python">def get_formation_position(
+    formation_type: SwarmFormationType,
+    node_index: int,
+    total_nodes: int,
+    radius: float = 10.0,
+    **kwargs
+) -&gt; Tuple[float, float, float]:
+    &quot;&quot;&quot;
+    Розраховує позицію дрона в формації.
+
+    Args:
+        formation_type: Тип формації
+        node_index: Індекс дрона (0-based)
+        total_nodes: Загальна кількість дронів
+        radius: Базовий радіус формації
+        **kwargs: Додаткові параметри (spacing, height_step, etc.)
+
+    Returns:
+        (x, y, z): Координати в метрах
+    &quot;&quot;&quot;
+</code></pre>
+<hr />
+<h2 id="_45">📈 Ефективність покриття</h2>
+<h3 id="_46">Математичне обґрунтування</h3>
+<p><strong>Hexagonal Grid (90.69%)</strong>:
+- Теорема про щільну упаковку кіл
+- π/(2√3) ≈ 0.9069
+- Найкраща для 2D площин</p>
+<p><strong>Fibonacci Sphere (95%)</strong>:
+- Рівномірний розподіл точок на сфері
+- Мінімізація Voronoi variance
+- Найкраща для 3D огляду</p>
+<p><strong>Cubic Lattice (78%)</strong>:
+- Простота структури vs щільність
+- Trade-off: легкість обчислення</p>
+<hr />
+<h2 id="performance">🚀 Performance</h2>
+<p>Всі формації мають <strong>O(1)</strong> складність на позицію:
+- ⚡ &lt; 0.01ms per calculation
+- 💾 Minimal memory (3 floats per drone)
+- 🔄 Real-time recalculation possible</p>
+<hr />
+<h2 id="_47">📚 Посилання</h2>
+<ol>
+<li><strong>Fibonacci Sphere</strong>: Vogel, H. (1979). "A better way to construct the sunflower head"</li>
+<li><strong>Silver Ratio</strong>: de Spinadel, V. (1999). "The Metallic Means Family"</li>
+<li><strong>Padovan Spiral</strong>: Padovan, R. (1994). "Dom Hans van der Laan: Modern Primitive"</li>
+<li><strong>Hexagonal Packing</strong>: Hales, T. (2001). "The Honeycomb Conjecture"</li>
+<li><strong>Cubic Lattice</strong>: Minkowski, H. (1907). "Geometrie der Zahlen"</li>
+<li><strong>Golden Rectangle</strong>: Livio, M. (2002). "The Golden Ratio"</li>
+</ol>
+<hr />
+<h2 id="_48">🎓 Навчальні матеріали</h2>
+<h3 id="_49">Візуалізація</h3>
+<ul>
+<li>[Interactive Demo] - 3D візуалізація формацій</li>
+<li>[Formation Simulator] - Порівняння ефективності</li>
+<li>[Coverage Calculator] - Калькулятор покриття</li>
+</ul>
+<h3 id="_50">Туторіали</h3>
+<ul>
+<li>"Вибір правильної формації для місії"</li>
+<li>"Оптимізація кількості дронів"</li>
+<li>"Динамічна зміна формацій"</li>
+</ul>
+<hr />
+<p><strong>Версія документу</strong>: 1.0<br />
+<strong>Останнє оновлення</strong>: 2026-01-25<br />
+<strong>Статус</strong>: Ready for Phase 2 implementation</p>
+<p><strong>Автор</strong>: sbsQ Development Team<br />
+<strong>Ліцензія</strong>: Proprietary (SmartBees Patent Portfolio)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.expand", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/custom.js"></script>
+      
+    
+  </body>
+</html>

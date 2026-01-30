@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin: 0; background: #000; overflow: hidden; font-family: 'Courier New', monospace; color: #4B5320; }
+        canvas { display: block; }
+        #ui { position: absolute; top: 10px; left: 10px; pointer-events: none; }
+        .panel { 
+            background: rgba(0, 20, 0, 0.8); 
+            border: 1px solid #4B5320; 
+            padding: 10px; 
+            margin-bottom: 10px;
+            color: #0f0;
+            width: 250px;
+        }
+        h3 { margin: 0 0 5px 0; border-bottom: 1px solid #4B5320; font-size: 14px; }
+        .stat { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 2px; }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <div class="panel">
+            <h3>SECTOR 7G - OVERWATCH</h3>
+            <div class="stat"><span>ACTIVE DRONES:</span><span id="drones-count">24</span></div>
+            <div class="stat"><span>THREAT LEVEL:</span><span style="color:red">ELEVATED</span></div>
+            <div class="stat"><span>NETWORK LOAD:</span><span id="load">42%</span></div>
+        </div>
+        <div class="panel">
+            <h3>MISSION LOG</h3>
+            <div id="log" style="font-size:10px; height:60px; overflow:hidden;">Initializing...</div>
+        </div>
+    </div>
+    <canvas id="map"></canvas>
+    <script>
+        const canvas = document.getElementById('map');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.onresize = resize;
+        resize();
+
+        const drones = [];
+        for(let i=0; i<24; i++) {
+            drones.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 2,
+                vy: (Math.random() - 0.5) * 2,
+                role: Math.random() > 0.8 ? 'LEADER' : 'SCOUT'
+            });
+        }
+
+        function drawHex(x, y, r) {
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+                ctx.lineTo(x + r * Math.cos(i * Math.PI / 3), y + r * Math.sin(i * Math.PI / 3));
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        function animate() {
+            // Fade effect
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw Grid
+            ctx.strokeStyle = '#111';
+            ctx.lineWidth = 1;
+            for(let y=0; y<height; y+=50) {
+                for(let x=0; x<width; x+=50) {
+                    // drawHex(x, y, 25); // Too heavy for simple demo, use lines
+                }
+            }
+
+            // Draw Drones
+            drones.forEach(d => {
+                d.x += d.vx;
+                d.y += d.vy;
+                if(d.x < 0 || d.x > width) d.vx *= -1;
+                if(d.y < 0 || d.y > height) d.vy *= -1;
+
+                // Connection lines
+                drones.forEach(other => {
+                    const dx = d.x - other.x;
+                    const dy = d.y - other.y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < 100) {
+                        ctx.beginPath();
+                        ctx.moveTo(d.x, d.y);
+                        ctx.lineTo(other.x, other.y);
+                        ctx.strokeStyle = `rgba(75, 83, 32, ${1 - dist/100})`;
+                        ctx.stroke();
+                    }
+                });
+
+                ctx.fillStyle = d.role === 'LEADER' ? '#FFD700' : '#4B5320';
+                ctx.beginPath();
+                ctx.arc(d.x, d.y, 3, 0, Math.PI*2);
+                ctx.fill();
+            });
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+        
+        // Log Update
+        setInterval(() => {
+            const msgs = ["Handshake verified", "Packet switched", "Entropy pool +1", "Heartbeat OK", "Syncing..."];
+            const log = document.getElementById("log");
+            log.innerHTML = `> ${msgs[Math.floor(Math.random()*msgs.length)]}<br>` + log.innerHTML;
+        }, 1000);
+    </script>
+</body>
+</html>

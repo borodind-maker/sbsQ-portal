@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin: 0; background: #000; overflow: hidden; font-family: 'Arial', sans-serif; color: #0f0; }
+        .hud-container {
+            position: absolute; width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+        }
+        . HUD-ring {
+            border: 2px solid rgba(0, 255, 0, 0.3);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .crosshair {
+            width: 20px; height: 2px; background: red; position: absolute;
+        }
+        .crosshair.v { transform: rotate(90deg); }
+        
+        .hud-text {
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            text-shadow: 0 0 5px #0f0;
+        }
+        
+        .top-left { top: 20px; left: 20px; }
+        .top-right { top: 20px; right: 20px; text-align: right; }
+        .bottom-center { bottom: 20px; left: 50%; transform: translateX(-50%); }
+        
+        .horizon-line {
+            width: 200px; height: 1px; background: #0f0; position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="hud-container" id="hud">
+        <!-- Central Reticle -->
+        <div class="HUD-ring" style="width: 200px; height: 200px;"></div>
+        <div class="HUD-ring" style="width: 50px; height: 50px; border-color: rgba(255,0,0,0.5);"></div>
+        <div class="crosshair"></div>
+        <div class="crosshair v"></div>
+        
+        <!-- Horizon -->
+        <div class="horizon-line" id="horizon" style="top: 50%;"></div>
+        
+        <!-- Stats -->
+        <div class="hud-text top-left">
+            ALT: <span id="alt">150</span>m<br>
+            SPD: <span id="spd">12</span>m/s<br>
+            BAT: 84%
+        </div>
+        
+        <div class="hud-text top-right">
+            MODE: <span style="color:gold">TACTICAL</span><br>
+            GPS: LOCK<br>
+            CAM: REC
+        </div>
+        
+        <div class="hud-text bottom-center">
+            === TARGET ACQUIRED ===
+        </div>
+    </div>
+    
+    <script>
+        const altEl = document.getElementById('alt');
+        const spdEl = document.getElementById('spd');
+        const horizEl = document.getElementById('horizon');
+        const hud = document.getElementById('hud');
+        
+        let alt = 150;
+        let pitch = 0;
+        let roll = 0;
+
+        function update() {
+            // Sim changes
+            alt += (Math.random() - 0.5);
+            
+            // Artificial horizon movement
+            pitch = Math.sin(Date.now() / 1000) * 20;
+            roll = Math.cos(Date.now() / 1500) * 10;
+            
+            altEl.innerText = alt.toFixed(1);
+            
+            // Update Horizon Line
+            horizEl.style.transform = `translateY(${pitch}px) rotate(${roll}deg)`;
+            
+            requestAnimationFrame(update);
+        }
+        update();
+    </script>
+</body>
+</html>

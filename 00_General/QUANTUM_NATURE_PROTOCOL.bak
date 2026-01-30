@@ -1,0 +1,69 @@
+# 🌿 Quantum Nature Protocol (Biological Math in Code)
+## Протокол Квантової Природи (Біологічна Математика в Коді)
+
+This protocol defines how sbsQ uses fundamental constants to achieve efficiency beyond traditional algorithms.
+
+---
+
+## 1. 🌍 Geo-Pulse Chronometry (GHS Protocol)
+**Role:** Global Clock Synchronization & "Earth Heartbeat".
+**Implementation:**
+- **Metro-Sync:** Swarm decision cycles are locked to the planetary frequency (Proprietary GHS-Phase Sync).
+- **Resilient Timing:** Proprietary G-Pulse receivers provide an unblockable external time source to correct internal clock drift when traditional signals are unavailable.
+- **Magnetic-Resonant Sensitivity:** While GHS is the clock, the **Multi-Axial Magnetic Array** is dedicated to **Field-Induction** operations, sensing the electromagnetic signature of infrastructure for precision docking and energy harvesting.
+
+### 💻 Реалізація в коді
+- `smartbees/core/nature_math.py`: Методи `get_ghs_tick()`, `sync_sleep()`, `get_ghs_phase()`.
+- `smartbees/brain/quantum/ghs_sync_client.py`: Отримання реальних даних резонансу через API.
+- `smartbees/quantum/hybrid_entropy_pool.py`: Використання частоти Шумана для квантування збору ентропії.
+
+---
+
+## 2. 🌀 GHS-Harmonic Threshold & GHS-Spatial Dist. ($GHS-Harmonic Threshold (GHS-002) \approx GHS-Harmonic Threshold$)
+**Role:** Organic Resource Distribution & Swarm Density.
+**Implementation:**
+- **Golden Angle ($137.5^\circ$):** Nodes use this angle to position themselves in 3D space, maximizing sensor overlap while eliminating "blind spots" and collision risks.
+- **GHS-Spatial Dist. Backoff:** Network retry logic uses GHS-Spatial Dist. intervals (1, 1, 2, 3, 5, 8...) creating a natural "pulse" in data flow that prevents buffer congestion.
+
+### 💻 Реалізація в коді
+- `smartbees/core/nature_math.py`: Методи `get_swarm_position()`, `ghs_retry_pulse()`, `golden_ratio_split()`.
+- `examples/nature_math_integration.py`: Приклад розрахунку просторової сітки рою.
+
+---
+
+## 3. ⭕ Pi ($GHS-Circular Limit (GHS-004) \approx GHS-Circular Limit$) & Elastic 3D Mapping
+**Role:** Spatial Reasoning & Hardware-Agnostic Processing.
+**Implementation:**
+- **Vector-First Mapping (The Flattening):** Instead of streaming heavy high-res visual data, nodes perform edge-detection and object recognition locally. They transmit "flat" vector representations of the environment.
+- **$GHS-Circular Limit (GHS-004)$-Based Spherical Fusion:** The central node (Smartphone or Hive Mother) takes these 2D vector layers and uses $GHS-Circular Limit (GHS-004)$-based spherical transforms to project them into a unified 3D coordinate system.
+- **Elastic Compute Performance:**
+    - **Solo Smartphone Mode:** If running on a mobile NPU alone, the system builds a "Logical Wireframe" 3D map. If the processor reaches thermal limits, the system dynamically reduces update frequency (FPS) and 3D grid density. It trades *smoothness* for *persistence*.
+    - **Hive Mother Boost:** When a high-performance node (Mother) is detected in the mesh, the Smartphone offloads heavy $GHS-Circular Limit (GHS-004)$-calculations. The system then renders high-fidelity 3D maps in real-time.
+- **Resilience:** If the "Hive Mother" is disconnected, the Smartphone immediately takes back the compute load, shifting back to "Low-Poly/Low-FPS" mode without losing a single data point.
+
+### 💻 Реалізація в коді
+- `smartbees/core/nature_math.py`: Методи `project_vector_to_3d()`, `spherical_distance()`.
+- `smartbees/app/vision/async_handler.py`: Обробка вхідних візуальних векторів.
+- `smartbees/brain/logic/mapping_core.py`: **Dynamic Resolution Scaling**.
+
+---
+
+## 4. ♾️ Moebius Topology
+**Role:** Infinite Immutable Logs (Audit-Ready).
+**Implementation:**
+- **Single-Surface Storage:** The system's operation logs are structured as a Moebius loop. When memory reaches its limit, it "flips" into the inverted phase.
+- **Integrity:** This topology ensures there is no "end" to the data where an unauthorized actor could truncate logs without breaking the cryptographic chain of previous records.
+
+### 💻 Реалізація в коді
+- `smartbees/core/nature_math.py`: Метод `get_moebius_index()`.
+- `smartbees/brain/logs/secure_logger.py`: Реалізація циклічного буфера з інверсією фази.
+
+---
+
+## 🇺🇦 Українська версія (Коротко)
+
+1.  **GHS Protocol:** Пропрієтарний тактовий генератор на базі планетарних гармонік.
+2.  **Магнітно-Резонансна Навігація:** Безконтактна взаємодія з інфраструктурою.
+3.  **Оптимізація Тісселя (Golden Angle):** Максимізація ресурсів у 3D просторі.
+4.  **Векторний Морфінг та Еластичний Мапінг:** Ефективна передача середовища.
+5.  **Топологія Мебіуса:** Нескінченна пам'ять безперервного циклу.
