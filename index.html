@@ -472,7 +472,7 @@
     <nav>
         <div class="logo">Σ SBS</div>
         <div class="nav-links" id="navLinks">
-            <a href="FAQ_uk/" id="faqLink">FAQ</a>
+            <a href="uk/FAQ_uk/" id="faqLink">FAQ</a>
             <a href="access.html" id="docsLink">Документація</a>
             <div class="controls">
                 <button class="ctrl-btn" onclick="toggleTheme()" id="tBtn">🌙</button>
@@ -867,7 +867,8 @@
             
             // Navigation
             document.getElementById('faqLink').textContent = t.navFAQ;
-            document.getElementById('faqLink').href = `FAQ_${lang}/`;
+            const langPrefix = lang === 'en' ? '' : `${lang}/`;
+            document.getElementById('faqLink').href = `${langPrefix}FAQ_${lang}/`;
             document.getElementById('docsLink').textContent = t.navDocs;
             document.getElementById('docsLink').href = 'access.html'; // Gateway always
             
