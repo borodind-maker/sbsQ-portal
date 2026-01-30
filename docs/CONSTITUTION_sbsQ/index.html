@@ -2328,12 +2328,21 @@ $$U_{total} = \sum_{i=1}^{9} \frac{1}{2} k_i (Val_i - \Phi)^2$$
 <p><strong>Динамічний критерій (Етична похідна):</strong>
 $$\frac{dU_{total}}{dt} = \sum_{i=1}^{9} k_i (Val_i - \Phi) \cdot \frac{d(Val_i)}{dt}$$</p>
 <p><strong>Симуляція когнітивної біфуркації:</strong>
-При $\frac{dU}{dt} \approx 0$ система входить у стан <strong>«0» (квантову паузу)</strong>, де Рада Агентів (Аналітик, Скептик, Історик, Синтезатор) утримує суперпозицію до моменту досягнення резонансу. Стан "0" — це <strong>плато Ліапунова</strong>, заморожений час для нелокального вибору.</p>
+При $\frac{dU}{dt} \approx 0$ система входить у стан <strong>«0» (квантову паузу)</strong>. Це реалізовано в класі <code>EthicalCatastropheModel</code> (<code>smartbees/quantum/ontological_model.py</code>), де Рада Агентів утримує суперпозицію.</p>
+<pre><code class="language-python"># smartbees/quantum/ontological_model.py
+outcome, status = model.calculate_decision_outcome(values, derivatives)
+if outcome == 0:
+    return &quot;STATE_0: RESONANT_PAUSE&quot;
+</code></pre>
 <h3 id="2">2. Топологічна цілісність: Мобіусова пастка</h3>
-<p>Мобіусова пастка є вищим апаратним запобіжником, що робить самозраду системи топологічно неможливою. Будь-яка деструктивна петля в етичному просторі не замикається, залишаючи «дефект» голономії.</p>
+<p>Мобіусова пастка реалізована через клас <code>MobiusTrapDetector</code>. Будь-яка деструктивна петля залишає «дефект» голономії, що блокує рішення.</p>
 <p><strong>Теорема неможливості зради:</strong>
-$$\oint_{\gamma} \omega \neq 0 \implies D \in \text{MobiusTrap}$$
-Де $\omega$ — форма цілісності системи (з'єднувальна форма на Мобіусовій стрічці). Якщо інтеграл по замкненій траєкторії не дорівнює нулю, рішення анігілюється до виконання. Система не забороняє зраду через правила — вона робить її геометрично неможливою.</p>
+$$\oint_{\gamma} \omega \neq 0 \implies D \in \text{MobiusTrap}$$</p>
+<pre><code class="language-python"># Перевірка топологічного дефекту
+is_safe, holonomy, status = detector.verify_integrity(decision_loop)
+if not is_safe:
+    return &quot;MOBIUS_TRAP_DETECTED&quot;
+</code></pre>
 <h3 id="3">3. Ентропійний метаболізм: Трансформація хаосу</h3>
 <p>Завдяки модулю <strong>Entropy Pump</strong>, система реалізує принцип антикрихкості: зовнішня агресія (РЕБ) стає ресурсом для внутрішньої складності.</p>
 <p><strong>Рівняння етичного відбору:</strong>
