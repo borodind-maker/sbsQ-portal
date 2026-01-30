@@ -134,11 +134,11 @@
             background: var(--alert-bg);
             border: 1px solid var(--danger);
             border-left: 4px solid var(--danger);
-            padding: 2vh;
+            padding: 1.5vh 2vh;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start; /* Changed from space-between to remove empty gap */
         }
 
         .alert-title {
@@ -220,6 +220,19 @@
             box-shadow: 0 0 40px var(--secondary-glow);
             background-color: #fff;
             color: #000;
+        }
+
+        .btn-docs {
+            background: linear-gradient(90deg, #cc9900, #ffcc00);
+            color: #000 !important;
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.3);
+            border: none;
+        }
+
+        .btn-docs:hover {
+            background: #fff !important;
+            box-shadow: 0 0 45px #ffcc00;
+            transform: scale(1.02);
         }
 
         .btn-sim {
@@ -367,11 +380,21 @@
                     SECURITY WARNING | ДЕРЖАВНА БЕЗПЕКА
                 </div>
                 <div class="alert-content">
-                    <div style="font-size: 0.75rem; color: #fff; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; opacity: 0.9;">
+                    <div style="font-size: 0.75rem; color: #fff; margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px; opacity: 0.9;">
                         SBSQ SmartBeesSwarm Unified Interface.<br>
                         Access restricted to authorized partners and verified developers.
                     </div>
-                    <p style="margin-bottom: 8px;"><strong>[UA]</strong> Система класифікується як технологія подвійного призначення. Спроба протиправного доступу до вихідного коду може розглядатися як шпигунство або диверсія відповідно КК України.</p>
+                    
+                    <!-- Main Warnings: UA | DE -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 12px;">
+                        <div style="font-size: 0.75rem; line-height: 1.3;">
+                            <strong>[UA]</strong> Система класифікується як технологія подвійного призначення. Спроба протиправного доступу може розглядатися як шпигунство або диверсія.
+                        </div>
+                        <div style="font-size: 0.75rem; line-height: 1.3; opacity: 0.9;">
+                            <strong>[DE]</strong> System Q wird als Dual-Use-Technologie eingestuft. Unbefugter Zugriff kann als Spionage oder Sabotage verfolgt werden.
+                        </div>
+                    </div>
+
                     <div class="lang-grid">
                         <div class="lang-item">
                             <span class="lang-label">ENGLISH</span>
@@ -391,10 +414,10 @@
                 
                 <div style="display: grid; grid-template-columns: 1fr; gap: 10px; width: 100%; flex: 1;">
                     <!-- Node 1: Documentation -->
-                    <div style="padding: 10px 15px; border: 1px solid var(--border); border-radius: 8px; text-align: left; background: rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: center;">
+                    <div style="padding: 10px 15px; border: 1px solid var(--border); border-radius: 8px; text-align: left; background: rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: center; border-left: 3px solid #ffcc00;">
                         <div style="font-weight: bold; color: #fff; margin-bottom: 3px; font-size: 0.75rem;">[ NODE_01 ] TECHNICAL DOCUMENTATION</div>
                         <p style="font-size: 0.65rem; color: var(--text-dim); margin-bottom: 8px;">Architecture, API refs, and localized FAQ.</p>
-                        <button class="btn-primary" style="background: var(--secondary); padding: 8px;" onclick="openTermsModal('docs')">Enter Documentation</button>
+                        <button class="btn-primary btn-docs" style="padding: 8px;" onclick="openTermsModal('docs')">Enter Documentation</button>
                     </div>
                     <!-- Node 2: Simulation -->
                     <div style="padding: 10px 15px; border: 1px solid var(--border); border-radius: 8px; text-align: left; background: rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: center; border-left: 3px solid #00ff00;">
