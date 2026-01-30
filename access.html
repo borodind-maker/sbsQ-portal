@@ -51,40 +51,59 @@
         }
 
         /* HEADER SECTION */
+        .system-top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 30px;
+            background: rgba(0,0,0,0.8);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 0.6rem;
+            font-family: 'Roboto Mono', monospace;
+            z-index: 1000;
+            color: var(--secondary);
+            letter-spacing: 1px;
+        }
+
         .header {
             text-align: center;
-            margin-bottom: 2vh;
-            border-bottom: 1px solid var(--border);
+            margin: 4vh 0 2vh;
             padding-bottom: 1.5vh;
             flex-shrink: 0;
         }
 
         .system-badge {
             font-family: var(--font-main);
-            background: var(--glass);
+            background: rgba(36, 108, 5, 0.1);
             color: var(--secondary);
-            padding: 2px 10px;
-            border-radius: 4px;
+            padding: 2px 12px;
+            border-radius: 20px;
             font-size: 0.7rem;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             display: inline-block;
-            border: 1px solid var(--secondary);
-            box-shadow: 0 0 10px var(--secondary-glow);
+            border: 1px solid rgba(36, 108, 5, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         h1 {
             font-family: var(--font-title);
             color: var(--danger);
-            font-size: 1.6rem;
-            margin: 5px 0 8px;
-            letter-spacing: 2px;
+            font-size: 1.8rem;
+            margin: 10px 0 10px;
+            letter-spacing: 4px;
+            text-shadow: 0 0 15px rgba(215, 20, 20, 0.3);
         }
 
         .subtitle {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-dim);
             max-width: 700px;
             margin: 0 auto;
+            letter-spacing: 1px;
         }
 
         /* CONTENT GRID */
@@ -302,24 +321,24 @@
 </head>
 <body>
 
+    <div class="system-top-bar">
+        <span>STATUS: ENCRYPTED_STABLE</span>
+        <span style="color: var(--text-dim);">SBSQ-MAIN-NODE-UA // LATENCY: 12ms</span>
+    </div>
+
     <div class="container">
         <!-- Static Header & Warning -->
         <header class="header">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <span class="system-badge" style="border-color: #4caf50; color: #4caf50;">STATUS: ENCRYPTED_STABLE</span>
-                <span style="font-size: 0.6rem; color: #444; font-family: 'Roboto Mono';">LATENCY: 12ms | NODE: SBS-MAIN-UA</span>
-            </div>
-            <span class="system-badge">CLASSIFICATION: DUAL-USE (COMMERCIAL/TACTICAL)</span>
+            <div class="system-badge">CLASSIFICATION: DUAL-USE (COMMERCIAL/TACTICAL)</div>
             <h1>Security Access Portal</h1>
             <p class="subtitle">SBSQ SmartBeesSwarm Unified Interface. <br>Access restricted to authorized partners and verified developers.</p>
         </header>
 
-        <!-- Mock Terminal Log -->
-        <div style="background: rgba(0,0,0,0.5); border: 1px solid var(--border); padding: 5px 12px; border-radius: 4px; font-family: 'Roboto Mono', monospace; font-size: 0.6rem; color: #4caf50; margin-bottom: 1.5vh; overflow: hidden; height: 50px; line-height: 1.1; flex-shrink: 0;">
-            <div>[OK] INITIALIZING SECURE_HANDSHAKE_V2...</div>
-            <div>[OK] VERIFYING HASH: 6140fc5_INTEGRITY_SNAPSHOT...</div>
-            <div>[OK] SYNCING TCI_MATRIX_7_LEVELS...</div>
-            <div>[OK] GIT_COMMIT: 6140fc5... VERIFIED</div>
+        <!-- Audit Trail (Subtle version of the OK list) -->
+        <div style="font-family: 'Roboto Mono', monospace; font-size: 0.55rem; color: #444; margin-bottom: 1.5vh; display: flex; justify-content: center; gap: 20px; text-transform: uppercase;">
+            <span>[ VERIFICATION_SEQUENCE_COMPLETE ]</span>
+            <span>[ HASH: 6140fc5 ]</span>
+            <span>[ TCI_MATRIX: SYNCED ]</span>
         </div>
 
         <!-- Main Layout Grid -->
