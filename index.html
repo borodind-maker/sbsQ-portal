@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="docs/assets/landing.css">
+    <link rel="stylesheet" href="docs/assets/ring.css">
     <style>
         :root {
             /* Default Dark/Green Theme (User Preferred) */
@@ -562,10 +564,68 @@
     </section>
 
     <div class="stats-banner">
-        <div class="stat-item"><h2>60Hz</h2><p>Реакція рефлексів</p></div>
-        <div class="stat-item"><h2>50x</h2><p>C++ Оптимізація</p></div>
-        <div class="stat-item"><h2>7.83</h2><p>Sync</p></div>
+        <div class="stat-item"><h2>60HZ</h2><p>Планетарний Резонанс</p></div>
+        <div class="stat-item"><h2>50X</h2><p>Гармонічний Поріг</p></div>
+        <div class="stat-item"><h2>7.83</h2><p>TCI</p></div>
         <div class="stat-item"><h2>Φ</h2><p>Ratio</p></div>
+    </div>
+
+    <section class="sectors" id="sectors" style="padding: 60px 5%;">
+        <span class="hero-label" style="display: block; text-align: center; margin-bottom: 40px;">Галузеві рішення</span>
+        <div class="lp-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <a href="reference/sensors/" class="lp-card" style="text-decoration: none; padding: 30px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; display: block;">
+                <h3 data-i18n="sector1Title" style="color: var(--secondary); margin-bottom: 10px;">AGRICULTURE 4.0</h3>
+                <p data-i18n="sector1Text" style="color: var(--text-dim); font-size: 0.9em;">Автономний моніторинг посівів та точкове внесення з використанням ройової координації.</p>
+            </a>
+            <a href="00_General/00_QUICK_START/" class="lp-card" style="text-decoration: none; padding: 30px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; display: block;">
+                <h3 data-i18n="sector2Title" style="color: var(--secondary); margin-bottom: 10px;">LOGISTICS</h3>
+                <p data-i18n="sector2Text" style="color: var(--text-dim); font-size: 0.9em;">Динамічна доставка та складське пакування за алгоритмами «Бджолиних сот».</p>
+            </a>
+            <a href="01_Core_Intelligence/HARMONY_GUARDRAILS/" class="lp-card" style="text-decoration: none; padding: 30px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; display: block;">
+                <h3 data-i18n="sector3Title" style="color: var(--secondary); margin-bottom: 10px;">DEFENSE</h3>
+                <p data-i18n="sector3Text" style="color: var(--text-dim); font-size: 0.9em;">Стійкі до РЕБ мережі зв'язку та автономне патрулювання за протоколами Adaptive Pathing.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="observability-section" id="observability" style="text-align: center; padding: 80px 5%;">
+        <h2 class="obs-title" data-i18n="obsTitle" style="font-family: var(--font-title); font-size: 2rem; margin-bottom: 20px;">Етична Спостережуваність</h2>
+        <p class="obs-desc" data-i18n="obsDesc" style="max-width: 700px; margin: 0 auto 60px; color: var(--text-dim);">
+            Система Q не просто фіксує помилки — вона відчуває <strong>«біль»</strong>. 
+            Кільця Гармонії діють як цифрова нервова система, що автоматично знижує агресивність рою при накопиченні стресу в секторах Безпеки.
+        </p>
+        
+        <div class="ring-container">
+            <div class="ring-core">CORE</div>
+            <!-- Sectors around the ring (Visualization) -->
+            <div class="sector safety" style="transform: rotate(0deg) translateY(-80px);"></div>
+            <div class="sector governance" style="transform: rotate(40deg) translateY(-80px);"></div>
+            <div class="sector normal" style="transform: rotate(80deg) translateY(-80px);"></div>
+            <div class="sector normal" style="transform: rotate(120deg) translateY(-80px);"></div>
+            <div class="sector normal" style="transform: rotate(160deg) translateY(-80px);"></div>
+            <div class="sector normal" style="transform: rotate(200deg) translateY(-80px);"></div>
+            <div class="sector normal" style="transform: rotate(240deg) translateY(-80px);"></div>
+            <div class="sector normal" style="transform: rotate(280deg) translateY(-80px);"></div>
+            <div class="sector normal" style="transform: rotate(320deg) translateY(-80px);"></div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <p style="color: #666; font-size: 0.9em;">
+                <span style="color: #ff0000;">●</span> Safety Strain (Active Pain) &nbsp;&nbsp; 
+                <span style="color: #ffaa00;">●</span> Governance Tension &nbsp;&nbsp; 
+                <span style="color: #00ff00;">●</span> Nominal State
+            </p>
+        </div>
+    </section>
+
+    <div class="pitch-card" style="max-width: 900px; margin: 60px auto; padding: 40px; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); border: 1px solid #333; border-radius: 12px; text-align: center;">
+        <h3 data-i18n="pitchTitle" style="font-size: 2em; margin-bottom: 20px; background: linear-gradient(90deg, #00ff00, #00aa00); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">💎 "Кардіограма" Розуму</h3>
+        <p data-i18n="pitchText" style="color: #ccc; font-size: 1.1em; line-height: 1.6; margin-bottom: 30px;">
+            sbsQ не просто логує помилки — вона <strong style="color: #00ff00;">відчуває біль</strong>. 
+            Система автоматично знижує агресивність при накопиченні стресу в секторах Безпеки, 
+            працюючи як цифрова нервова система з математичною точністю.
+        </p>
+        <a href="01_Core_Intelligence/PHYSIOLOGY_SNAPSHOT/" class="lp-btn lp-btn-fill" data-i18n="pitchBtn" style="color: #fff; text-decoration: none; border: 1px solid var(--primary); padding: 10px 20px; border-radius: 20px;">Дізнатися більше про Physiology Snapshot →</a>
     </div>
 
     <section class="manifesto-grid">
