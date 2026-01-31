@@ -37,17 +37,18 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto; /* Enable scrolling */
         }
 
         .container {
             max-width: 1100px;
             width: 100%;
-            padding: 1vh 20px;
+            padding: 20px 20px 50px 20px; /* Added bottom padding for system bar */
             display: flex;
             flex-direction: column;
-            height: calc(100vh - 30px);
-            justify-content: center;
+            min-height: calc(100vh - 30px); /* Use min-height */
+            justify-content: flex-start; /* Align to top */
         }
 
         /* SYSTEM BAR (Now at bottom) */
