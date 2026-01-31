@@ -943,17 +943,18 @@
             document.documentElement.lang = lang;
         }
 
-        // Load saved language or detect browser language
-        const savedLang = localStorage.getItem('preferredLang');
-        if (savedLang) {
-            const option = document.querySelector(`[data-lang="${savedLang}"]`);
-            if (option) {
-                langBtn.querySelector('.flag').textContent = option.dataset.flag;
-                langBtn.querySelector('.lang-code').textContent = option.dataset.code;
-                langOptions.forEach(opt => opt.classList.remove('active'));
-                option.classList.add('active');
-                setLanguage(savedLang);
-            }
+        // Load saved language or default to 'uk'
+        const savedLang = localStorage.getItem('preferredLang') || 'uk';
+        const option = document.querySelector(`[data-lang="${savedLang}"]`) || document.querySelector('[data-lang="uk"]');
+
+        if (option) {
+            langBtn.querySelector('.flag').textContent = option.dataset.flag;
+            langBtn.querySelector('.lang-code').textContent = option.dataset.code;
+            langOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+            
+            // Apply language
+            setLanguage(savedLang);
         }
     </script>
 
