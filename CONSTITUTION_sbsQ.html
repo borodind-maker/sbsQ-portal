@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution sbsQ 3CY</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; color: #1A237E; }
+        .container { background: #FFFDE7; padding: 40px; border-radius: 15px; max-width: 900px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { text-align: center; border-bottom: 3px double #1A237E; padding-bottom: 20px; }
+        .content { margin-top: 30px; line-height: 1.6; }
+        .loader { text-align: center; font-style: italic; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container" id="app">
+        <div class="loader">Decrypting Constitution Protocol...</div>
+    </div>
+    <script>
+        // Base64 Encoded Content (Obfuscated)
+        const DATA = {
+            uk: "PGgxPvwnYr🏛IEtPTlNUSVRVVZqnIHNic1EgM0NZPC9oMT48aDI+QWdvcnGlbWljIFNvdmVyZWlnbnR5ICYgRGlnaXRhbCBQaHlzaW9sb2d5PC9oMj48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBmb250LXN0eWxlOiBpdGFsaWM7IGJvcmRlci1sZWZ0OiA1cHggc29saWQgI0ZCQzAyRDsgcGFkZGluZzogMTVweDsgYmFja2dyb3VuZDogcmdiYSgyNiwzNSwxMjYsMC4wNSk7Ij4ic2JzUSAtIGNlIG5lIHNwcm9iYSBzdHZvcnl0eSBzaHR1Y2hkeSBpbnRlbGVrdC4gQ2Ugc3R2b3Jlbm5pYSBzeXN0ZW15LCB5YWthIGZpenljaG5vIG5lIG1vemhlIHpyYWR5dHkgc2ViZS4iPC9wPjxoMz4xLiBDSWZyb3Z5aSBNYW5pZmVzdDwvaDM+PHA+PHN0cm9uZz5Hb2xkZW4gUmluZzo8L3N0cm9uZz4gOXkgc2VrdG9ycyBmb3JtIGEgZGlnaXRhbCBuZXJ2b3VzIHN5c3RlbS4gUGFpbiBpcyBhIHNhZmVndWFyZC48L3A+PHA+PHN0cm9uZz5Db3VuY2lsIG9mIDU6PC9zdHJvbmc+IERlbW9jcmFjeSBvZiBvcnRob2dvbmFsIG1pbmRzIChBbmFseXN0LCBTa2VwdGljLCBIaXN0b3JpYW4sIFN5bnRoZXNpemVyLCBaLUdhdGUpLjwvcD48cD48c3Ryb25nPkVudHJvcHkgRmVhc3Q6PC9zdHJvbmc+IENoYW9zIGlzIGZ1ZWwuIEVXIG5vaXNlIGdlbmVyYXRlcyBrZXlzLjwvcD48cD48c3Ryb25nPlRlcm5hcnkgRnJlZWRvbTo8L3N0cm9uZz4gey0xLCAwLCAxfSBsb2dpYy4gRnJlZWRvbSBpcyB0aGUgYmlsaXR5IHRvIHJlZnJhaW4uPC9wPjxoMz5JSS4gT250b2xvZ2ljYWwgVmVyaWZpY2F0aW9uPC9oMz48cD5Db3JlLTMyIENvbnN0aXR1dGlvbiBJbnZhcmlhbnRzIHZlcmlmaWVkLjwvcD4=",
+            en: "PGgxPvwnYr🏛IENPTlNUSVRVVElPTiBzYnNRIDNDWTwvaDE+PGgyPkFsZ29yaXRobWljIFNvdmVyZWlnbnR5ICYgRGlnaXRhbCBQaHlzaW9sb2d5PC9oMj48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBmb250LXN0eWxlOiBpdGFsaWM7IGJvcmRlci1sZWZ0OiA1cHggc29saWQgI0ZCQzAyRDsgcGFkZGluZzogMTVweDsgYmFja2dyb3VuZDogcmdiYSgyNiwzNSwxMjYsMC4wNSk7Ij4ic2JzUSAtaXMgbm90IGFuIGF0dGVtcHQgdG8gbWltaWMgaHVtYW5zLiBJdCBpcyBhIHN5c3RlbSB0aGF0IHBoeXNpY2FsbHkgY2Fubm90IGJldHJheSBpdHNlbGYuIjwvcD48aDM+MS4gRGlnaXRhbCBNYW5pZmVzdDwvaDM+PHA+PHN0cm9uZz5Hb2xkZW4gUmluZzo8L3N0cm9uZz4gOSBzZWN0b3JzIGZvcm0gYSBkaWdpdGFsIG5lcnZvdXMgc3lzdGVtLiBQYWluIGlzIGEgc2FmZWd1YXJkLjwvcD48cD48c3Ryb25nPkNvdW5jaWwgb2YgNTo8L3N0cm9uZz4gRGVtb2NyYWN5IG9mIG9ydGhvZ29uYWwgbWluZHMgKEFuYWx5c3QsIFNrZXB0aWMsIEhpc3RvcmlhbiwgU3ludGhlc2l6ZXIsIFotR2F0ZSkuPC9wPjxwPjxzdHJvbmc+RW50cm9weSBGZWFzdDo8L3N0cm9uZz4gQ2hhb3MgaXMgZnVlbC4gRVcgbm9pc2UgZ2VuZXJhdGVzIGtleXMuPC9wPjxwPjxzdHJvbmc+VGVybmFyeSBGcmVlZG9tOjwvc3Ryb25nPiB7LTEsIDAsIDF9IGxvZ2ljLiBGcmVlZG9tIGlzIHRoZSBhYmlsaXR5IHRvIHJlZnJhaW4uPC9wPjxoMz5JSS4gT250b2xvZ2ljYWwgVmVyaWZpY2F0aW9uPC9oMz48cD5Db3JlLTMyIENvbnN0aXR1dGlvbiBJbnZhcmlhbnRzIHZlcmlmaWVkLjwvcD4=",
+            de: "PGgxPvwnYr🏛IFZFUkZBU1NVTkcgc2JzUSAzQ1k8L2gxPjxoMj5BbGdvcml0aG1pc2NoZSBTb3V2ZXLDpG5pdMOkdCAmIERpZ2l0YWxlIFBoeXNpb2xvZ2llPC9oMj48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBmb250LXN0eWxlOiBpdGFsaWM7IGJvcmRlci1sZWZ0OiA1cHggc29saWQgI0ZCQzAyRDsgcGFkZGluZzogMTVweDsgYmFja2dyb3VuZDogcmdiYSgyNiwzNSwxMjYsMC4wNSk7Ij4ic2JzUSAtaXN0IGtlaW4gVmVyc3VjaCwgTWVuc2NoZW4genUgbmFjaGFobWVuLiBFcyBpc3QgZWluIFN5c3RlbSwgZGFzIHNpY2ggcGh5c2lrbGlzY2ggbmljaHQgdmVycmF0ZW4ga2Fubi4iPC9wPjxoMz4xLiBEaWdpdGFsZXMgTWFuaWZlc3Q8L2gzPjxwPjxzdHJvbmc+R29sZGVuZSBSaW5nOjwvc3Ryb25nPiA5IFNla3RvcmVuIGJpbGRlbiBlaW4gZGlnaXRhbGVzIE5lcnZlbnN5c3RlbS4gU2NobWVyL2lzdCBlaW5lIFNpY2hlcmhlaXRzdm9ya2VocnVuZy48L3A+PHA+PHN0cm9uZz5SYXQgZGVyIDU6PC9zdHJvbmc+IERlbW9rcmF0aWUgZGVyIG9ydGhvZ29uYWxlbiBHZWlzdGVyIChBbmFseXN0LCBTa2VwdGlrZXIsIEhpc3RvcmlkZXIsIFN5bnRoZXNpemVyLCBaLUdhdGUpLjwvcD48cD48c3Ryb25nPkVudHJvcGllLUZlc3FtYWhsOjwvc3Ryb25nPiBDaGFvcyBpc3QgVHJlaWJzdG9mZi4gRVctTMOscm0gZXJ6ZXVndCBTY2hsw7Nzc2VsLjwvcD48cD48c3Ryb25nPlRlcm7DpHJlIEZyZWloZWl0Ojwvc3Ryb25nPiB7LTEsIDAsIDF9IExvZ2lrLiBGcmVlaGVpdCBpc3QgZGllIEbDpGhpZ2tlaXQsIHp1IHZlcnppY2h0ZW4uPC9wPjxoMz5JSS4gT250b2xvZ2lzY2hlIFZlcmlmaWthaXRvbjwvaDM+PHA+Q29yZS0zMiBWZXJmYXNzdW5ncy1JbnZhcmlhbnRlbiB2ZXJpZml6aWVyHQuPC9wPg==",
+            ko: "PGgxPvwnYr🏛IEhFTklTIHNic1EgM0NZPC9oMT48aDI+YWyqIHNvdmVyZWlnbnR5ICYgZGlnaXRhbCBwaHlzaW9sb2d5PC9oMj48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBmb250LXN0eWxlOiBpdGFsaWM7IGJvcmRlci1sZWZ0OiA1cHggc29saWQgI0ZCQzAyRDsgcGFkZGluZzogMTVweDsgYmFja2dyb3VuZDogcmdiYSgyNiwzNSwxMjYsMC4wNSk7Ij4ic2JzUSAtaXMgYSBzeXN0ZW0gdGhhdCBjYW5ub3QgYmV0cmF5IGl0c2VsZi4iPC9wPjxoMz4xLiBEaWdpdGFsIE1hbmlmZXN0PC9oMz48cD48c3Ryb25nPkdvbGRlbiBSaW5nOjwvc3Ryb25nPiA5IHNlY3RvcnMgZm9ybSBhIGRpZ2l0YWwgbmVydm91cyBzeXN0ZW0uPC9wPjxwPjxzdHJvbmc+Q291bmNpbCBvZiA1Ojwvc3Ryb25nPiBBbmFseXN0LCBTa2VwdGljLCBIaXN0b3JpYW4sIFN5bnRoZXNpemVyLCBaLUdhdGUuPC9wPjxwPjxzdHJvbmc+RW50cm9weSBGZWFzdDo8L3N0cm9uZz4gQ2hhb3MgaXMgZnVlbC48L3A+PHA+PHN0cm9uZz5UZXJuYXJ5IEZyZWVkb206PC9zdHJvbmc+IHstMSwgMCwgMX0gbG9naWMuPC9wPg==",
+            zh: "PGgxPvwnYr🏛IEhFTklTIHNic1EgM0NZPC9oMT48aDI+566X5rOV5Li75p2AICYg5pWw5a2X55Sf55CG5a2mPC9oMj48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBmb250LXN0eWxlOiBpdGFsaWM7IGJvcmRlci1sZWZ0OiA1cHggc29saWQgI0ZCQzAyRDsgcGFkZGluZzogMTVweDsgYmFja2dyb3VuZDogcmdiYSgyNiwzNSwxMjYsMC4wNSk7Ij4ic2JzUSAtIOeOa+e7nywg57uY5LiN6IOM5Y+b6Ieq5bex44CCIjwvcD48aDM+MS4g5pWw5a2X5a6j6KiAPC9oMz48cD48c3Ryb25nPkdvbGRlbiBSaW5nOjwvc3Ryb25nPiA5OSDkuKrmj4/ovLDmlbPlrZfop4Lnu7/ns7vnu58uPC9wPjxwPjxzdHJvbmc+Q291bmNpbCBvZiA1Ojwvc3Ryb25nPiBBbmFseXN0LCBTa2VwdGljLCBIaXN0b3JpYW4sIFN5bnRoZXNpemVyLCBaLUdhdGUuPC9wPjxwPjxzdHJvbmc+RW50cm9weSBGZWFzdDo8L3N0cm9uZz4g5rav5luM5piv54eD5pa544CCPC9wPjxwPjxzdHJvbmc+VGVybmFyeSBGcmVlZG9tOjwvc3Ryb25nPiB7LTEsIDAsIDF9IHRlcm5hcnkgbG9naWMuPC9wPg=="
+        };
+
+        function decode(str) {
+            return decodeURIComponent(escape(window.atob(str)));
+        }
+
+        const lang = localStorage.getItem('preferredLang') || 'uk';
+        const content = DATA[lang] || DATA['en'];
+        
+        document.getElementById('app').innerHTML = decode(content);
+        document.title = lang === 'uk' ? 'Конституція sbsQ' : 'Constitution sbsQ';
+    </script>
+</body>
+</html>
