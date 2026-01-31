@@ -37,18 +37,17 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow-x: hidden;
-            overflow-y: auto; /* Enable scrolling */
+            overflow: hidden; /* Revert to hidden for single screen feel */
         }
 
         .container {
             max-width: 1100px;
             width: 100%;
-            padding: 20px 20px 50px 20px; /* Added bottom padding for system bar */
+            padding: 10px 20px 30px 20px;
             display: flex;
             flex-direction: column;
-            min-height: calc(100vh - 30px); /* Use min-height */
-            justify-content: flex-start; /* Align to top */
+            height: 100vh;
+            justify-content: center;
         }
 
         /* SYSTEM BAR (Now at bottom) */
@@ -71,8 +70,8 @@
 
         .header {
             text-align: center;
-            margin: 1vh 0;
-            padding-bottom: 0.5vh;
+            margin: 0;
+            padding-bottom: 5px;
             flex-shrink: 0;
         }
 
@@ -80,15 +79,15 @@
             font-family: var(--font-title);
             background: rgba(36, 108, 5, 0.2);
             color: #00ff00;
-            padding: 4px 15px;
+            padding: 3px 10px;
             border-radius: 4px;
-            font-size: 0.75rem;
-            margin-bottom: 10px;
+            font-size: 0.65rem;
+            margin-bottom: 5px;
             display: inline-block;
-            border: 2px solid #00ff00;
+            border: 1px solid #00ff00;
             text-transform: uppercase;
             letter-spacing: 2px;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
             animation: pulse-glow 2s infinite alternate;
         }
 
@@ -100,27 +99,20 @@
         h1 {
             font-family: var(--font-title);
             color: var(--danger);
-            font-size: 1.4rem;
-            margin: 5px 0;
-            letter-spacing: 3px;
+            font-size: 1.2rem;
+            margin: 0;
+            letter-spacing: 2px;
             text-shadow: 0 0 10px rgba(215, 20, 20, 0.3);
-        }
-
-        .subtitle {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            max-width: 700px;
-            margin: 0 auto;
-            letter-spacing: 1px;
         }
 
         /* CONTENT GRID */
         .content-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 15px;
             flex: 1;
             min-height: 0; /* Allow grid to shrink if needed */
+            margin-bottom: 20px; /* Space for system bar */
         }
 
         @media (min-width: 850px) {
@@ -135,11 +127,11 @@
             background: var(--alert-bg);
             border: 1px solid var(--danger);
             border-left: 4px solid var(--danger);
-            padding: 1.5vh 2vh;
+            padding: 10px 15px;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Changed from space-between to remove empty gap */
+            justify-content: center; /* Center content vertically */
         }
 
         .alert-title {
@@ -147,22 +139,22 @@
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 5px;
             font-family: var(--font-main);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
         .alert-content p {
-            margin: 0 0 10px;
-            font-size: 0.85rem;
+            margin: 0 0 5px;
+            font-size: 0.8rem;
         }
 
         .lang-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 8px;
+            margin-top: 8px;
         }
         
         @media (min-width: 900px) {
@@ -171,31 +163,32 @@
 
         .lang-item {
             background: rgba(0,0,0,0.2);
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 0.75rem;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-size: 0.65rem;
             border: 1px solid rgba(255,255,255,0.05);
+            line-height: 1.2;
         }
 
         .lang-label {
             font-weight: 700;
             color: #fff;
-            margin-bottom: 3px;
+            margin-bottom: 1px;
             display: block;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             opacity: 0.7;
         }
 
         /* ACTION AREA */
         .action-area {
             text-align: center;
-            padding: 2vh;
+            padding: 15px;
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 12px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly; /* Better spacing to fill height */
             align-items: stretch;
         }
 
@@ -204,10 +197,10 @@
             color: #000;
             font-family: var(--font-title);
             font-weight: 700;
-            padding: 15px 30px;
+            padding: 12px 20px;
             border: none;
             border-radius: 4px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 0 20px var(--secondary-glow);
@@ -248,6 +241,30 @@
             background: #fff !important;
             box-shadow: 0 0 50px #00ff00;
             transform: scale(1.02);
+        }
+        
+        /* Mobile Optimization for Single Screen */
+        @media (max-width: 768px) {
+            .container { padding: 5px 15px 35px 15px; }
+            .header h1 { font-size: 1rem; }
+            .system-badge { padding: 2px 8px; font-size: 0.55rem; border-width: 1px; }
+            .audit-trail { display: none !important; } /* Hide decorative text */
+            
+            .content-grid { gap: 10px; margin-bottom: 5px; }
+            
+            .alert-box { padding: 8px; overflow-y: auto; }
+            .alert-title { font-size: 0.75rem; margin-bottom: 2px; }
+            .alert-content { font-size: 0.65rem; line-height: 1.1; }
+            .alert-content div { margin-bottom: 4px !important; padding-bottom: 4px !important; }
+            
+            .lang-grid { grid-template-columns: 1fr 1fr; margin-top: 5px; gap: 5px; }
+            .lang-item { padding: 3px; font-size: 0.55rem; }
+            
+            .action-area { padding: 8px; }
+            .btn-primary { padding: 10px 15px; font-size: 0.7rem; }
+            
+            /* Hide excessive text in mobile layout */
+            .mobile-hide { display: none; }
         }
 
         /* MODAL (Google/Microsoft Style) */
@@ -365,7 +382,7 @@
         </header>
 
         <!-- Audit Trail (Subtle version of the OK list) -->
-        <div style="font-family: 'Roboto Mono', monospace; font-size: 0.55rem; color: #444; margin-bottom: 1.5vh; display: flex; justify-content: center; gap: 20px; text-transform: uppercase;">
+        <div class="audit-trail" style="font-family: 'Roboto Mono', monospace; font-size: 0.55rem; color: #444; margin-bottom: 1.5vh; display: flex; justify-content: center; gap: 20px; text-transform: uppercase;">
             <span>[ VERIFICATION_SEQUENCE_COMPLETE ]</span>
             <span>[ HASH: 6140fc5 ]</span>
             <span>[ TCI_MATRIX: SYNCED ]</span>
