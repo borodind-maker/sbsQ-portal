@@ -510,6 +510,7 @@
         </div>
         <div class="nav-links" id="navLinks">
             <a href="FAQ.html" id="faqLink">FAQ</a>
+            <a href="CONSTITUTION_sbsQ.html" id="constLink">Конституція</a>
             <a href="access.html" id="docsLink">Документація</a>
             <div class="controls">
                 <button class="ctrl-btn" onclick="toggleTheme()" id="tBtn">🌙</button>
@@ -659,6 +660,7 @@
         const translations = {
             uk: {
                 navFAQ: "FAQ",
+                navConst: "Конституція",
                 navDocs: "Документація",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "Довірена",
@@ -708,6 +710,7 @@
             },
             en: {
                 navFAQ: "FAQ",
+                navConst: "Constitution",
                 navDocs: "Documentation",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "Trusted Swarm",
@@ -761,6 +764,7 @@
             },
             de: {
                 navFAQ: "FAQ",
+                navConst: "Verfassung",
                 navDocs: "Dokumentation",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "Vertrauenswürdige",
@@ -786,6 +790,7 @@
             },
             ko: {
                 navFAQ: "FAQ",
+                navConst: "헌법",
                 navDocs: "문서",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "신뢰할 수 있는",
@@ -811,6 +816,7 @@
             },
             th: {
                 navFAQ: "FAQ",
+                navConst: "รัฐธรรมนูญ",
                 navDocs: "เอกสารประกอบ",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "ที่ไว้วางใจได้",
@@ -831,6 +837,7 @@
             },
             zh: {
                 navFAQ: "FAQ",
+                navConst: "憲法",
                 navDocs: "說明文件",
                 heroLabel: "SBS OS v1.6",
                 heroTitle: "值得信賴的",
@@ -905,6 +912,7 @@
             // Navigation
             document.getElementById('faqLink').textContent = t.navFAQ;
             document.getElementById('faqLink').href = 'FAQ.html';
+            document.getElementById('constLink').textContent = t.navConst;
             document.getElementById('docsLink').textContent = t.navDocs;
             document.getElementById('docsLink').href = 'access.html'; // Gateway always
             
