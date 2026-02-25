@@ -3,48 +3,26 @@
 {% block tabs %}
   {{ super() }}
   <div class="md-header__option">
-    <div class="custom-controls" style="display: flex; gap: 6px; align-items: center; margin-right: 1rem;">
-      <button class="md-header__button md-icon font-size-btn" onclick="changeFontSize(3)" title="Збільшити розмір шрифту / Increase Font" aria-label="Increase font size">
-        <span style="font-weight: 700; font-size: 0.9em; font-family: monospace;">A+</span>
+    <div class="custom-controls" style="display: flex; gap: 10px; align-items: center; margin-right: 1rem;">
+      <button class="md-header__button md-icon" onclick="changeSize(2)" title="Increase Font">
+        <!-- Material Design 'Format Size' icon imitation -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 4v3h5v12h3V7h5V4H9m-6 8h3v7h3v-7h3V9H3v3z" fill="currentColor"/></svg>
+        <span style="font-size: 0.7em; vertical-align: super;">+</span>
       </button>
-      <button class="md-header__button md-icon font-size-btn" onclick="changeFontSize(-3)" title="Зменшити розмір шрифту / Decrease Font" aria-label="Decrease font size">
-        <span style="font-weight: 700; font-size: 0.9em; font-family: monospace;">A-</span>
+      <button class="md-header__button md-icon" onclick="changeSize(-2)" title="Decrease Font">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 4v3h5v12h3V7h5V4H9m-6 8h3v7h3v-7h3V9H3v3z" fill="currentColor"/></svg>
+        <span style="font-size: 0.7em; vertical-align: super;">-</span>
       </button>
     </div>
   </div>
 
-  <style>
-    .font-size-btn {
-      background: rgba(var(--md-primary-fg-color--light-rgb), 0.1) !important;
-      border: 1px solid rgba(var(--md-primary-fg-color--light-rgb), 0.3) !important;
-      border-radius: 6px !important;
-      padding: 6px 10px !important;
-      transition: all 0.2s ease !important;
-    }
-    .font-size-btn:hover {
-      background: rgba(var(--md-primary-fg-color--light-rgb), 0.2) !important;
-      border-color: var(--md-primary-fg-color) !important;
-      transform: translateY(-1px);
-    }
-    .font-size-btn span {
-      color: var(--md-primary-fg-color);
-    }
-  </style>
-
   <script>
-    function changeFontSize(delta) {
+    // Inline fallback for size change if asset not loaded
+    function changeSize(delta) {
       const html = document.documentElement;
-      let currentSize = parseInt(localStorage.getItem('docs_fontSize')) || parseInt(window.getComputedStyle(html).fontSize);
-      let newSize = Math.min(Math.max(currentSize + delta, 12), 28);
+      let currentSize = parseInt(window.getComputedStyle(html).fontSize);
+      let newSize = Math.min(Math.max(currentSize + delta, 12), 24);
       html.style.fontSize = newSize + "px";
-      localStorage.setItem('docs_fontSize', newSize);
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const savedSize = localStorage.getItem('docs_fontSize');
-      if (savedSize) {
-        document.documentElement.style.fontSize = savedSize + 'px';
-      }
-    });
   </script>
 {% endblock %}
