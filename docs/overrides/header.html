@@ -3,26 +3,48 @@
 {% block tabs %}
   {{ super() }}
   <div class="md-header__option">
-    <div class="custom-controls" style="display: flex; gap: 10px; align-items: center; margin-right: 1rem;">
-      <button class="md-header__button md-icon" onclick="changeSize(2)" title="Increase Font">
-        <!-- Material Design 'Format Size' icon imitation -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 4v3h5v12h3V7h5V4H9m-6 8h3v7h3v-7h3V9H3v3z" fill="currentColor"/></svg>
-        <span style="font-size: 0.7em; vertical-align: super;">+</span>
+    <div class="custom-controls" style="display: flex; gap: 6px; align-items: center; margin-right: 1rem;">
+
+      <!-- Кнопка зменшення -->
+      <button class="md-header__button md-icon"
+              onclick="changeSize(-2)"
+              title="Зменшити шрифт (А-)"
+              aria-label="Decrease font size"
+              style="font-size: 1rem; font-weight: bold; padding: 2px 6px;">
+        A<sup style="font-size:0.6em">−</sup>
       </button>
-      <button class="md-header__button md-icon" onclick="changeSize(-2)" title="Decrease Font">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 4v3h5v12h3V7h5V4H9m-6 8h3v7h3v-7h3V9H3v3z" fill="currentColor"/></svg>
-        <span style="font-size: 0.7em; vertical-align: super;">-</span>
+
+      <!-- Індикатор поточного розміру + скидання -->
+      <span id="font-size-indicator"
+            onclick="resetFontSize()"
+            title="Натисніть для скидання"
+            style="font-size: 0.7rem; cursor: pointer; opacity: 0.7; min-width: 36px; text-align: center;">
+        16px
+      </span>
+
+      <!-- Кнопка збільшення -->
+      <button class="md-header__button md-icon"
+              onclick="changeSize(2)"
+              title="Збільшити шрифт (А+)"
+              aria-label="Increase font size"
+              style="font-size: 1.2rem; font-weight: bold; padding: 2px 6px;">
+        A<sup style="font-size:0.6em">+</sup>
       </button>
+
     </div>
   </div>
 
   <script>
-    // Inline fallback for size change if asset not loaded
-    function changeSize(delta) {
-      const html = document.documentElement;
-      let currentSize = parseInt(window.getComputedStyle(html).fontSize);
-      let newSize = Math.min(Math.max(currentSize + delta, 12), 24);
-      html.style.fontSize = newSize + "px";
-    }
+    // Відновлюємо розмір та індикатор одразу при рендері хедера
+    (function () {
+      const saved = localStorage.getItem('sbsq-font-size');
+      const size = saved ? parseInt(saved) : 16;
+      document.documentElement.style.fontSize = size + 'px';
+      // Встановлюємо індикатор після рендеру DOM
+      document.addEventListener('DOMContentLoaded', function () {
+        const ind = document.getElementById('font-size-indicator');
+        if (ind) ind.textContent = size + 'px';
+      });
+    })();
   </script>
 {% endblock %}
