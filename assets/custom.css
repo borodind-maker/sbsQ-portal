@@ -50,7 +50,7 @@ html {
     /* Головний sidebar/nav overlay */
     .md-sidebar {
         background-color: var(--md-default-bg-color) !important;
-        opacity: 0.95 !important;
+        opacity: 1 !important;
     }
 
     /* Фон самого nav списку */
@@ -85,5 +85,5 @@ html {
 /* Хедер — теж робимо менш прозорим скрізь */
 .md-header {
     background-color: var(--md-primary-fg-color) !important;
-    opacity: 0.95 !important;
+    opacity: 1 !important;
 }
