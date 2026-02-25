@@ -82,3 +82,41 @@ function injectFontButtons() {
     // Вставляємо перед останнім елементом у хедері (перед search/settings)
     target.appendChild(wrap);
 }
+
+// === ДИНАМІЧНЕ ПЕРЕМИКАННЯ МОВ У ДОКУМЕНТАЦІЇ ===
+// Скрипт перехоплює кліки на випадаюче меню мов і перекидає на ту саму сторінку, але в іншій версії
+document.addEventListener('DOMContentLoaded', function() {
+    fixLanguageSwitchLinks();
+});
+
+document.addEventListener('DOMContentSwitch', function() {
+    fixLanguageSwitchLinks();
+});
+
+function fixLanguageSwitchLinks() {
+    // Шукаємо пункти меню в перемикачі Material (якщо він є)
+    const links = document.querySelectorAll('.md-select__link');
+    if (!links.length) return;
+
+    const currentPath = window.location.pathname;
+    const projectRoot = '/sbsQ-portal/';
+    
+    // Отримуємо "чистий" шлях без мовного префіксу
+    // sbsQ-portal/uk/docs/ -> docs/
+    let relativePath = currentPath.replace(projectRoot, '');
+    const prefixes = ['en/', 'uk/', 'de/', 'ko/', 'zh/', 'th/'];
+    prefixes.forEach(p => {
+        if (relativePath.startsWith(p)) {
+            relativePath = relativePath.replace(p, '');
+        }
+    });
+
+    links.forEach(link => {
+        const targetLang = link.getAttribute('hreflang');
+        if (targetLang) {
+            // Формуємо новий шлях: /sbsQ-portal/ + [короткий код мови або порожньо для en] + relativePath
+            const langPrefix = targetLang === 'en' ? '' : targetLang + '/';
+            link.href = projectRoot + langPrefix + relativePath;
+        }
+    });
+}
