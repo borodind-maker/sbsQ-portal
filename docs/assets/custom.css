@@ -40,3 +40,50 @@ html {
     background-color: transparent !important;
     box-shadow: none !important;
 }
+
+/* === MOBILE MENU OPACITY FIX ===
+   Робимо меню майже непрозорим (95% opacity = 5% прозорість)
+   для кращої читабельності на мобільних пристроях */
+
+/* Мобільний drawer (бічне меню) */
+@media screen and (max-width: 76.1875em) {
+    /* Головний sidebar/nav overlay */
+    .md-sidebar {
+        background-color: var(--md-default-bg-color) !important;
+        opacity: 0.95 !important;
+    }
+
+    /* Фон самого nav списку */
+    .md-nav {
+        background-color: var(--md-default-bg-color) !important;
+    }
+
+    /* Drawer що виїжджає при відкритті меню */
+    [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary,
+    .md-sidebar--primary {
+        background-color: var(--md-default-bg-color) !important;
+        opacity: 1 !important;
+    }
+
+    /* Внутрішній блок nav */
+    .md-sidebar__inner {
+        background-color: var(--md-default-bg-color) !important;
+    }
+
+    /* Nav items фон */
+    .md-nav__item,
+    .md-nav__link {
+        background-color: transparent !important;
+    }
+
+    /* Overlay що з'являється під меню */
+    .md-overlay {
+        opacity: 0.6 !important;
+    }
+}
+
+/* Хедер — теж робимо менш прозорим скрізь */
+.md-header {
+    background-color: var(--md-primary-fg-color) !important;
+    opacity: 0.95 !important;
+}
